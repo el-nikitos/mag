@@ -17,43 +17,43 @@ $EndDescr
 $Comp
 L elements:ATmega8A-AU DD1
 U 1 1 5CE45047
-P 2050 3050
-F 0 "DD1" H 3650 3250 50  0000 C CNN
-F 1 "ATmega8A-AU" H 3600 1300 50  0000 C CNN
-F 2 "N_DD:микросхема_ATMEGA-8-161AU" H 2050 3050 50  0001 C CNN
-F 3 "" H 2050 3050 50  0001 C CNN
-	1    2050 3050
+P 3300 3400
+F 0 "DD1" H 4900 3600 50  0000 C CNN
+F 1 "ATmega8A-AU" H 4850 1650 50  0000 C CNN
+F 2 "N_DD:микросхема_ATMEGA-8-161AU" H 3300 3400 50  0001 C CNN
+F 3 "" H 3300 3400 50  0001 C CNN
+	1    3300 3400
 	1    0    0    -1  
 $EndComp
 $Comp
 L elements:Резистор_0,065Вт R2
 U 1 1 5CE45133
-P 2600 1800
-F 0 "R2" V 2547 1903 60  0000 L CNN
-F 1 "20k_0603" V 2653 1903 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 2600 1800 60  0001 C CNN
-F 3 "" H 2600 1800 60  0001 C CNN
-	1    2600 1800
+P 3850 2150
+F 0 "R2" V 3797 2253 60  0000 L CNN
+F 1 "20k_0603" V 3903 2253 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 3850 2150 60  0001 C CNN
+F 3 "" H 3850 2150 60  0001 C CNN
+	1    3850 2150
 	0    1    1    0   
 $EndComp
 $Comp
 L elements:Резистор_0,065Вт R1
 U 1 1 5CE451D9
-P 1900 1800
-F 0 "R1" V 1847 1903 60  0000 L CNN
-F 1 "20k_0603" V 1953 1903 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 1900 1800 60  0001 C CNN
-F 3 "" H 1900 1800 60  0001 C CNN
-	1    1900 1800
+P 3150 2150
+F 0 "R1" V 3097 2253 60  0000 L CNN
+F 1 "20k_0603" V 3203 2253 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 3150 2150 60  0001 C CNN
+F 3 "" H 3150 2150 60  0001 C CNN
+	1    3150 2150
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4000 4050 4300 4050
+	5250 4400 5550 4400
 Wire Wire Line
-	4000 4150 4300 4150
-Text Label 4300 4050 0    50   ~ 0
+	5250 4500 5550 4500
+Text Label 5550 4400 0    50   ~ 0
 SDA
-Text Label 4300 4150 0    50   ~ 0
+Text Label 5550 4500 0    50   ~ 0
 SCL
 $Comp
 L elements:Вилка_PLD6_ПРОГ XP3
@@ -67,28 +67,28 @@ F 3 "" H 8550 5900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 1400 1900 1200
+	3150 1750 3150 1550
 Wire Wire Line
-	1900 1200 2600 1200
+	3150 1550 3850 1550
 Wire Wire Line
-	2600 1200 2600 1400
+	3850 1550 3850 1750
 Wire Wire Line
-	1900 2200 1900 2400
+	3150 2550 3150 2750
 Wire Wire Line
-	2600 2200 2600 2400
-Text Label 1900 2400 0    50   ~ 0
+	3850 2550 3850 2750
+Text Label 3150 2750 0    50   ~ 0
 SDA
-Text Label 2600 2400 0    50   ~ 0
+Text Label 3850 2750 0    50   ~ 0
 SCL
 Text Label 9300 5750 0    50   ~ 0
 VCC_prog
 Wire Wire Line
-	1950 4450 1650 4450
+	3200 4800 2900 4800
 Wire Wire Line
-	1950 4550 1650 4550
-Text Label 1650 4450 2    50   ~ 0
+	3200 4900 2900 4900
+Text Label 2900 4800 2    50   ~ 0
 PB3_MOSI
-Text Label 1650 4550 2    50   ~ 0
+Text Label 2900 4900 2    50   ~ 0
 PB4_MISO
 Wire Wire Line
 	8100 5750 7800 5750
@@ -103,20 +103,20 @@ Wire Wire Line
 Text Label 9300 6050 0    50   ~ 0
 GND
 Wire Wire Line
-	4300 3050 4000 3050
-Text Label 4300 3050 0    50   ~ 0
+	5550 3400 5250 3400
+Text Label 5550 3400 0    50   ~ 0
 PB5_SCK
 Wire Wire Line
 	8100 5900 7800 5900
 Text Label 7800 5900 2    50   ~ 0
 PB5_SCK
 Wire Wire Line
-	4000 4250 4300 4250
-Text Label 4300 4250 0    50   ~ 0
+	5250 4600 5550 4600
+Text Label 5550 4600 0    50   ~ 0
 RES
 Wire Wire Line
 	7800 6050 8100 6050
-Text Label 3250 2400 0    50   ~ 0
+Text Label 4500 2750 0    50   ~ 0
 RES
 $Comp
 L elements:D-triger_8bit DD2
@@ -130,84 +130,64 @@ F 3 "" H 8200 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1950 3650 1650 3650
+	3200 4000 2900 4000
 Wire Wire Line
-	1950 3750 1650 3750
-Text Label 1650 3650 2    50   ~ 0
-PB6
-Text Label 1650 3750 2    50   ~ 0
-PB7
+	3200 4100 2900 4100
 Wire Wire Line
-	1950 3850 1650 3850
+	3200 4200 2900 4200
 Wire Wire Line
-	1950 3950 1650 3950
-Text Label 1650 3850 2    50   ~ 0
+	3200 4300 2900 4300
+Text Label 2900 4200 2    50   ~ 0
 PD5
-Text Label 1650 3950 2    50   ~ 0
+Text Label 2900 4300 2    50   ~ 0
 PD6
 Wire Wire Line
-	1950 4050 1650 4050
-Text Label 1650 4050 2    50   ~ 0
+	3200 4400 2900 4400
+Text Label 2900 4400 2    50   ~ 0
 PD7
 Wire Wire Line
-	1950 4150 1650 4150
+	3200 4500 2900 4500
 Wire Wire Line
-	1950 4250 1650 4250
-Text Label 1650 4150 2    50   ~ 0
+	3200 4600 2900 4600
+Text Label 2900 4500 2    50   ~ 0
 PB0
-Text Label 1650 4250 2    50   ~ 0
+Text Label 2900 4600 2    50   ~ 0
 PB1
 Wire Wire Line
-	1950 4350 1650 4350
-Text Label 1650 4350 2    50   ~ 0
+	3200 4700 2900 4700
+Text Label 2900 4700 2    50   ~ 0
 PB2
 Wire Wire Line
 	8000 1100 7700 1100
 Wire Wire Line
 	8000 1250 7700 1250
-Text Label 7700 1100 2    50   ~ 0
-PB6
-Text Label 7700 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	8000 1400 7700 1400
 Wire Wire Line
 	8000 1550 7700 1550
-Text Label 7700 1400 2    50   ~ 0
-PD5
-Text Label 7700 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	8000 1700 7700 1700
-Text Label 7700 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	8000 1850 7700 1850
 Wire Wire Line
 	8000 2000 7700 2000
-Text Label 7700 1850 2    50   ~ 0
-PB0
-Text Label 7700 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	8000 2150 7700 2150
-Text Label 7700 2150 2    50   ~ 0
-PB2
 Wire Wire Line
-	1950 3250 1650 3250
-Text Label 1650 3250 2    50   ~ 0
+	3200 3600 2900 3600
+Text Label 2900 3600 2    50   ~ 0
 GND
 Wire Wire Line
-	1950 3450 1650 3450
-Text Label 1650 3450 2    50   ~ 0
+	3200 3800 2900 3800
+Text Label 2900 3800 2    50   ~ 0
 GND
 Wire Wire Line
-	1950 3350 1650 3350
+	3200 3700 2900 3700
 Wire Wire Line
-	1950 3550 1650 3550
-Text Label 1650 3350 2    50   ~ 0
+	3200 3900 2900 3900
+Text Label 2900 3700 2    50   ~ 0
 VCC
-Text Label 1650 3550 2    50   ~ 0
+Text Label 2900 3900 2    50   ~ 0
 VCC
 Wire Wire Line
 	8000 2300 7700 2300
@@ -219,8 +199,6 @@ Text Label 9200 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	8000 950  7700 950 
-Text Label 7700 950  2    50   ~ 0
-PB3_MOSI
 Wire Wire Line
 	8900 2900 9200 2900
 Wire Wire Line
@@ -237,13 +215,13 @@ Wire Wire Line
 	9200 3200 8900 3200
 Text Label 9200 3200 0    50   ~ 0
 GND
-Text Label 2400 1200 0    50   ~ 0
+Text Label 3650 1550 0    50   ~ 0
 VCC
 $Comp
-L elements:Розетка_PBS4 XS1
+L elements:Розетка_PBS4 HL2
 U 1 1 5CE597ED
 P 8400 2800
-F 0 "XS1" H 8656 2881 60  0000 C CNN
+F 0 "HL2" H 8656 2881 60  0000 C CNN
 F 1 "oled_0.91_128x32" H 8575 2225 60  0001 C CNN
 F 2 "N_VD_HL:oled_0.91_128x32" H 8400 2800 60  0001 C CNN
 F 3 "" H 8400 2800 60  0001 C CNN
@@ -265,46 +243,26 @@ Wire Wire Line
 	10200 1100 9900 1100
 Wire Wire Line
 	10200 1250 9900 1250
-Text Label 9900 1100 2    50   ~ 0
-PB6
-Text Label 9900 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	10200 1400 9900 1400
 Wire Wire Line
 	10200 1550 9900 1550
-Text Label 9900 1400 2    50   ~ 0
-PD5
-Text Label 9900 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	10200 1700 9900 1700
-Text Label 9900 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	10200 1850 9900 1850
 Wire Wire Line
 	10200 2000 9900 2000
-Text Label 9900 1850 2    50   ~ 0
-PB0
-Text Label 9900 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	10200 2150 9900 2150
-Text Label 9900 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	10200 2300 9900 2300
-Text Label 9900 2300 2    50   ~ 0
-GND
 Wire Wire Line
 	11400 950  11100 950 
 Text Label 11400 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	10200 950  9900 950 
-Text Label 9900 950  2    50   ~ 0
-PB3_MOSI
 $Comp
 L elements:D-triger_8bit DD4
 U 1 1 5CE5ACE2
@@ -320,46 +278,26 @@ Wire Wire Line
 	12300 1100 12000 1100
 Wire Wire Line
 	12300 1250 12000 1250
-Text Label 12000 1100 2    50   ~ 0
-PB6
-Text Label 12000 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	12300 1400 12000 1400
 Wire Wire Line
 	12300 1550 12000 1550
-Text Label 12000 1400 2    50   ~ 0
-PD5
-Text Label 12000 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	12300 1700 12000 1700
-Text Label 12000 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	12300 1850 12000 1850
 Wire Wire Line
 	12300 2000 12000 2000
-Text Label 12000 1850 2    50   ~ 0
-PB0
-Text Label 12000 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	12300 2150 12000 2150
-Text Label 12000 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	12300 2300 12000 2300
-Text Label 12000 2300 2    50   ~ 0
-GND
 Wire Wire Line
 	13500 950  13200 950 
 Text Label 13500 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	12300 950  12000 950 
-Text Label 12000 950  2    50   ~ 0
-PB3_MOSI
 $Comp
 L elements:D-triger_8bit DD5
 U 1 1 5CE5ACFE
@@ -375,46 +313,26 @@ Wire Wire Line
 	14500 1100 14200 1100
 Wire Wire Line
 	14500 1250 14200 1250
-Text Label 14200 1100 2    50   ~ 0
-PB6
-Text Label 14200 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	14500 1400 14200 1400
 Wire Wire Line
 	14500 1550 14200 1550
-Text Label 14200 1400 2    50   ~ 0
-PD5
-Text Label 14200 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	14500 1700 14200 1700
-Text Label 14200 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	14500 1850 14200 1850
 Wire Wire Line
 	14500 2000 14200 2000
-Text Label 14200 1850 2    50   ~ 0
-PB0
-Text Label 14200 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	14500 2150 14200 2150
-Text Label 14200 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	14500 2300 14200 2300
-Text Label 14200 2300 2    50   ~ 0
-GND
 Wire Wire Line
 	15700 950  15400 950 
 Text Label 15700 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	14500 950  14200 950 
-Text Label 14200 950  2    50   ~ 0
-PB3_MOSI
 Text Notes 8450 3400 0    50   ~ 0
 Display
 Wire Wire Line
@@ -434,10 +352,10 @@ Wire Wire Line
 Text Label 9200 4000 0    50   ~ 0
 GND
 $Comp
-L elements:Розетка_PBS4 XS2
+L elements:Розетка_PBS4 XS1
 U 1 1 5CE619B4
 P 8400 3600
-F 0 "XS2" H 8656 3681 60  0000 C CNN
+F 0 "XS1" H 8656 3681 60  0000 C CNN
 F 1 "Розетка_PBS4" H 8575 3025 60  0001 C CNN
 F 2 "N_X:Вилка_PLS4_вертикальная" H 8400 3600 60  0001 C CNN
 F 3 "" H 8400 3600 60  0001 C CNN
@@ -464,94 +382,94 @@ GND
 $Comp
 L elements:Конденсатор_керамический C1
 U 1 1 5CE7741B
-P 1500 5450
-F 0 "C1" V 1472 5538 60  0000 L CNN
-F 1 "10мкФ_0603" V 1578 5538 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 1500 5450 60  0001 C CNN
-F 3 "" H 1500 5450 60  0001 C CNN
-	1    1500 5450
+P 2750 5800
+F 0 "C1" V 2722 5888 60  0000 L CNN
+F 1 "10мкФ_0603" V 2828 5888 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 2750 5800 60  0001 C CNN
+F 3 "" H 2750 5800 60  0001 C CNN
+	1    2750 5800
 	0    1    1    0   
 $EndComp
 $Comp
 L elements:Конденсатор_керамический C2
 U 1 1 5CE7765E
-P 2250 5450
-F 0 "C2" V 2222 5538 60  0000 L CNN
-F 1 "10мкФ_0603" V 2328 5538 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 2250 5450 60  0001 C CNN
-F 3 "" H 2250 5450 60  0001 C CNN
-	1    2250 5450
+P 3500 5800
+F 0 "C2" V 3472 5888 60  0000 L CNN
+F 1 "10мкФ_0603" V 3578 5888 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 3500 5800 60  0001 C CNN
+F 3 "" H 3500 5800 60  0001 C CNN
+	1    3500 5800
 	0    1    1    0   
 $EndComp
 $Comp
 L elements:Конденсатор_керамический C3
 U 1 1 5CE7A591
-P 3000 5450
-F 0 "C3" V 2972 5538 60  0000 L CNN
-F 1 "10мкФ_0603" V 3078 5538 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 3000 5450 60  0001 C CNN
-F 3 "" H 3000 5450 60  0001 C CNN
-	1    3000 5450
+P 4250 5800
+F 0 "C3" V 4222 5888 60  0000 L CNN
+F 1 "10мкФ_0603" V 4328 5888 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 4250 5800 60  0001 C CNN
+F 3 "" H 4250 5800 60  0001 C CNN
+	1    4250 5800
 	0    1    1    0   
 $EndComp
 $Comp
 L elements:Конденсатор_керамический C4
 U 1 1 5CE7A597
-P 3750 5450
-F 0 "C4" V 3722 5538 60  0000 L CNN
-F 1 "10мкФ_0603" V 3828 5538 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 3750 5450 60  0001 C CNN
-F 3 "" H 3750 5450 60  0001 C CNN
-	1    3750 5450
+P 5000 5800
+F 0 "C4" V 4972 5888 60  0000 L CNN
+F 1 "10мкФ_0603" V 5078 5888 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 5000 5800 60  0001 C CNN
+F 3 "" H 5000 5800 60  0001 C CNN
+	1    5000 5800
 	0    1    1    0   
 $EndComp
-Text Label 1500 5200 1    50   ~ 0
+Text Label 2750 5550 1    50   ~ 0
 VCC
-Text Label 1500 5750 3    50   ~ 0
+Text Label 2750 6100 3    50   ~ 0
 GND
 Wire Wire Line
-	1500 5550 1500 5650
+	2750 5900 2750 6000
 Wire Wire Line
-	1500 5200 1500 5300
+	2750 5550 2750 5650
 Wire Wire Line
-	1500 5300 2250 5300
+	2750 5650 3500 5650
 Wire Wire Line
-	2250 5300 2250 5400
-Connection ~ 1500 5300
+	3500 5650 3500 5750
+Connection ~ 2750 5650
 Wire Wire Line
-	1500 5300 1500 5400
+	2750 5650 2750 5750
 Wire Wire Line
-	2250 5300 3000 5300
+	3500 5650 4250 5650
 Wire Wire Line
-	3000 5300 3000 5400
-Connection ~ 2250 5300
+	4250 5650 4250 5750
+Connection ~ 3500 5650
 Wire Wire Line
-	1500 5650 2250 5650
+	2750 6000 3500 6000
 Wire Wire Line
-	2250 5650 2250 5550
-Connection ~ 1500 5650
+	3500 6000 3500 5900
+Connection ~ 2750 6000
 Wire Wire Line
-	1500 5650 1500 5750
+	2750 6000 2750 6100
 Wire Wire Line
-	2250 5650 3000 5650
+	3500 6000 4250 6000
 Wire Wire Line
-	3000 5650 3000 5550
-Connection ~ 2250 5650
+	4250 6000 4250 5900
+Connection ~ 3500 6000
 Wire Wire Line
-	3000 5300 3750 5300
+	4250 5650 5000 5650
 Wire Wire Line
-	3750 5300 3750 5400
-Connection ~ 3000 5300
+	5000 5650 5000 5750
+Connection ~ 4250 5650
 Wire Wire Line
-	3000 5650 3750 5650
+	4250 6000 5000 6000
 Wire Wire Line
-	3750 5650 3750 5550
-Connection ~ 3000 5650
+	5000 6000 5000 5900
+Connection ~ 4250 6000
 $Comp
-L elements:display_EDS803_EDS805 VD1
+L elements:display_EDS803_EDS805 HL1
 U 1 1 5CEAE07F
 P 12000 3100
-F 0 "VD1" H 13050 3250 50  0000 L CNN
+F 0 "HL1" H 13050 3250 50  0000 L CNN
 F 1 "display_EDS803_EDS805" H 12300 100 50  0000 L CNN
 F 2 "N_VD_HL:display_EDS803_805" H 12000 3100 50  0001 C CNN
 F 3 "" H 12000 3100 50  0001 C CNN
@@ -785,58 +703,54 @@ Text Label 13750 4600 0    50   ~ 0
 Out26
 Text Label 13750 4300 0    50   ~ 0
 Out28
-Text Label 11600 5350 2    50   ~ 0
+Text Label 11600 4900 2    50   ~ 0
 Out31
 Text Label 11600 5200 2    50   ~ 0
 Out33
-Text Label 11600 5050 2    50   ~ 0
-Out35
-Text Label 11600 4900 2    50   ~ 0
-Out37
 Text Label 13750 5500 0    50   ~ 0
-Out32
-Text Label 13750 5350 0    50   ~ 0
-Out34
+Out35
 Text Label 13750 5200 0    50   ~ 0
+Out37
+Text Label 11600 5050 2    50   ~ 0
+Out32
+Text Label 11600 5350 2    50   ~ 0
+Out34
+Text Label 13750 5350 0    50   ~ 0
 Out36
 Text Label 13750 5050 0    50   ~ 0
 Out38
-Text Label 11600 5950 2    50   ~ 0
+Text Label 11600 5500 2    50   ~ 0
 Out41
 Text Label 11600 5800 2    50   ~ 0
 Out43
-Text Label 11600 5650 2    50   ~ 0
-Out45
-Text Label 11600 5500 2    50   ~ 0
-Out47
-Text Label 13750 5950 0    50   ~ 0
-Out42
-Text Label 13750 5800 0    50   ~ 0
-Out44
-Text Label 13750 5650 0    50   ~ 0
-Out46
 Text Label 11600 3400 2    50   ~ 0
+Out45
+Text Label 13750 5800 0    50   ~ 0
+Out47
+Text Label 11600 5650 2    50   ~ 0
+Out42
+Text Label 11600 5950 2    50   ~ 0
+Out44
+Text Label 13750 5950 0    50   ~ 0
+Out46
+Text Label 13750 5650 0    50   ~ 0
 Out48
 Wire Wire Line
 	11600 3400 11900 3400
-Text Label 4300 3650 0    50   ~ 0
+Text Label 5550 4000 0    50   ~ 0
 PC0
 Wire Wire Line
-	4300 3950 4000 3950
+	5550 4300 5250 4300
 Wire Wire Line
-	4300 3850 4000 3850
+	5550 4200 5250 4200
 Wire Wire Line
-	4300 3750 4000 3750
+	5550 4100 5250 4100
 Wire Wire Line
-	4300 3650 4000 3650
-Text Label 4300 3750 0    50   ~ 0
+	5550 4000 5250 4000
+Text Label 5550 4100 0    50   ~ 0
 PC1
-Text Label 4300 3850 0    50   ~ 0
+Text Label 5550 4200 0    50   ~ 0
 PC2
-Text Label 4300 3950 0    50   ~ 0
-PC3
-Text Label 9200 2300 0    50   ~ 0
-PC0
 Wire Wire Line
 	15700 2300 15400 2300
 Wire Wire Line
@@ -845,107 +759,97 @@ Wire Wire Line
 	11400 2300 11100 2300
 Wire Wire Line
 	9200 2300 8900 2300
-Text Label 11400 2300 0    50   ~ 0
-PC1
-Text Label 13500 2300 0    50   ~ 0
-PC2
-Text Label 15700 2300 0    50   ~ 0
-PC3
 $Comp
 L elements:кнопка K1
 U 1 1 5D0AA259
-P 1900 6350
-F 0 "K1" H 1750 6550 60  0000 C CNN
-F 1 "кнопка_FSMSM" H 1750 6250 60  0000 C CNN
-F 2 "N_X:Кнопка_FSMSM" H 1775 6400 60  0001 C CNN
-F 3 "" H 1775 6400 60  0001 C CNN
-	1    1900 6350
+P 3150 6700
+F 0 "K1" H 3000 6900 60  0000 C CNN
+F 1 "кнопка_FSMSM" H 3000 6600 60  0000 C CNN
+F 2 "N_X:Кнопка_FSMSM" H 3025 6750 60  0001 C CNN
+F 3 "" H 3025 6750 60  0001 C CNN
+	1    3150 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L elements:кнопка K2
 U 1 1 5D0ADEEF
-P 1900 6800
-F 0 "K2" H 1750 7000 60  0000 C CNN
-F 1 "кнопка_FSMSM" H 1750 6700 60  0000 C CNN
-F 2 "N_X:Кнопка_FSMSM" H 1775 6850 60  0001 C CNN
-F 3 "" H 1775 6850 60  0001 C CNN
-	1    1900 6800
+P 3150 7150
+F 0 "K2" H 3000 7350 60  0000 C CNN
+F 1 "кнопка_FSMSM" H 3000 7050 60  0000 C CNN
+F 2 "N_X:Кнопка_FSMSM" H 3025 7200 60  0001 C CNN
+F 3 "" H 3025 7200 60  0001 C CNN
+	1    3150 7150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 6350 1350 6350
+	2800 6700 2600 6700
 Wire Wire Line
-	1350 6350 1350 6800
+	2600 6700 2600 7150
 Wire Wire Line
-	1350 6800 1550 6800
+	2600 7150 2800 7150
 Wire Wire Line
-	1950 3050 1650 3050
+	3200 3400 2900 3400
 Wire Wire Line
-	1950 3150 1650 3150
-Text Label 1650 3050 2    50   ~ 0
+	3200 3500 2900 3500
+Text Label 2900 3400 2    50   ~ 0
 PD3
-Text Label 1650 3150 2    50   ~ 0
+Text Label 2900 3500 2    50   ~ 0
 PD4
-Text Label 1350 6900 3    50   ~ 0
+Text Label 2600 7250 3    50   ~ 0
 GND
 Wire Wire Line
-	1350 6800 1350 6900
-Connection ~ 1350 6800
+	2600 7150 2600 7250
+Connection ~ 2600 7150
 Wire Wire Line
-	1900 6350 2200 6350
+	3150 6700 3450 6700
 Wire Wire Line
-	1900 6800 2200 6800
-Text Label 2200 6350 0    50   ~ 0
-PD3
-Text Label 2200 6800 0    50   ~ 0
-PD4
-Text Notes 2400 6350 0    50   ~ 0
+	3150 7150 3450 7150
+Text Notes 3650 6700 0    50   ~ 0
 Режим/Работа
-Text Notes 2400 6800 0    50   ~ 0
+Text Notes 3650 7150 0    50   ~ 0
 Информация
 $Comp
 L elements:Конденсатор_керамический C5
 U 1 1 5D118A0D
-P 4550 5450
-F 0 "C5" V 4522 5538 60  0000 L CNN
-F 1 "10мкФ_0603" V 4628 5538 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 4550 5450 60  0001 C CNN
-F 3 "" H 4550 5450 60  0001 C CNN
-	1    4550 5450
+P 5800 5800
+F 0 "C5" V 5772 5888 60  0000 L CNN
+F 1 "10мкФ_0603" V 5878 5888 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 5800 5800 60  0001 C CNN
+F 3 "" H 5800 5800 60  0001 C CNN
+	1    5800 5800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3750 5650 4550 5650
+	5000 6000 5800 6000
 Wire Wire Line
-	4550 5650 4550 5550
-Connection ~ 3750 5650
-Text Label 4300 3350 0    50   ~ 0
+	5800 6000 5800 5900
+Connection ~ 5000 6000
+Text Label 5550 3700 0    50   ~ 0
 AREF
 Wire Wire Line
-	4300 3350 4000 3350
-Text Label 4550 5200 0    50   ~ 0
+	5550 3700 5250 3700
+Text Label 5800 5550 0    50   ~ 0
 AREF
 Wire Wire Line
-	4550 5200 4550 5400
+	5800 5550 5800 5750
 $Comp
 L elements:Резистор_0,065Вт R3
 U 1 1 5D14357F
-P 3250 1800
-F 0 "R3" V 3197 1903 60  0000 L CNN
-F 1 "20k_0603" V 3303 1903 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 3250 1800 60  0001 C CNN
-F 3 "" H 3250 1800 60  0001 C CNN
-	1    3250 1800
+P 4500 2150
+F 0 "R3" V 4447 2253 60  0000 L CNN
+F 1 "20k_0603" V 4553 2253 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 4500 2150 60  0001 C CNN
+F 3 "" H 4500 2150 60  0001 C CNN
+	1    4500 2150
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3250 1200 3250 1400
+	4500 1550 4500 1750
 Wire Wire Line
-	3250 2200 3250 2400
+	4500 2550 4500 2750
 Wire Wire Line
-	2600 1200 3250 1200
-Connection ~ 2600 1200
+	3850 1550 4500 1550
+Connection ~ 3850 1550
 Text Label 7800 6050 2    50   ~ 0
 RES
 $Comp
@@ -1001,12 +905,12 @@ Wire Wire Line
 Wire Wire Line
 	8850 8500 8550 8500
 Wire Wire Line
-	4000 4350 4300 4350
-Text Label 4300 4350 0    50   ~ 0
+	5250 4700 5550 4700
+Text Label 5550 4700 0    50   ~ 0
 MC_RX
 Wire Wire Line
-	4000 4450 4300 4450
-Text Label 4300 4450 0    50   ~ 0
+	5250 4800 5550 4800
+Text Label 5550 4800 0    50   ~ 0
 MC_TX
 Text Label 8850 8400 0    50   ~ 0
 MC_TX
@@ -1015,61 +919,59 @@ MC_RX
 $Comp
 L elements:Резистор_0,065Вт R4
 U 1 1 5D2DD9FC
-P 4050 1250
-F 0 "R4" V 3997 1353 60  0000 L CNN
-F 1 "20k_0603" V 4103 1353 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 4050 1250 60  0001 C CNN
-F 3 "" H 4050 1250 60  0001 C CNN
-	1    4050 1250
+P 5300 1600
+F 0 "R4" V 5247 1703 60  0000 L CNN
+F 1 "20k_0603" V 5353 1703 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 5300 1600 60  0001 C CNN
+F 3 "" H 5300 1600 60  0001 C CNN
+	1    5300 1600
 	0    1    1    0   
 $EndComp
 $Comp
 L elements:Резистор_0,065Вт R5
 U 1 1 5D2E0229
-P 4050 2150
-F 0 "R5" V 3997 2253 60  0000 L CNN
-F 1 "20k_0603" V 4103 2253 60  0000 L CNN
-F 2 "N_RLC:Конденсатор_SMD_0603" H 4050 2150 60  0001 C CNN
-F 3 "" H 4050 2150 60  0001 C CNN
-	1    4050 2150
+P 5300 2500
+F 0 "R5" V 5247 2603 60  0000 L CNN
+F 1 "20k_0603" V 5353 2603 60  0000 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 5300 2500 60  0001 C CNN
+F 3 "" H 5300 2500 60  0001 C CNN
+	1    5300 2500
 	0    1    1    0   
 $EndComp
-Text Label 4050 750  0    50   ~ 0
+Text Label 5300 1100 0    50   ~ 0
 VCC_bat
 Wire Wire Line
-	4050 750  4050 850 
-Text Label 4050 2650 0    50   ~ 0
+	5300 1100 5300 1200
+Text Label 5300 3000 0    50   ~ 0
 GND
 Wire Wire Line
-	4050 2550 4050 2650
+	5300 2900 5300 3000
 Wire Wire Line
-	4050 1650 4050 1700
+	5300 2000 5300 2050
 Wire Wire Line
-	4300 3250 4000 3250
-Text Label 4300 3250 0    50   ~ 0
+	5550 3600 5250 3600
+Text Label 5550 3600 0    50   ~ 0
 ADC6
-Text Label 4200 1700 0    50   ~ 0
+Text Label 5450 2050 0    50   ~ 0
 ADC6
 Wire Wire Line
-	4200 1700 4050 1700
-Connection ~ 4050 1700
+	5450 2050 5300 2050
+Connection ~ 5300 2050
 Wire Wire Line
-	4050 1700 4050 1750
+	5300 2050 5300 2100
 Wire Wire Line
 	11600 3250 11900 3250
 Wire Wire Line
-	4000 4550 4300 4550
-Text Label 4300 4550 0    50   ~ 0
-PD2
-Text Label 11600 3250 2    50   ~ 0
+	5250 4900 5550 4900
+Text Label 5550 4900 0    50   ~ 0
 PD2
 Wire Wire Line
-	4000 3450 4300 3450
-Text Label 4300 3450 0    50   ~ 0
+	5250 3800 5550 3800
+Text Label 5550 3800 0    50   ~ 0
 GND
 Wire Wire Line
-	4000 3150 4300 3150
-Text Label 4300 3150 0    50   ~ 0
+	5250 3500 5550 3500
+Text Label 5550 3500 0    50   ~ 0
 VCC
 Text Label 11600 4300 2    50   ~ 0
 Out21
@@ -1079,4 +981,102 @@ Text Label 13750 4750 0    50   ~ 0
 Out25
 Text Label 13750 4450 0    50   ~ 0
 Out27
+Text Label 7700 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 7700 2150 2    50   ~ 0
+PD5
+Text Label 7700 2000 2    50   ~ 0
+PD6
+Text Label 7700 1850 2    50   ~ 0
+PD7
+Text Label 7700 1700 2    50   ~ 0
+PB0
+Text Label 7700 1550 2    50   ~ 0
+PB1
+Text Label 7700 1400 2    50   ~ 0
+PB2
+Text Label 7700 1100 2    50   ~ 0
+PB4_MISO
+Text Label 7700 950  2    50   ~ 0
+PB5_SCK
+Text Label 9900 2300 2    50   ~ 0
+GND
+Text Label 9900 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 9900 2150 2    50   ~ 0
+PD5
+Text Label 9900 2000 2    50   ~ 0
+PD6
+Text Label 9900 1850 2    50   ~ 0
+PD7
+Text Label 9900 1700 2    50   ~ 0
+PB0
+Text Label 9900 1550 2    50   ~ 0
+PB1
+Text Label 9900 1400 2    50   ~ 0
+PB2
+Text Label 9900 1100 2    50   ~ 0
+PB4_MISO
+Text Label 9900 950  2    50   ~ 0
+PB5_SCK
+Text Label 12000 2300 2    50   ~ 0
+GND
+Text Label 12000 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 12000 2150 2    50   ~ 0
+PD5
+Text Label 12000 2000 2    50   ~ 0
+PD6
+Text Label 12000 1850 2    50   ~ 0
+PD7
+Text Label 12000 1700 2    50   ~ 0
+PB0
+Text Label 12000 1550 2    50   ~ 0
+PB1
+Text Label 12000 1400 2    50   ~ 0
+PB2
+Text Label 12000 1100 2    50   ~ 0
+PB4_MISO
+Text Label 12000 950  2    50   ~ 0
+PB5_SCK
+Text Label 14200 2300 2    50   ~ 0
+GND
+Text Label 14200 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 14200 2150 2    50   ~ 0
+PD5
+Text Label 14200 2000 2    50   ~ 0
+PD6
+Text Label 14200 1850 2    50   ~ 0
+PD7
+Text Label 14200 1700 2    50   ~ 0
+PB0
+Text Label 14200 1550 2    50   ~ 0
+PB1
+Text Label 14200 1400 2    50   ~ 0
+PB2
+Text Label 14200 1100 2    50   ~ 0
+PB4_MISO
+Text Label 14200 950  2    50   ~ 0
+PB5_SCK
+Text Label 11600 3250 2    50   ~ 0
+PC0
+Text Label 2900 4000 2    50   ~ 0
+PB6
+Text Label 11400 2300 0    50   ~ 0
+PB6
+Text Label 9200 2300 0    50   ~ 0
+PB7
+Text Label 2900 4100 2    50   ~ 0
+PB7
+Text Label 3450 6700 0    50   ~ 0
+PC1
+NoConn ~ 5250 3900
+Text Label 15700 2300 0    50   ~ 0
+PD3
+Text Label 13500 2300 0    50   ~ 0
+PD4
+Text Label 3450 7150 0    50   ~ 0
+PC2
+NoConn ~ 5550 4300
 $EndSCHEMATC

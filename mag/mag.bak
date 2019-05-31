@@ -133,10 +133,6 @@ Wire Wire Line
 	1950 3650 1650 3650
 Wire Wire Line
 	1950 3750 1650 3750
-Text Label 1650 3650 2    50   ~ 0
-PB6
-Text Label 1650 3750 2    50   ~ 0
-PB7
 Wire Wire Line
 	1950 3850 1650 3850
 Wire Wire Line
@@ -165,34 +161,18 @@ Wire Wire Line
 	8000 1100 7700 1100
 Wire Wire Line
 	8000 1250 7700 1250
-Text Label 7700 1100 2    50   ~ 0
-PB6
-Text Label 7700 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	8000 1400 7700 1400
 Wire Wire Line
 	8000 1550 7700 1550
-Text Label 7700 1400 2    50   ~ 0
-PD5
-Text Label 7700 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	8000 1700 7700 1700
-Text Label 7700 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	8000 1850 7700 1850
 Wire Wire Line
 	8000 2000 7700 2000
-Text Label 7700 1850 2    50   ~ 0
-PB0
-Text Label 7700 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	8000 2150 7700 2150
-Text Label 7700 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	1950 3250 1650 3250
 Text Label 1650 3250 2    50   ~ 0
@@ -219,8 +199,6 @@ Text Label 9200 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	8000 950  7700 950 
-Text Label 7700 950  2    50   ~ 0
-PB3_MOSI
 Wire Wire Line
 	8900 2900 9200 2900
 Wire Wire Line
@@ -240,12 +218,12 @@ GND
 Text Label 2400 1200 0    50   ~ 0
 VCC
 $Comp
-L elements:Розетка_PBS4 XS1
+L elements:Розетка_PBS4 HL2
 U 1 1 5CE597ED
 P 8400 2800
-F 0 "XS1" H 8656 2881 60  0000 C CNN
-F 1 "Розетка_PBS4" H 8575 2225 60  0001 C CNN
-F 2 "N_X:Вилка_PLS4_вертикальная" H 8400 2800 60  0001 C CNN
+F 0 "HL2" H 8656 2881 60  0000 C CNN
+F 1 "oled_0.91_128x32" H 8575 2225 60  0001 C CNN
+F 2 "N_VD_HL:oled_0.91_128x32" H 8400 2800 60  0001 C CNN
 F 3 "" H 8400 2800 60  0001 C CNN
 	1    8400 2800
 	1    0    0    -1  
@@ -265,46 +243,26 @@ Wire Wire Line
 	10200 1100 9900 1100
 Wire Wire Line
 	10200 1250 9900 1250
-Text Label 9900 1100 2    50   ~ 0
-PB6
-Text Label 9900 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	10200 1400 9900 1400
 Wire Wire Line
 	10200 1550 9900 1550
-Text Label 9900 1400 2    50   ~ 0
-PD5
-Text Label 9900 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	10200 1700 9900 1700
-Text Label 9900 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	10200 1850 9900 1850
 Wire Wire Line
 	10200 2000 9900 2000
-Text Label 9900 1850 2    50   ~ 0
-PB0
-Text Label 9900 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	10200 2150 9900 2150
-Text Label 9900 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	10200 2300 9900 2300
-Text Label 9900 2300 2    50   ~ 0
-GND
 Wire Wire Line
 	11400 950  11100 950 
 Text Label 11400 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	10200 950  9900 950 
-Text Label 9900 950  2    50   ~ 0
-PB3_MOSI
 $Comp
 L elements:D-triger_8bit DD4
 U 1 1 5CE5ACE2
@@ -320,46 +278,26 @@ Wire Wire Line
 	12300 1100 12000 1100
 Wire Wire Line
 	12300 1250 12000 1250
-Text Label 12000 1100 2    50   ~ 0
-PB6
-Text Label 12000 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	12300 1400 12000 1400
 Wire Wire Line
 	12300 1550 12000 1550
-Text Label 12000 1400 2    50   ~ 0
-PD5
-Text Label 12000 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	12300 1700 12000 1700
-Text Label 12000 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	12300 1850 12000 1850
 Wire Wire Line
 	12300 2000 12000 2000
-Text Label 12000 1850 2    50   ~ 0
-PB0
-Text Label 12000 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	12300 2150 12000 2150
-Text Label 12000 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	12300 2300 12000 2300
-Text Label 12000 2300 2    50   ~ 0
-GND
 Wire Wire Line
 	13500 950  13200 950 
 Text Label 13500 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	12300 950  12000 950 
-Text Label 12000 950  2    50   ~ 0
-PB3_MOSI
 $Comp
 L elements:D-triger_8bit DD5
 U 1 1 5CE5ACFE
@@ -375,46 +313,26 @@ Wire Wire Line
 	14500 1100 14200 1100
 Wire Wire Line
 	14500 1250 14200 1250
-Text Label 14200 1100 2    50   ~ 0
-PB6
-Text Label 14200 1250 2    50   ~ 0
-PB7
 Wire Wire Line
 	14500 1400 14200 1400
 Wire Wire Line
 	14500 1550 14200 1550
-Text Label 14200 1400 2    50   ~ 0
-PD5
-Text Label 14200 1550 2    50   ~ 0
-PD6
 Wire Wire Line
 	14500 1700 14200 1700
-Text Label 14200 1700 2    50   ~ 0
-PD7
 Wire Wire Line
 	14500 1850 14200 1850
 Wire Wire Line
 	14500 2000 14200 2000
-Text Label 14200 1850 2    50   ~ 0
-PB0
-Text Label 14200 2000 2    50   ~ 0
-PB1
 Wire Wire Line
 	14500 2150 14200 2150
-Text Label 14200 2150 2    50   ~ 0
-PB2
 Wire Wire Line
 	14500 2300 14200 2300
-Text Label 14200 2300 2    50   ~ 0
-GND
 Wire Wire Line
 	15700 950  15400 950 
 Text Label 15700 950  0    50   ~ 0
 VCC
 Wire Wire Line
 	14500 950  14200 950 
-Text Label 14200 950  2    50   ~ 0
-PB3_MOSI
 Text Notes 8450 3400 0    50   ~ 0
 Display
 Wire Wire Line
@@ -434,10 +352,10 @@ Wire Wire Line
 Text Label 9200 4000 0    50   ~ 0
 GND
 $Comp
-L elements:Розетка_PBS4 XS2
+L elements:Розетка_PBS4 XS1
 U 1 1 5CE619B4
 P 8400 3600
-F 0 "XS2" H 8656 3681 60  0000 C CNN
+F 0 "XS1" H 8656 3681 60  0000 C CNN
 F 1 "Розетка_PBS4" H 8575 3025 60  0001 C CNN
 F 2 "N_X:Вилка_PLS4_вертикальная" H 8400 3600 60  0001 C CNN
 F 3 "" H 8400 3600 60  0001 C CNN
@@ -548,10 +466,10 @@ Wire Wire Line
 	3750 5650 3750 5550
 Connection ~ 3000 5650
 $Comp
-L elements:display_EDS803_EDS805 VD1
+L elements:display_EDS803_EDS805 HL1
 U 1 1 5CEAE07F
 P 12000 3100
-F 0 "VD1" H 13050 3250 50  0000 L CNN
+F 0 "HL1" H 13050 3250 50  0000 L CNN
 F 1 "display_EDS803_EDS805" H 12300 100 50  0000 L CNN
 F 2 "N_VD_HL:display_EDS803_805" H 12000 3100 50  0001 C CNN
 F 3 "" H 12000 3100 50  0001 C CNN
@@ -701,19 +619,19 @@ Text Label 15700 2150 0    50   ~ 0
 Out48
 Wire Wire Line
 	11900 3700 11600 3700
-Text Label 11600 4150 2    50   ~ 0
+Text Label 11600 3700 2    50   ~ 0
 Out11
-Text Label 13750 4000 0    50   ~ 0
+Text Label 11600 3850 2    50   ~ 0
 Out12
 Text Label 11600 4000 2    50   ~ 0
 Out13
-Text Label 13750 3850 0    50   ~ 0
+Text Label 11600 4150 2    50   ~ 0
 Out14
-Text Label 11600 3850 2    50   ~ 0
+Text Label 13750 4000 0    50   ~ 0
 Out15
-Text Label 13750 3700 0    50   ~ 0
+Text Label 13750 3850 0    50   ~ 0
 Out16
-Text Label 11600 3700 2    50   ~ 0
+Text Label 13750 3700 0    50   ~ 0
 Out17
 Text Label 13750 3550 0    50   ~ 0
 Out18
@@ -777,53 +695,45 @@ Wire Wire Line
 	13750 3550 13450 3550
 Wire Wire Line
 	13750 3700 13450 3700
-Text Label 11600 4750 2    50   ~ 0
-Out21
-Text Label 11600 4600 2    50   ~ 0
-Out23
 Text Label 11600 4450 2    50   ~ 0
-Out25
-Text Label 11600 4300 2    50   ~ 0
-Out27
-Text Label 13750 4750 0    50   ~ 0
 Out22
-Text Label 13750 4600 0    50   ~ 0
+Text Label 11600 4750 2    50   ~ 0
 Out24
-Text Label 13750 4450 0    50   ~ 0
+Text Label 13750 4600 0    50   ~ 0
 Out26
 Text Label 13750 4300 0    50   ~ 0
 Out28
-Text Label 11600 5350 2    50   ~ 0
+Text Label 11600 4900 2    50   ~ 0
 Out31
 Text Label 11600 5200 2    50   ~ 0
 Out33
-Text Label 11600 5050 2    50   ~ 0
-Out35
-Text Label 11600 4900 2    50   ~ 0
-Out37
 Text Label 13750 5500 0    50   ~ 0
-Out32
-Text Label 13750 5350 0    50   ~ 0
-Out34
+Out35
 Text Label 13750 5200 0    50   ~ 0
+Out37
+Text Label 11600 5050 2    50   ~ 0
+Out32
+Text Label 11600 5350 2    50   ~ 0
+Out34
+Text Label 13750 5350 0    50   ~ 0
 Out36
 Text Label 13750 5050 0    50   ~ 0
 Out38
-Text Label 11600 5950 2    50   ~ 0
+Text Label 11600 5500 2    50   ~ 0
 Out41
 Text Label 11600 5800 2    50   ~ 0
 Out43
-Text Label 11600 5650 2    50   ~ 0
-Out45
-Text Label 11600 5500 2    50   ~ 0
-Out47
-Text Label 13750 5950 0    50   ~ 0
-Out42
-Text Label 13750 5800 0    50   ~ 0
-Out44
-Text Label 13750 5650 0    50   ~ 0
-Out46
 Text Label 11600 3400 2    50   ~ 0
+Out45
+Text Label 13750 5800 0    50   ~ 0
+Out47
+Text Label 11600 5650 2    50   ~ 0
+Out42
+Text Label 11600 5950 2    50   ~ 0
+Out44
+Text Label 13750 5950 0    50   ~ 0
+Out46
+Text Label 13750 5650 0    50   ~ 0
 Out48
 Wire Wire Line
 	11600 3400 11900 3400
@@ -843,8 +753,6 @@ Text Label 4300 3850 0    50   ~ 0
 PC2
 Text Label 4300 3950 0    50   ~ 0
 PC3
-Text Label 9200 2300 0    50   ~ 0
-PC0
 Wire Wire Line
 	15700 2300 15400 2300
 Wire Wire Line
@@ -853,12 +761,6 @@ Wire Wire Line
 	11400 2300 11100 2300
 Wire Wire Line
 	9200 2300 8900 2300
-Text Label 11400 2300 0    50   ~ 0
-PC1
-Text Label 13500 2300 0    50   ~ 0
-PC2
-Text Label 15700 2300 0    50   ~ 0
-PC3
 $Comp
 L elements:кнопка K1
 U 1 1 5D0AA259
@@ -904,9 +806,9 @@ Wire Wire Line
 	1900 6350 2200 6350
 Wire Wire Line
 	1900 6800 2200 6800
-Text Label 2200 6350 0    50   ~ 0
+Text Label 2200 6250 0    50   ~ 0
 PD3
-Text Label 2200 6800 0    50   ~ 0
+Text Label 2200 6700 0    50   ~ 0
 PD4
 Text Notes 2400 6350 0    50   ~ 0
 Режим/Работа
@@ -1079,4 +981,107 @@ Wire Wire Line
 	4000 3150 4300 3150
 Text Label 4300 3150 0    50   ~ 0
 VCC
+Text Label 11600 4300 2    50   ~ 0
+Out21
+Text Label 11600 4600 2    50   ~ 0
+Out23
+Text Label 13750 4750 0    50   ~ 0
+Out25
+Text Label 13750 4450 0    50   ~ 0
+Out27
+Text Label 7700 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 7700 2150 2    50   ~ 0
+PD5
+Text Label 7700 2000 2    50   ~ 0
+PD6
+Text Label 7700 1850 2    50   ~ 0
+PD7
+Text Label 7700 1700 2    50   ~ 0
+PB0
+Text Label 7700 1550 2    50   ~ 0
+PB1
+Text Label 7700 1400 2    50   ~ 0
+PB2
+Text Label 7700 1100 2    50   ~ 0
+PB4_MISO
+Text Label 7700 950  2    50   ~ 0
+PB5_SCK
+Text Label 9900 2300 2    50   ~ 0
+GND
+Text Label 9900 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 9900 2150 2    50   ~ 0
+PD5
+Text Label 9900 2000 2    50   ~ 0
+PD6
+Text Label 9900 1850 2    50   ~ 0
+PD7
+Text Label 9900 1700 2    50   ~ 0
+PB0
+Text Label 9900 1550 2    50   ~ 0
+PB1
+Text Label 9900 1400 2    50   ~ 0
+PB2
+Text Label 9900 1100 2    50   ~ 0
+PB4_MISO
+Text Label 9900 950  2    50   ~ 0
+PB5_SCK
+Text Label 12000 2300 2    50   ~ 0
+GND
+Text Label 12000 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 12000 2150 2    50   ~ 0
+PD5
+Text Label 12000 2000 2    50   ~ 0
+PD6
+Text Label 12000 1850 2    50   ~ 0
+PD7
+Text Label 12000 1700 2    50   ~ 0
+PB0
+Text Label 12000 1550 2    50   ~ 0
+PB1
+Text Label 12000 1400 2    50   ~ 0
+PB2
+Text Label 12000 1100 2    50   ~ 0
+PB4_MISO
+Text Label 12000 950  2    50   ~ 0
+PB5_SCK
+Text Label 14200 2300 2    50   ~ 0
+GND
+Text Label 14200 1250 2    50   ~ 0
+PB3_MOSI
+Text Label 14200 2150 2    50   ~ 0
+PD5
+Text Label 14200 2000 2    50   ~ 0
+PD6
+Text Label 14200 1850 2    50   ~ 0
+PD7
+Text Label 14200 1700 2    50   ~ 0
+PB0
+Text Label 14200 1550 2    50   ~ 0
+PB1
+Text Label 14200 1400 2    50   ~ 0
+PB2
+Text Label 14200 1100 2    50   ~ 0
+PB4_MISO
+Text Label 14200 950  2    50   ~ 0
+PB5_SCK
+Text Label 4550 3650 0    50   ~ 0
+PC0
+Text Label 1650 3650 2    50   ~ 0
+PB6
+Text Label 11400 2300 0    50   ~ 0
+PB6
+Text Label 9200 2300 0    50   ~ 0
+PB7
+Text Label 1650 3750 2    50   ~ 0
+PB7
+Text Label 4550 3750 0    50   ~ 0
+PC1
+NoConn ~ 4000 3550
+Text Label 15700 2300 0    50   ~ 0
+PD3
+Text Label 13500 2300 0    50   ~ 0
+PD4
 $EndSCHEMATC
