@@ -1079,4 +1079,7 @@ PD4
 Text Label 3450 7150 0    50   ~ 0
 PC2
 NoConn ~ 5550 4300
+NoConn ~ 5850 4900
+Text Notes 14650 5900 0    50   ~ 0
+поменять out44 и out45
 $EndSCHEMATC

@@ -121,12 +121,12 @@ RES
 $Comp
 L elements:D-triger_8bit DD2
 U 1 1 5CE49B21
-P 8200 950
-F 0 "DD2" H 8600 1100 50  0000 C CNN
-F 1 "D-triger_74VHC573MTC" H 8450 -550 50  0000 C CNN
-F 2 "N_DD:SSOP-20" H 8200 950 50  0001 C CNN
-F 3 "" H 8200 950 50  0001 C CNN
-	1    8200 950 
+P 8100 950
+F 0 "DD2" H 8500 1100 50  0000 C CNN
+F 1 "D-triger_74VHC573MTC" H 8350 -550 50  0000 C CNN
+F 2 "N_DD:SSOP-20" H 8100 950 50  0001 C CNN
+F 3 "" H 8100 950 50  0001 C CNN
+	1    8100 950 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -158,21 +158,21 @@ Wire Wire Line
 Text Label 2900 4700 2    50   ~ 0
 PB2
 Wire Wire Line
-	8000 1100 7700 1100
+	7900 1100 7600 1100
 Wire Wire Line
-	8000 1250 7700 1250
+	7900 1250 7600 1250
 Wire Wire Line
-	8000 1400 7700 1400
+	7900 1400 7600 1400
 Wire Wire Line
-	8000 1550 7700 1550
+	7900 1550 7600 1550
 Wire Wire Line
-	8000 1700 7700 1700
+	7900 1700 7600 1700
 Wire Wire Line
-	8000 1850 7700 1850
+	7900 1850 7600 1850
 Wire Wire Line
-	8000 2000 7700 2000
+	7900 2000 7600 2000
 Wire Wire Line
-	8000 2150 7700 2150
+	7900 2150 7600 2150
 Wire Wire Line
 	3200 3600 2900 3600
 Text Label 2900 3600 2    50   ~ 0
@@ -190,15 +190,15 @@ VCC
 Text Label 2900 3900 2    50   ~ 0
 VCC
 Wire Wire Line
-	8000 2300 7700 2300
-Text Label 7700 2300 2    50   ~ 0
+	7900 2300 7600 2300
+Text Label 7600 2300 2    50   ~ 0
 GND
 Wire Wire Line
-	9200 950  8900 950 
-Text Label 9200 950  0    50   ~ 0
+	9100 950  8800 950 
+Text Label 9100 950  0    50   ~ 0
 VCC
 Wire Wire Line
-	8000 950  7700 950 
+	7900 950  7600 950 
 Wire Wire Line
 	8900 2900 9200 2900
 Wire Wire Line
@@ -231,38 +231,38 @@ $EndComp
 $Comp
 L elements:D-triger_8bit DD3
 U 1 1 5CE59956
-P 10400 950
-F 0 "DD3" H 10800 1100 50  0000 C CNN
-F 1 "D-triger_74VHC573MTC" H 10650 -550 50  0000 C CNN
-F 2 "N_DD:SSOP-20" H 10400 950 50  0001 C CNN
-F 3 "" H 10400 950 50  0001 C CNN
-	1    10400 950 
+P 10300 950
+F 0 "DD3" H 10700 1100 50  0000 C CNN
+F 1 "D-triger_74VHC573MTC" H 10550 -550 50  0000 C CNN
+F 2 "N_DD:SSOP-20" H 10300 950 50  0001 C CNN
+F 3 "" H 10300 950 50  0001 C CNN
+	1    10300 950 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10200 1100 9900 1100
+	10100 1100 9800 1100
 Wire Wire Line
-	10200 1250 9900 1250
+	10100 1250 9800 1250
 Wire Wire Line
-	10200 1400 9900 1400
+	10100 1400 9800 1400
 Wire Wire Line
-	10200 1550 9900 1550
+	10100 1550 9800 1550
 Wire Wire Line
-	10200 1700 9900 1700
+	10100 1700 9800 1700
 Wire Wire Line
-	10200 1850 9900 1850
+	10100 1850 9800 1850
 Wire Wire Line
-	10200 2000 9900 2000
+	10100 2000 9800 2000
 Wire Wire Line
-	10200 2150 9900 2150
+	10100 2150 9800 2150
 Wire Wire Line
-	10200 2300 9900 2300
+	10100 2300 9800 2300
 Wire Wire Line
-	11400 950  11100 950 
-Text Label 11400 950  0    50   ~ 0
+	11300 950  11000 950 
+Text Label 11300 950  0    50   ~ 0
 VCC
 Wire Wire Line
-	10200 950  9900 950 
+	10100 950  9800 950 
 $Comp
 L elements:D-triger_8bit DD4
 U 1 1 5CE5ACE2
@@ -490,68 +490,68 @@ NoConn ~ 11900 3550
 NoConn ~ 13450 4150
 NoConn ~ 13450 4900
 Wire Wire Line
-	9200 1100 8900 1100
-Text Label 9200 1100 0    50   ~ 0
+	9100 1100 8800 1100
+Text Label 9100 1100 0    50   ~ 0
 Out11
 Wire Wire Line
-	9200 1250 8900 1250
-Text Label 9200 1250 0    50   ~ 0
+	9100 1250 8800 1250
+Text Label 9100 1250 0    50   ~ 0
 Out12
 Wire Wire Line
-	9200 1400 8900 1400
-Text Label 9200 1400 0    50   ~ 0
+	9100 1400 8800 1400
+Text Label 9100 1400 0    50   ~ 0
 Out13
 Wire Wire Line
-	9200 1550 8900 1550
-Text Label 9200 1550 0    50   ~ 0
+	9100 1550 8800 1550
+Text Label 9100 1550 0    50   ~ 0
 Out14
 Wire Wire Line
-	9200 1700 8900 1700
-Text Label 9200 1700 0    50   ~ 0
+	9100 1700 8800 1700
+Text Label 9100 1700 0    50   ~ 0
 Out15
 Wire Wire Line
-	9200 1850 8900 1850
-Text Label 9200 1850 0    50   ~ 0
+	9100 1850 8800 1850
+Text Label 9100 1850 0    50   ~ 0
 Out16
 Wire Wire Line
-	9200 2000 8900 2000
-Text Label 9200 2000 0    50   ~ 0
+	9100 2000 8800 2000
+Text Label 9100 2000 0    50   ~ 0
 Out17
 Wire Wire Line
-	9200 2150 8900 2150
-Text Label 9200 2150 0    50   ~ 0
+	9100 2150 8800 2150
+Text Label 9100 2150 0    50   ~ 0
 Out18
 Wire Wire Line
-	11400 1100 11100 1100
-Text Label 11400 1100 0    50   ~ 0
+	11300 1100 11000 1100
+Text Label 11300 1100 0    50   ~ 0
 Out21
 Wire Wire Line
-	11400 1250 11100 1250
-Text Label 11400 1250 0    50   ~ 0
+	11300 1250 11000 1250
+Text Label 11300 1250 0    50   ~ 0
 Out22
 Wire Wire Line
-	11400 1400 11100 1400
-Text Label 11400 1400 0    50   ~ 0
+	11300 1400 11000 1400
+Text Label 11300 1400 0    50   ~ 0
 Out23
 Wire Wire Line
-	11400 1550 11100 1550
-Text Label 11400 1550 0    50   ~ 0
+	11300 1550 11000 1550
+Text Label 11300 1550 0    50   ~ 0
 Out24
 Wire Wire Line
-	11400 1700 11100 1700
-Text Label 11400 1700 0    50   ~ 0
+	11300 1700 11000 1700
+Text Label 11300 1700 0    50   ~ 0
 Out25
 Wire Wire Line
-	11400 1850 11100 1850
-Text Label 11400 1850 0    50   ~ 0
+	11300 1850 11000 1850
+Text Label 11300 1850 0    50   ~ 0
 Out26
 Wire Wire Line
-	11400 2000 11100 2000
-Text Label 11400 2000 0    50   ~ 0
+	11300 2000 11000 2000
+Text Label 11300 2000 0    50   ~ 0
 Out27
 Wire Wire Line
-	11400 2150 11100 2150
-Text Label 11400 2150 0    50   ~ 0
+	11300 2150 11000 2150
+Text Label 11300 2150 0    50   ~ 0
 Out28
 Wire Wire Line
 	13500 1100 13200 1100
@@ -756,9 +756,9 @@ Wire Wire Line
 Wire Wire Line
 	13500 2300 13200 2300
 Wire Wire Line
-	11400 2300 11100 2300
+	11300 2300 11000 2300
 Wire Wire Line
-	9200 2300 8900 2300
+	9100 2300 8800 2300
 $Comp
 L elements:кнопка K1
 U 1 1 5D0AA259
@@ -981,43 +981,43 @@ Text Label 13750 4750 0    50   ~ 0
 Out25
 Text Label 13750 4450 0    50   ~ 0
 Out27
-Text Label 7700 1250 2    50   ~ 0
+Text Label 7600 1250 2    50   ~ 0
 PB3_MOSI
-Text Label 7700 2150 2    50   ~ 0
+Text Label 7600 2150 2    50   ~ 0
 PD5
-Text Label 7700 2000 2    50   ~ 0
+Text Label 7600 2000 2    50   ~ 0
 PD6
-Text Label 7700 1850 2    50   ~ 0
+Text Label 7600 1850 2    50   ~ 0
 PD7
-Text Label 7700 1700 2    50   ~ 0
+Text Label 7600 1700 2    50   ~ 0
 PB0
-Text Label 7700 1550 2    50   ~ 0
+Text Label 7600 1550 2    50   ~ 0
 PB1
-Text Label 7700 1400 2    50   ~ 0
+Text Label 7600 1400 2    50   ~ 0
 PB2
-Text Label 7700 1100 2    50   ~ 0
+Text Label 7600 1100 2    50   ~ 0
 PB4_MISO
-Text Label 7700 950  2    50   ~ 0
+Text Label 7600 950  2    50   ~ 0
 PB5_SCK
-Text Label 9900 2300 2    50   ~ 0
+Text Label 9800 2300 2    50   ~ 0
 GND
-Text Label 9900 1250 2    50   ~ 0
+Text Label 9800 1250 2    50   ~ 0
 PB3_MOSI
-Text Label 9900 2150 2    50   ~ 0
+Text Label 9800 2150 2    50   ~ 0
 PD5
-Text Label 9900 2000 2    50   ~ 0
+Text Label 9800 2000 2    50   ~ 0
 PD6
-Text Label 9900 1850 2    50   ~ 0
+Text Label 9800 1850 2    50   ~ 0
 PD7
-Text Label 9900 1700 2    50   ~ 0
+Text Label 9800 1700 2    50   ~ 0
 PB0
-Text Label 9900 1550 2    50   ~ 0
+Text Label 9800 1550 2    50   ~ 0
 PB1
-Text Label 9900 1400 2    50   ~ 0
+Text Label 9800 1400 2    50   ~ 0
 PB2
-Text Label 9900 1100 2    50   ~ 0
+Text Label 9800 1100 2    50   ~ 0
 PB4_MISO
-Text Label 9900 950  2    50   ~ 0
+Text Label 9800 950  2    50   ~ 0
 PB5_SCK
 Text Label 12000 2300 2    50   ~ 0
 GND
@@ -1063,9 +1063,9 @@ Text Label 11600 3250 2    50   ~ 0
 PC0
 Text Label 2900 4000 2    50   ~ 0
 PB6
-Text Label 11400 2300 0    50   ~ 0
+Text Label 11300 2300 0    50   ~ 0
 PB6
-Text Label 9200 2300 0    50   ~ 0
+Text Label 9100 2300 0    50   ~ 0
 PB7
 Text Label 2900 4100 2    50   ~ 0
 PB7
@@ -1079,4 +1079,5 @@ PD4
 Text Label 3450 7150 0    50   ~ 0
 PC2
 NoConn ~ 5550 4300
+NoConn ~ 5850 4900
 $EndSCHEMATC
