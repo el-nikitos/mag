@@ -8,5 +8,4 @@ void num_cut(int num)
   byte_seg_3 = round( (num%100)/10 ) ;
   byte_seg_2 = round( (num%1000)/100 ) ;
   byte_seg_1 = round( num/1000 ) ;
-  
 }
