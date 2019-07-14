@@ -1,27 +1,3 @@
-/*
-
-void loop() 
-{
-  if (! baro.begin()) 
-  {
-    Serial.println("Couldnt find sensor");
-    return;
-  }
-
-  float pascals = baro.getPressure();
-  float altm = baro.getAltitude();
-  float tempC = baro.getTemperature();
-  
-  Serial.print(tempC); 
-  Serial.println("*C");
-  
-  //int_hight++;
-  //TWI_start_read_stop(0x60);
-  
-  
-  
-}
-*/
 
 #include <Wire.h>
 #include <Adafruit_MPL3115A2.h>
@@ -65,7 +41,8 @@ void setup() {
 }
 
 void loop() {
-  if (! baro.begin()) {
+  if (! baro.begin()) 
+  {
     Serial.println("Couldnt find sensor");
     return;
   }
@@ -75,7 +52,7 @@ void loop() {
 
   float tempC = baro.getTemperature();
   Serial.println(tempC);
-
+  
   displayed( round(altm) );
   
   digitalWrite(PC0, LOW);
