@@ -365,21 +365,6 @@ $EndComp
 Text Notes 8450 4200 0    50   ~ 0
 Altimetr
 $Comp
-L elements:Клеммник_х2 XТ1
-U 1 1 5CE694BC
-P 8550 6750
-F 0 "XТ1" H 8411 6956 60  0000 C CNN
-F 1 "Клеммник_х2" H 8500 6375 60  0001 C CNN
-F 2 "N_X:батарейный_отсек_CR2032" H 8550 6750 60  0001 C CNN
-F 3 "" H 8550 6750 60  0001 C CNN
-	1    8550 6750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8850 6750 8550 6750
-Text Label 8850 6750 0    50   ~ 0
-GND
-$Comp
 L elements:Конденсатор_керамический C1
 U 1 1 5CE7741B
 P 2750 5800
@@ -723,13 +708,13 @@ Text Label 11600 5500 2    50   ~ 0
 Out41
 Text Label 11600 5800 2    50   ~ 0
 Out43
-Text Label 11600 3400 2    50   ~ 0
+Text Label 11600 5950 2    50   ~ 0
 Out45
 Text Label 13750 5800 0    50   ~ 0
 Out47
 Text Label 11600 5650 2    50   ~ 0
 Out42
-Text Label 11600 5950 2    50   ~ 0
+Text Label 11600 3400 2    50   ~ 0
 Out44
 Text Label 13750 5950 0    50   ~ 0
 Out46
@@ -865,10 +850,6 @@ F 3 "" H 8050 7350 60  0001 C CNN
 $EndComp
 Wire Wire Line
 	9300 5750 9000 5750
-Text Label 8850 6950 0    50   ~ 0
-VCC_bat
-Wire Wire Line
-	8550 6950 8850 6950
 Text Label 8850 7450 0    50   ~ 0
 VCC_bat
 Wire Wire Line
@@ -1079,7 +1060,4 @@ PD4
 Text Label 3450 7150 0    50   ~ 0
 PC2
 NoConn ~ 5550 4300
-NoConn ~ 5850 4900
-Text Notes 14650 5900 0    50   ~ 0
-поменять out44 и out45
 $EndSCHEMATC
