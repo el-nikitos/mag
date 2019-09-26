@@ -1,4 +1,4 @@
-170714563611412
+172284076450412
 N_A
 Arduino_Ethernet_shield
 
@@ -97,6 +97,13 @@ BME680
 0
 8
 8
+N_DD
+BMP180
+
+
+0
+7
+7
 N_DD
 DIP8
 
