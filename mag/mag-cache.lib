@@ -319,6 +319,30 @@ X Vin 5 -200 0 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
+# elements_Память_eeprom_AT24C512C
+#
+DEF elements_Память_eeprom_AT24C512C DD 0 40 Y Y 1 F N
+F0 "DD" 700 100 50 H V C CNN
+F1 "elements_Память_eeprom_AT24C512C" 450 -425 50 H V C CNN
+F2 "N_DD:SO-8" -100 0 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+DRAW
+T 0 450 -100 50 0 0 0 EEPROM Normal 0 C C
+T 0 450 0 50 0 0 0 I2C Normal 0 C C
+S 300 -350 0 50 0 1 0 N
+S 600 -350 300 50 0 1 0 N
+S 900 -350 600 50 0 1 0 N
+X A0 1 -100 0 100 R 50 50 1 1 I
+X A1 2 -100 -100 100 R 50 50 1 1 I
+X A2 3 -100 -200 100 R 50 50 1 1 I
+X GND 4 -100 -300 100 R 50 50 1 1 I
+X SDA 5 1000 -300 100 L 50 50 1 1 I
+X SCL 6 1000 -200 100 L 50 50 1 1 I
+X WrProt 7 1000 -100 100 L 50 50 1 1 I
+X VCC 8 1000 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # elements_Предохранитель
 #
 DEF elements_Предохранитель FU 0 40 Y Y 1 F N
@@ -1138,7 +1162,7 @@ ENDDEF
 DEF elements_Резистор_0,065Вт R 0 40 Y Y 1 F N
 F0 "R" -25 150 60 H V C CNN
 F1 "elements_Резистор_0,065Вт" 0 -150 60 H I C CNN
-F2 "" 0 0 60 H I C CNN
+F2 "N_RLC:Резистор_SMD_0603_0,065_Вт" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "R101" 0 0 50 H I C CNN "УГО"
 F5 "100 Ом" 0 0 50 H V C CNN "Номинал"
@@ -1157,7 +1181,7 @@ ENDDEF
 DEF elements_Резистор_0,25Вт R 0 40 Y Y 1 F N
 F0 "R" -25 150 60 H V C CNN
 F1 "elements_Резистор_0,25Вт" 0 -150 60 H I C CNN
-F2 "" 0 0 60 H I C CNN
+F2 "N_RLC:Резистор_SMD_1206-0,25_Вт" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "100 Ом" 0 0 50 H V C CNN "Номинал"
 F5 "R101" 0 0 50 H I C CNN "УГО"

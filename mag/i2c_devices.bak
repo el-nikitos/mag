@@ -197,4 +197,85 @@ F 5 "С111" H 9500 2800 50  0001 C CNN "УГО"
 	1    9500 2800
 	0    1    1    0   
 $EndComp
+$Comp
+L elements:Память_eeprom_AT24C512C DD7
+U 1 1 5D8F9F5D
+P 7600 4000
+F 0 "DD7" H 8300 4100 50  0000 C CNN
+F 1 "Память_eeprom_AT24C512C" H 8050 3600 50  0000 C CNN
+F 2 "N_DD:SO-8" H 7500 4000 50  0001 C CNN
+F 3 "" H 7500 4000 50  0001 C CNN
+	1    7600 4000
+	1    0    0    -1  
+$EndComp
+Text Notes 7650 4650 0    50   ~ 0
+Память EEPROM\nadres:  0x50 (1010 000b)
+Text Label 8750 4300 0    50   ~ 0
+SCL
+Text Label 8750 4200 0    50   ~ 0
+SDA
+Wire Wire Line
+	8750 4200 8600 4200
+Wire Wire Line
+	8600 4300 8750 4300
+Wire Wire Line
+	8750 4000 8600 4000
+Text Label 8750 4100 0    50   ~ 0
+gnd
+Wire Wire Line
+	7500 4000 7250 4000
+Wire Wire Line
+	7500 4100 7250 4100
+Wire Wire Line
+	7500 4200 7250 4200
+Text Label 7000 4300 2    50   ~ 0
+gnd
+Wire Wire Line
+	7000 4300 7250 4300
+Wire Wire Line
+	8750 4100 8600 4100
+Wire Wire Line
+	7250 4300 7250 4200
+Connection ~ 7250 4300
+Wire Wire Line
+	7250 4300 7500 4300
+Connection ~ 7250 4100
+Wire Wire Line
+	7250 4100 7250 4000
+Connection ~ 7250 4200
+Wire Wire Line
+	7250 4200 7250 4100
+Text Label 9500 4000 2    50   ~ 0
+vcc
+Wire Wire Line
+	9500 4000 9500 4250
+Wire Wire Line
+	9500 4400 9500 4650
+Text Label 9500 4650 0    50   ~ 0
+gnd
+$Comp
+L elements:Конденсатор_керамический C?
+U 1 1 5D903FED
+P 9500 4300
+AR Path="/5D903FED" Ref="C?"  Part="1" 
+AR Path="/5D924959/5D903FED" Ref="C?"  Part="1" 
+AR Path="/5DB88CD1/5D903FED" Ref="C?"  Part="1" 
+AR Path="/5DCA4D45/5D903FED" Ref="C15"  Part="1" 
+F 0 "C15" V 9472 4388 60  0000 L CNN
+F 1 "Конденсатор_керамический" V 9578 4388 60  0001 L CNN
+F 2 "N_RLC:Конденсатор_SMD_0603" H 9500 4300 60  0001 C CNN
+F 3 "" H 9500 4300 60  0001 C CNN
+F 4 "1 мкФ/10 В" V 9600 4600 50  0000 C CNN "Номинал"
+F 5 "С111" H 9500 4300 50  0001 C CNN "УГО"
+	1    9500 4300
+	0    1    1    0   
+$EndComp
+Text HLabel 2000 3500 0    50   Input ~ 0
+VCCbat
+Wire Wire Line
+	2000 3500 2250 3500
+Text Label 2250 3500 0    50   ~ 0
+VCCbat
+Text Label 8750 4000 0    50   ~ 0
+VCCbat
 $EndSCHEMATC
