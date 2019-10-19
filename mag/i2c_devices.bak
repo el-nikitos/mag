@@ -245,8 +245,6 @@ Wire Wire Line
 Connection ~ 7250 4200
 Wire Wire Line
 	7250 4200 7250 4100
-Text Label 9500 4000 2    50   ~ 0
-vcc
 Wire Wire Line
 	9500 4000 9500 4250
 Wire Wire Line
@@ -277,5 +275,7 @@ Wire Wire Line
 Text Label 2250 3500 0    50   ~ 0
 VCCbat
 Text Label 8750 4000 0    50   ~ 0
+VCCbat
+Text Label 9500 4000 0    50   ~ 0
 VCCbat
 $EndSCHEMATC

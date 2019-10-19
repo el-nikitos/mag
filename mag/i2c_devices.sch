@@ -210,9 +210,9 @@ F 3 "" H 7500 4000 50  0001 C CNN
 $EndComp
 Text Notes 7650 4650 0    50   ~ 0
 Память EEPROM\nadres:  0x50 (1010 000b)
-Text Label 8750 4300 0    50   ~ 0
-SCL
 Text Label 8750 4200 0    50   ~ 0
+SCL
+Text Label 8750 4300 0    50   ~ 0
 SDA
 Wire Wire Line
 	8750 4200 8600 4200
