@@ -1292,4 +1292,6 @@ Text Label 10750 1750 0    50   ~ 0
 VCC_bat
 Wire Wire Line
 	10500 1750 10750 1750
+Text Notes 7700 8200 0    50   ~ 0
+убрать ключ напротив MOSI
 $EndSCHEMATC

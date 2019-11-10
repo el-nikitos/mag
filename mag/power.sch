@@ -576,4 +576,6 @@ Wire Wire Line
 Wire Wire Line
 	4500 3750 5000 3750
 Connection ~ 5000 3750
+Text Notes 500  3800 0    50   ~ 0
+замена предохранителя на пред. с меньшим сопротивлением
 $EndSCHEMATC
