@@ -1000,7 +1000,7 @@ AREF
 Wire Wire Line
 	4550 9900 4550 10000
 $Comp
-L elements:Клеммник_х2 X1
+L mag-rescue:Клеммник_х2-elements X1
 U 1 1 5DB281F4
 P 2500 2750
 F 0 "X1" H 2300 2950 60  0000 C CNN
