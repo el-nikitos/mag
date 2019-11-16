@@ -33,7 +33,11 @@ void loop() {
   
   if (receiv == '2')
   {
-    Serial.println("MC_Receiv test is OK");
+    Serial.println("MC_Receiv is OK");
   }
- 
+
+ if (receiv == '3')
+  {
+    Serial.write(ADCH);
+  }
 }
