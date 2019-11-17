@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# elements_ATmega8A-AU
+# mag-rescue_ATmega8A-AU-elements
 #
-DEF elements_ATmega8A-AU DD 0 40 Y Y 1 F N
+DEF mag-rescue_ATmega8A-AU-elements DD 0 40 Y Y 1 F N
 F0 "DD" 1850 150 50 H V C CNN
-F1 "elements_ATmega8A-AU" 950 -1600 50 H V C CNN
+F1 "mag-rescue_ATmega8A-AU-elements" 950 -1600 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -45,11 +45,11 @@ X PD5(T1) 9 -100 -800 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_D-triger_8bit
+# mag-rescue_D-triger_8bit-elements
 #
-DEF elements_D-triger_8bit DD 0 40 Y Y 1 F N
+DEF mag-rescue_D-triger_8bit-elements DD 0 40 Y Y 1 F N
 F0 "DD" 400 150 50 H V C CNN
-F1 "elements_D-triger_8bit" 250 -1500 50 H V C CNN
+F1 "mag-rescue_D-triger_8bit-elements" 250 -1500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -77,11 +77,11 @@ X D7 9 -200 -1200 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_LIS3DH
+# mag-rescue_LIS3DH-elements
 #
-DEF elements_LIS3DH DD 0 40 Y Y 1 F N
+DEF mag-rescue_LIS3DH-elements DD 0 40 Y Y 1 F N
 F0 "DD" 800 200 50 H V C CNN
-F1 "elements_LIS3DH" 600 -750 50 H V C CNN
+F1 "mag-rescue_LIS3DH-elements" 600 -750 50 H V C CNN
 F2 "N_DD:акселерометр_LIS3DH" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -105,11 +105,11 @@ X INT2 9 1100 0 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_display_EDS803_EDS805
+# mag-rescue_display_EDS803_EDS805-elements
 #
-DEF elements_display_EDS803_EDS805 VD 0 40 Y Y 1 F N
+DEF mag-rescue_display_EDS803_EDS805-elements VD 0 40 Y Y 1 F N
 F0 "VD" 1150 200 50 H V C CNN
-F1 "elements_display_EDS803_EDS805" 700 -3050 50 H V C CNN
+F1 "mag-rescue_display_EDS803_EDS805-elements" 700 -3050 50 H V C CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 DRAW
@@ -187,11 +187,11 @@ X 2E 9 -100 -1200 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Вилка_PLD6_ПРОГ
+# mag-rescue_Вилка_PLD6_ПРОГ-elements
 #
-DEF elements_Вилка_PLD6_ПРОГ XP 0 40 Y Y 1 F N
+DEF mag-rescue_Вилка_PLD6_ПРОГ-elements XP 0 40 Y Y 1 F N
 F0 "XP" 0 350 60 H V C CNN
-F1 "elements_Вилка_PLD6_ПРОГ" 0 -350 60 H V C CNN
+F1 "mag-rescue_Вилка_PLD6_ПРОГ-elements" 0 -350 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -208,11 +208,11 @@ X GND 6 450 -150 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Вилка_PLS4
+# mag-rescue_Вилка_PLS4-elements
 #
-DEF elements_Вилка_PLS4 XP 0 40 Y Y 1 F N
+DEF mag-rescue_Вилка_PLS4-elements XP 0 40 Y Y 1 F N
 F0 "XP" 100 100 60 H V C CNN
-F1 "elements_Вилка_PLS4" 200 -575 60 H I C CNN
+F1 "mag-rescue_Вилка_PLS4-elements" 200 -575 60 H I C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -227,11 +227,11 @@ X 4 4 500 -400 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Датчик_bmp180
+# mag-rescue_Датчик_bmp180-elements
 #
-DEF elements_Датчик_bmp180 DD 0 40 Y Y 1 F N
+DEF mag-rescue_Датчик_bmp180-elements DD 0 40 Y Y 1 F N
 F0 "DD" 200 150 50 H V C CNN
-F1 "elements_Датчик_bmp180" 600 -600 50 H V C CNN
+F1 "mag-rescue_Датчик_bmp180-elements" 600 -600 50 H V C CNN
 F2 "N_DD:BMP180" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -247,11 +247,11 @@ X GND 7 1100 0 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Диод_шоттки
+# mag-rescue_Диод_шоттки-elements
 #
-DEF elements_Диод_шоттки VD 0 40 Y Y 1 F N
+DEF mag-rescue_Диод_шоттки-elements VD 0 40 Y Y 1 F N
 F0 "VD" 175 125 50 H V C CNN
-F1 "elements_Диод_шоттки" 175 -125 50 H V C CNN
+F1 "mag-rescue_Диод_шоттки-elements" 175 -125 50 H V C CNN
 F2 "" -100 0 50 H I C CNN
 F3 "" -100 0 50 H I C CNN
 DRAW
@@ -266,11 +266,30 @@ X ~ 2 300 0 50 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# elements_Конденсатор_керамический
+# mag-rescue_Клеммник_х2-elements
 #
-DEF elements_Конденсатор_керамический C 0 40 Y Y 1 F N
+DEF mag-rescue_Клеммник_х2-elements XТ 0 40 Y Y 1 F N
+F0 "XТ" -125 200 60 H V C CNN
+F1 "mag-rescue_Клеммник_х2-elements" -50 -375 60 H I C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+C -225 -200 25 0 1 0 N
+C -225 0 25 0 1 0 N
+P 2 0 1 0 -225 -225 -225 -325 N
+P 2 0 1 0 -225 -175 -225 -125 N
+P 2 0 1 0 -225 -25 -225 -75 N
+P 2 0 1 0 -225 25 -225 125 N
+X 1 1 0 0 200 L 50 50 1 1 I
+X 2 2 0 -200 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# mag-rescue_Конденсатор_керамический-elements
+#
+DEF mag-rescue_Конденсатор_керамический-elements C 0 40 Y Y 1 F N
 F0 "C" 0 150 60 H V C CNN
-F1 "elements_Конденсатор_керамический" 100 -100 60 H I C CNN
+F1 "mag-rescue_Конденсатор_керамический-elements" 100 -100 60 H I C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "10 мкФ/6,3 В" 0 0 50 H V C CNN "Номинал"
@@ -283,11 +302,11 @@ X ~ 2 100 0 50 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Микросхема_DCDC_step_UP_LM2703
+# mag-rescue_Микросхема_DCDC_step_UP_LM2703-elements
 #
-DEF elements_Микросхема_DCDC_step_UP_LM2703 DD 0 40 Y Y 1 F N
+DEF mag-rescue_Микросхема_DCDC_step_UP_LM2703-elements DD 0 40 Y Y 1 F N
 F0 "DD" 450 150 50 H V C CNN
-F1 "elements_Микросхема_DCDC_step_UP_LM2703" 350 -450 50 H V C CNN
+F1 "mag-rescue_Микросхема_DCDC_step_UP_LM2703-elements" 350 -450 50 H V C CNN
 F2 "N_G:Преобразователь_LM2703_SOT-23-5" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -300,11 +319,11 @@ X Vin 5 -200 0 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Память_eeprom_AT24C512C
+# mag-rescue_Память_eeprom_AT24C512C-elements
 #
-DEF elements_Память_eeprom_AT24C512C DD 0 40 Y Y 1 F N
+DEF mag-rescue_Память_eeprom_AT24C512C-elements DD 0 40 Y Y 1 F N
 F0 "DD" 700 100 50 H V C CNN
-F1 "elements_Память_eeprom_AT24C512C" 450 -425 50 H V C CNN
+F1 "mag-rescue_Память_eeprom_AT24C512C-elements" 450 -425 50 H V C CNN
 F2 "N_DD:SO-8" -100 0 50 H I C CNN
 F3 "" -100 0 50 H I C CNN
 DRAW
@@ -324,11 +343,11 @@ X VCC 8 1000 0 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Предохранитель
+# mag-rescue_Предохранитель-elements
 #
-DEF elements_Предохранитель FU 0 40 Y Y 1 F N
+DEF mag-rescue_Предохранитель-elements FU 0 40 Y Y 1 F N
 F0 "FU" -25 150 60 H V C CNN
-F1 "elements_Предохранитель" 0 -150 60 H V C CNN
+F1 "mag-rescue_Предохранитель-elements" 0 -150 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -339,11 +358,11 @@ X ~ 2 400 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Преобразователь_CP2102(USB-UART)
+# mag-rescue_Преобразователь_CP2102(USB-UART)-elements
 #
-DEF elements_Преобразователь_CP2102(USB-UART) DD 0 40 Y Y 28 F N
+DEF mag-rescue_Преобразователь_CP2102(USB-UART)-elements DD 0 40 Y Y 28 F N
 F0 "DD" 1475 200 50 H V C CNN
-F1 "elements_Преобразователь_CP2102(USB-UART)" 900 -2625 50 H V C CNN
+F1 "mag-rescue_Преобразователь_CP2102(USB-UART)-elements" 900 -2625 50 H V C CNN
 F2 "N_DD:Микросхема_CP2102" 200 0 50 H I C CNN
 F3 "" 200 0 50 H I C CNN
 DRAW
@@ -1138,11 +1157,11 @@ X ~SUSPEND ~-U\ 1800 -300 200 L 50 50 28 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Резистор_0,065Вт
+# mag-rescue_Резистор_0,065Вт-elements
 #
-DEF elements_Резистор_0,065Вт R 0 40 Y Y 1 F N
+DEF mag-rescue_Резистор_0,065Вт-elements R 0 40 Y Y 1 F N
 F0 "R" -25 150 60 H V C CNN
-F1 "elements_Резистор_0,065Вт" 0 -150 60 H I C CNN
+F1 "mag-rescue_Резистор_0,065Вт-elements" 0 -150 60 H I C CNN
 F2 "N_RLC:Резистор_SMD_0603_0,065_Вт" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "R101" 0 0 50 H I C CNN "УГО"
@@ -1157,11 +1176,11 @@ X ~ 2 300 0 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Резистор_0,25Вт
+# mag-rescue_Резистор_0,25Вт-elements
 #
-DEF elements_Резистор_0,25Вт R 0 40 Y Y 1 F N
+DEF mag-rescue_Резистор_0,25Вт-elements R 0 40 Y Y 1 F N
 F0 "R" -25 150 60 H V C CNN
-F1 "elements_Резистор_0,25Вт" 0 -150 60 H I C CNN
+F1 "mag-rescue_Резистор_0,25Вт-elements" 0 -150 60 H I C CNN
 F2 "N_RLC:Резистор_SMD_1206-0,25_Вт" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "100 Ом" 0 0 50 H V C CNN "Номинал"
@@ -1174,11 +1193,11 @@ X ~ 2 300 0 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Розетка_PBS4
+# mag-rescue_Розетка_PBS4-elements
 #
-DEF elements_Розетка_PBS4 XS 0 40 Y Y 1 F N
+DEF mag-rescue_Розетка_PBS4-elements XS 0 40 Y Y 1 F N
 F0 "XS" 100 100 60 H V C CNN
-F1 "elements_Розетка_PBS4" 175 -575 60 H I C CNN
+F1 "mag-rescue_Розетка_PBS4-elements" 175 -575 60 H I C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -1193,11 +1212,11 @@ X 4 4 500 -400 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Транзистор_полевой_P-канал(IRLML2246TRPBF)
+# mag-rescue_Транзистор_полевой_P-канал(IRLML2246TRPBF)-elements
 #
-DEF elements_Транзистор_полевой_P-канал(IRLML2246TRPBF) VT 0 40 Y Y 1 F N
+DEF mag-rescue_Транзистор_полевой_P-канал(IRLML2246TRPBF)-elements VT 0 40 Y Y 1 F N
 F0 "VT" 125 500 60 H V C CNN
-F1 "elements_Транзистор_полевой_P-канал(IRLML2246TRPBF)" 100 -200 60 H V C CNN
+F1 "mag-rescue_Транзистор_полевой_P-канал(IRLML2246TRPBF)-elements" 100 -200 60 H V C CNN
 F2 "N_VD_HL:Транзистор_IRLML6344TR_SOT-23" 200 650 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -1223,11 +1242,11 @@ X ~ 3 550 300 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_Чип-индуктивность
+# mag-rescue_Чип-индуктивность-elements
 #
-DEF elements_Чип-индуктивность L 0 40 Y Y 1 F N
+DEF mag-rescue_Чип-индуктивность-elements L 0 40 Y Y 1 F N
 F0 "L" -200 150 60 H V C CNN
-F1 "elements_Чип-индуктивность" -200 -100 60 H I C CNN
+F1 "mag-rescue_Чип-индуктивность-elements" -200 -100 60 H I C CNN
 F2 "N_RLC:Чип-индуктивность_SMD_0805" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "10 мкГн" 0 0 50 H V C CNN "Номинал"
@@ -1242,11 +1261,11 @@ X ~ 2 50 0 50 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_кнопка
+# mag-rescue_кнопка-elements
 #
-DEF elements_кнопка K 0 40 Y Y 1 F N
+DEF mag-rescue_кнопка-elements K 0 40 Y Y 1 F N
 F0 "K" 40 140 60 H V C CNN
-F1 "elements_кнопка" 25 -150 60 H V C CNN
+F1 "mag-rescue_кнопка-elements" 25 -150 60 H V C CNN
 F2 "" -125 50 60 H I C CNN
 F3 "" -125 50 60 H I C CNN
 DRAW
@@ -1266,11 +1285,11 @@ X ~ 2 -350 0 50 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_стабилизатор_нерегулируемый_XC6206P302MR
+# mag-rescue_стабилизатор_нерегулируемый_XC6206P302MR-elements
 #
-DEF elements_стабилизатор_нерегулируемый_XC6206P302MR G 0 40 Y Y 1 F N
+DEF mag-rescue_стабилизатор_нерегулируемый_XC6206P302MR-elements G 0 40 Y Y 1 F N
 F0 "G" 600 150 50 H V C CNN
-F1 "elements_стабилизатор_нерегулируемый_XC6206P302MR" 1000 -350 50 H V C CNN
+F1 "mag-rescue_стабилизатор_нерегулируемый_XC6206P302MR-elements" 1000 -350 50 H V C CNN
 F2 "N_VD_HL:Транзистор_IRLML6344TR_SOT-23" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -1278,25 +1297,6 @@ S 700 -250 0 100 0 1 0 N
 X GND 1 350 -300 50 U 50 50 1 1 P
 X 3В 2 750 0 50 L 50 50 1 1 O
 X 3,2...6_В 3 -50 0 50 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# mag-rescue_Клеммник_х2-elements
-#
-DEF mag-rescue_Клеммник_х2-elements XТ 0 40 Y Y 1 F N
-F0 "XТ" -125 200 60 H V C CNN
-F1 "mag-rescue_Клеммник_х2-elements" -50 -375 60 H I C CNN
-F2 "" 0 0 60 H I C CNN
-F3 "" 0 0 60 H I C CNN
-DRAW
-C -225 -200 25 0 1 0 N
-C -225 0 25 0 1 0 N
-P 2 0 1 0 -225 -225 -225 -325 N
-P 2 0 1 0 -225 -175 -225 -125 N
-P 2 0 1 0 -225 -25 -225 -75 N
-P 2 0 1 0 -225 25 -225 125 N
-X 1 1 0 0 200 L 50 50 1 1 I
-X 2 2 0 -200 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #

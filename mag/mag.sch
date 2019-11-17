@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:mag-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L elements:ATmega8A-AU DD1
+L mag-rescue:ATmega8A-AU-elements DD1
 U 1 1 5CE45047
 P 2400 6500
 F 0 "DD1" H 4000 6700 50  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 2400 6500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R2
+L mag-rescue:Резистор_0,065Вт-elements R2
 U 1 1 5CE45133
 P 2950 5150
 F 0 "R2" V 2897 5253 60  0000 L CNN
@@ -39,7 +39,7 @@ F 5 "R101" H 2950 5150 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R1
+L mag-rescue:Резистор_0,065Вт-elements R1
 U 1 1 5CE451D9
 P 2250 5150
 F 0 "R1" V 2197 5253 60  0000 L CNN
@@ -60,7 +60,7 @@ SDA
 Text Label 4650 7600 0    50   ~ 0
 SCL
 $Comp
-L elements:Вилка_PLD6_ПРОГ XP3
+L mag-rescue:Вилка_PLD6_ПРОГ-elements XP3
 U 1 1 5CE4524F
 P 7750 7650
 F 0 "XP3" H 7850 8000 60  0000 C CNN
@@ -117,7 +117,7 @@ Wire Wire Line
 Text Label 3600 5650 0    50   ~ 0
 RES
 $Comp
-L elements:D-triger_8bit DD2
+L mag-rescue:D-triger_8bit-elements DD2
 U 1 1 5CE49B21
 P 7400 4500
 F 0 "DD2" H 7800 4650 50  0000 C CNN
@@ -202,7 +202,7 @@ Wire Wire Line
 Wire Wire Line
 	12500 1800 12200 1800
 $Comp
-L elements:Розетка_PBS4 HL2
+L mag-rescue:Розетка_PBS4-elements HL2
 U 1 1 5CE597ED
 P 11700 1400
 F 0 "HL2" H 11956 1481 60  0000 C CNN
@@ -213,7 +213,7 @@ F 3 "" H 11700 1400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:D-triger_8bit DD3
+L mag-rescue:D-triger_8bit-elements DD3
 U 1 1 5CE59956
 P 9600 4500
 F 0 "DD3" H 10000 4650 50  0000 C CNN
@@ -246,7 +246,7 @@ Wire Wire Line
 Wire Wire Line
 	9400 4500 9100 4500
 $Comp
-L elements:D-triger_8bit DD4
+L mag-rescue:D-triger_8bit-elements DD4
 U 1 1 5CE5ACE2
 P 11800 4500
 F 0 "DD4" H 12200 4650 50  0000 C CNN
@@ -279,7 +279,7 @@ Wire Wire Line
 Wire Wire Line
 	11600 4500 11300 4500
 $Comp
-L elements:D-triger_8bit DD5
+L mag-rescue:D-triger_8bit-elements DD5
 U 1 1 5CE5ACFE
 P 14000 4500
 F 0 "DD5" H 14400 4650 50  0000 C CNN
@@ -314,7 +314,7 @@ Wire Wire Line
 Text Notes 11750 2000 0    50   ~ 0
 Display
 $Comp
-L elements:display_EDS803_EDS805 HL1
+L mag-rescue:display_EDS803_EDS805-elements HL1
 U 1 1 5CEAE07F
 P 13750 1000
 F 0 "HL1" H 14800 1150 50  0000 L CNN
@@ -602,7 +602,7 @@ Wire Wire Line
 Wire Wire Line
 	8400 5850 8100 5850
 $Comp
-L elements:кнопка K1
+L mag-rescue:кнопка-elements K1
 U 1 1 5D0AA259
 P 2050 8800
 F 0 "K1" H 1900 9000 60  0000 C CNN
@@ -613,7 +613,7 @@ F 3 "" H 1925 8850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:кнопка K2
+L mag-rescue:кнопка-elements K2
 U 1 1 5D0ADEEF
 P 2050 9250
 F 0 "K2" H 1900 9450 60  0000 C CNN
@@ -653,7 +653,7 @@ AREF
 Wire Wire Line
 	4650 6800 4350 6800
 $Comp
-L elements:Резистор_0,065Вт R3
+L mag-rescue:Резистор_0,065Вт-elements R3
 U 1 1 5D14357F
 P 3600 5150
 F 0 "R3" V 3547 5253 60  0000 L CNN
@@ -679,7 +679,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 7900 4650 7900
 $Comp
-L elements:Резистор_0,065Вт R4
+L mag-rescue:Резистор_0,065Вт-elements R4
 U 1 1 5D2DD9FC
 P 4400 4700
 F 0 "R4" V 4347 4803 60  0000 L CNN
@@ -692,7 +692,7 @@ F 5 "R101" H 4400 4700 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R5
+L mag-rescue:Резистор_0,065Вт-elements R5
 U 1 1 5D2E0229
 P 4400 5400
 F 0 "R5" V 4347 5503 60  0000 L CNN
@@ -847,7 +847,7 @@ F12 "USB_pwr_out" I R 5000 1750 50
 F13 "pwr_on_off" I R 5000 2750 50 
 $EndSheet
 $Comp
-L elements:Вилка_PLS4 XP4
+L mag-rescue:Вилка_PLS4-elements XP4
 U 1 1 5D953B57
 P 2000 1650
 F 0 "XP4" H 2258 1731 60  0000 C CNN
@@ -878,7 +878,7 @@ Wire Wire Line
 Wire Wire Line
 	2500 1750 3000 1750
 $Comp
-L elements:Конденсатор_керамический C1
+L mag-rescue:Конденсатор_керамический-elements C1
 U 1 1 5DA4B9C4
 P 1500 10150
 AR Path="/5DA4B9C4" Ref="C1"  Part="1" 
@@ -893,7 +893,7 @@ F 5 "С111" H 1500 10150 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Конденсатор_керамический C2
+L mag-rescue:Конденсатор_керамический-elements C2
 U 1 1 5DA4B9CC
 P 2250 10150
 AR Path="/5DA4B9CC" Ref="C2"  Part="1" 
@@ -908,7 +908,7 @@ F 5 "С111" H 2250 10150 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Конденсатор_керамический C3
+L mag-rescue:Конденсатор_керамический-elements C3
 U 1 1 5DA4B9D4
 P 3000 10150
 AR Path="/5DA4B9D4" Ref="C3"  Part="1" 
@@ -923,7 +923,7 @@ F 5 "С111" H 3000 10150 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Конденсатор_керамический C4
+L mag-rescue:Конденсатор_керамический-elements C4
 U 1 1 5DA4B9DC
 P 3750 10150
 AR Path="/5DA4B9DC" Ref="C4"  Part="1" 
@@ -976,7 +976,7 @@ Wire Wire Line
 	3750 10350 3750 10250
 Connection ~ 3000 10350
 $Comp
-L elements:Конденсатор_керамический C5
+L mag-rescue:Конденсатор_керамический-elements C5
 U 1 1 5DA4B9FC
 P 4550 10150
 AR Path="/5DA4B9FC" Ref="C5"  Part="1" 
@@ -1098,7 +1098,7 @@ SDA
 Text Label 9250 2250 2    50   ~ 0
 SCL
 $Comp
-L elements:Резистор_0,065Вт R16
+L mag-rescue:Резистор_0,065Вт-elements R16
 U 1 1 5D9E1F2D
 P 1750 5150
 F 0 "R16" V 1697 5253 60  0000 L CNN
@@ -1111,7 +1111,7 @@ F 5 "R101" H 1750 5150 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R15
+L mag-rescue:Резистор_0,065Вт-elements R15
 U 1 1 5D9E20AE
 P 1250 5150
 F 0 "R15" V 1197 5253 60  0000 L CNN
@@ -1148,7 +1148,7 @@ VCC_bat
 Text Label 3250 4650 0    50   ~ 0
 VCC_bat
 $Comp
-L elements:Резистор_0,065Вт R17
+L mag-rescue:Резистор_0,065Вт-elements R17
 U 1 1 5DA74EF5
 P 5350 10000
 AR Path="/5DA74EF5" Ref="R17"  Part="1" 
@@ -1185,7 +1185,7 @@ Text Label 15000 4500 0    50   ~ 0
 5V
 NoConn ~ 8200 7500
 $Comp
-L elements:Резистор_0,065Вт R20
+L mag-rescue:Резистор_0,065Вт-elements R20
 U 1 1 5DBE5539
 P 9050 7650
 AR Path="/5DBE5539" Ref="R20"  Part="1" 
@@ -1204,7 +1204,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 7650 8750 7650
 $Comp
-L elements:Резистор_0,065Вт R19
+L mag-rescue:Резистор_0,065Вт-elements R19
 U 1 1 5DC136FC
 P 6450 7650
 AR Path="/5DC136FC" Ref="R19"  Part="1" 
@@ -1219,7 +1219,7 @@ F 5 "R203" H 6450 7650 50  0001 C CNN "УГО"
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R18
+L mag-rescue:Резистор_0,065Вт-elements R18
 U 1 1 5DC14E63
 P 6450 7250
 AR Path="/5DC14E63" Ref="R18"  Part="1" 
@@ -1294,4 +1294,6 @@ Wire Wire Line
 	10500 1750 10750 1750
 Text Notes 7700 8200 0    50   ~ 0
 убрать ключ напротив MOSI
+Text Notes 5350 10300 0    50   ~ 0
+замена на 100 Ом
 $EndSCHEMATC

@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:mag-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -27,7 +27,7 @@ RX(MISO)
 Text HLabel 7500 3550 2    50   Input ~ 0
 TX(MOSI)
 $Comp
-L elements:Преобразователь_CP2102(USB-UART) DD8
+L mag-rescue:Преобразователь_CP2102(USB-UART)-elements DD8
 U 1 1 5DC1E646
 P 4500 2500
 F 0 "DD8" H 5900 2700 50  0000 C CNN
@@ -38,7 +38,7 @@ F 3 "" H 4700 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5DC54381
 P 7200 3000
 AR Path="/5DC54381" Ref="R?"  Part="1" 
@@ -54,7 +54,7 @@ F 5 "R203" H 7200 3000 50  0001 C CNN "УГО"
 	-1   0    0    1   
 $EndComp
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DC6BAE6
 P 3250 2700
 AR Path="/5DC6BAE6" Ref="C?"  Part="1" 
@@ -75,7 +75,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 2650 3250 2500
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DC6D54C
 P 3250 3300
 AR Path="/5DC6D54C" Ref="C?"  Part="1" 
@@ -129,7 +129,7 @@ Wire Wire Line
 Text Label 7750 3000 0    50   ~ 0
 gnd
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5DC794DF
 P 7200 2500
 AR Path="/5DC794DF" Ref="R?"  Part="1" 

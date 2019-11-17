@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:mag-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -23,7 +23,7 @@ I2C_SDA
 Text HLabel 2000 3000 0    50   Input ~ 0
 I2C_SCL
 $Comp
-L elements:LIS3DH DD?
+L mag-rescue:LIS3DH-elements DD?
 U 1 1 5DCBE002
 P 3500 2500
 AR Path="/5DCBE002" Ref="DD?"  Part="1" 
@@ -72,7 +72,7 @@ Wire Wire Line
 Text Label 3250 3200 2    50   ~ 0
 vcc
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DCF31B7
 P 6000 2800
 AR Path="/5DCF31B7" Ref="C?"  Part="1" 
@@ -117,7 +117,7 @@ gnd
 Wire Wire Line
 	4600 2600 4850 2600
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5DD39505
 P 5150 2600
 AR Path="/5DD39505" Ref="R?"  Part="1" 
@@ -138,7 +138,7 @@ Wire Wire Line
 Text Label 4850 3000 0    50   ~ 0
 vcc
 $Comp
-L elements:Датчик_bmp180 DD9
+L mag-rescue:Датчик_bmp180-elements DD9
 U 1 1 5D8E78D8
 P 7500 2500
 F 0 "DD9" H 8350 2650 50  0000 C CNN
@@ -181,7 +181,7 @@ Wire Wire Line
 Text Label 9500 3150 0    50   ~ 0
 gnd
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5D8ED9F7
 P 9500 2800
 AR Path="/5D8ED9F7" Ref="C?"  Part="1" 
@@ -198,7 +198,7 @@ F 5 "С111" H 9500 2800 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Память_eeprom_AT24C512C DD7
+L mag-rescue:Память_eeprom_AT24C512C-elements DD7
 U 1 1 5D8F9F5D
 P 7600 4000
 F 0 "DD7" H 8300 4100 50  0000 C CNN
@@ -252,7 +252,7 @@ Wire Wire Line
 Text Label 9500 4650 0    50   ~ 0
 gnd
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5D903FED
 P 9500 4300
 AR Path="/5D903FED" Ref="C?"  Part="1" 
@@ -278,4 +278,6 @@ Text Label 8750 4000 0    50   ~ 0
 VCCbat
 Text Label 9500 4000 0    50   ~ 0
 VCCbat
+Text Notes 9750 4600 0    50   ~ 0
+отодвинуть от G2
 $EndSCHEMATC
