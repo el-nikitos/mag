@@ -32,6 +32,15 @@
  
 void setup()
 {
+  //DDRC &= ~(1<<3);
+  //PORTC |= (1<<3);
+  DDRC |= (1<<3);
+  PORTC |= (1<<3);
+
+  delay(5000);
+  
+  PORTC &= ~(1<<3);
+  
   Wire.begin();
  
   Serial.begin(9600);

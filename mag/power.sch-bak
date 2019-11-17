@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:mag-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -23,7 +23,7 @@ USB_D-
 Text HLabel 1500 2250 0    50   Input ~ 0
 USB_pwr_gnd
 $Comp
-L elements:Предохранитель FU?
+L mag-rescue:Предохранитель-elements FU?
 U 1 1 5D9AEB0E
 P 2350 3500
 AR Path="/5D9AEB0E" Ref="FU?"  Part="1" 
@@ -46,7 +46,7 @@ gnd
 Text Label 3000 1000 0    50   ~ 0
 USB_vcc
 $Comp
-L elements:Диод_шоттки VD5
+L mag-rescue:Диод_шоттки-elements VD5
 U 1 1 5DA75E76
 P 4000 1650
 F 0 "VD5" V 4100 1850 50  0000 C CNN
@@ -74,7 +74,7 @@ Connection ~ 2950 3500
 Wire Wire Line
 	3350 1000 4000 1000
 $Comp
-L elements:Диод_шоттки VD1
+L mag-rescue:Диод_шоттки-elements VD1
 U 1 1 5D9AF37D
 P 3350 1950
 F 0 "VD1" V 3546 1847 50  0000 R CNN
@@ -88,7 +88,7 @@ Wire Wire Line
 	3350 2500 3350 2250
 Connection ~ 3350 2250
 $Comp
-L elements:Резистор_0,25Вт R6
+L mag-rescue:Резистор_0,25Вт-elements R6
 U 1 1 5DA90F31
 P 3500 3500
 F 0 "R6" H 3450 3650 60  0000 C CNN
@@ -101,7 +101,7 @@ F 5 "R100" H 3500 3500 50  0001 C CNN "УГО"
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Резистор_0,25Вт R7
+L mag-rescue:Резистор_0,25Вт-elements R7
 U 1 1 5DA924F9
 P 3500 4000
 F 0 "R7" H 3450 4150 60  0000 C CNN
@@ -114,7 +114,7 @@ F 5 "R100" H 3500 4000 50  0001 C CNN "УГО"
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Диод_шоттки VD4
+L mag-rescue:Диод_шоттки-elements VD4
 U 1 1 5DA92C22
 P 3350 2700
 F 0 "VD4" V 3454 2803 50  0000 L CNN
@@ -143,7 +143,7 @@ Wire Wire Line
 Text Label 3000 2500 2    50   ~ 0
 gnd
 $Comp
-L elements:Предохранитель FU?
+L mag-rescue:Предохранитель-elements FU?
 U 1 1 5DAA0CE8
 P 2150 1000
 AR Path="/5DAA0CE8" Ref="FU?"  Part="1" 
@@ -163,7 +163,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 3150 2950 3150
 $Comp
-L elements:Диод_шоттки VD3
+L mag-rescue:Диод_шоттки-elements VD3
 U 1 1 5DB56B32
 P 2650 1950
 F 0 "VD3" V 2846 1847 50  0000 R CNN
@@ -174,7 +174,7 @@ F 3 "" H 2550 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L elements:Диод_шоттки VD2
+L mag-rescue:Диод_шоттки-elements VD2
 U 1 1 5DB57165
 P 2000 1950
 F 0 "VD2" V 2196 1847 50  0000 R CNN
@@ -251,7 +251,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 3250 8000 3250
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DAFBE7A
 P 9250 3550
 AR Path="/5DAFBE7A" Ref="C?"  Part="1" 
@@ -266,7 +266,7 @@ F 5 "С111" H 9250 3550 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DAC0C48
 P 8500 3550
 AR Path="/5DAC0C48" Ref="C?"  Part="1" 
@@ -313,7 +313,7 @@ Wire Wire Line
 Wire Wire Line
 	6000 3900 5750 3900
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DAEAF30
 P 5000 4050
 AR Path="/5DAEAF30" Ref="C?"  Part="1" 
@@ -328,7 +328,7 @@ F 5 "С111" H 5000 4050 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5DAD5F00
 P 8000 4650
 AR Path="/5DAD5F00" Ref="R?"  Part="1" 
@@ -343,7 +343,7 @@ F 5 "R101" H 8000 4650 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5DAD5865
 P 8000 3800
 AR Path="/5DAD5865" Ref="R?"  Part="1" 
@@ -358,7 +358,7 @@ F 5 "R101" H 8000 3800 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Чип-индуктивность L1
+L mag-rescue:Чип-индуктивность-elements L1
 U 1 1 5DABFCBC
 P 6700 3250
 F 0 "L1" H 6450 3400 60  0000 C CNN
@@ -371,7 +371,7 @@ F 5 "L666" H 6700 3250 50  0001 C CNN "УГО"
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Диод_шоттки VD6
+L mag-rescue:Диод_шоттки-elements VD6
 U 1 1 5DABC3D5
 P 7500 3250
 F 0 "VD6" H 7550 3400 50  0000 L CNN
@@ -382,7 +382,7 @@ F 3 "" H 7400 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Микросхема_DCDC_step_UP_LM2703 G2
+L mag-rescue:Микросхема_DCDC_step_UP_LM2703-elements G2
 U 1 1 5DABB5AB
 P 6200 3750
 F 0 "G2" H 6600 3900 50  0000 C CNN
@@ -408,7 +408,7 @@ Wire Wire Line
 Wire Wire Line
 	7950 2000 7950 2200
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DA73B6B
 P 7950 2250
 AR Path="/5DA73B6B" Ref="C?"  Part="1" 
@@ -435,7 +435,7 @@ Connection ~ 9200 2000
 Wire Wire Line
 	9200 2000 9200 2200
 $Comp
-L elements:Конденсатор_керамический C?
+L mag-rescue:Конденсатор_керамический-elements C?
 U 1 1 5DA73764
 P 9200 2250
 AR Path="/5DA73764" Ref="C?"  Part="1" 
@@ -462,7 +462,7 @@ gnd
 Text HLabel 9500 2000 2    50   Input ~ 0
 3V_out
 $Comp
-L elements:стабилизатор_нерегулируемый_XC6206P302MR G1
+L mag-rescue:стабилизатор_нерегулируемый_XC6206P302MR-elements G1
 U 1 1 5DA41F3D
 P 8250 2000
 F 0 "G1" H 8600 2265 50  0000 C CNN
@@ -483,7 +483,7 @@ Wire Wire Line
 Text Label 7950 1500 0    50   ~ 0
 Bat_out+
 $Comp
-L elements:кнопка K?
+L mag-rescue:кнопка-elements K?
 U 1 1 5D96CFE8
 P 3500 6250
 AR Path="/5D96CFE8" Ref="K?"  Part="1" 
@@ -496,7 +496,7 @@ F 3 "" H 3375 6300 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5D96E506
 P 2950 5300
 AR Path="/5D96E506" Ref="R?"  Part="1" 
@@ -511,7 +511,7 @@ F 5 "R203" H 2950 5300 50  0001 C CNN "УГО"
 	0    1    1    0   
 $EndComp
 $Comp
-L elements:Транзистор_полевой_P-канал(IRLML2246TRPBF) VT1
+L mag-rescue:Транзистор_полевой_P-канал(IRLML2246TRPBF)-elements VT1
 U 1 1 5D976703
 P 3750 5550
 F 0 "VT1" V 4400 5750 60  0000 C CNN
@@ -551,7 +551,7 @@ Wire Wire Line
 Text HLabel 9500 6000 2    50   Input ~ 0
 pwr_on_off
 $Comp
-L elements:Резистор_0,065Вт R?
+L mag-rescue:Резистор_0,065Вт-elements R?
 U 1 1 5D9A0DAF
 P 8300 6000
 AR Path="/5D9A0DAF" Ref="R?"  Part="1" 
