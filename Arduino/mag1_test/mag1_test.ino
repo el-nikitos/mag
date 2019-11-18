@@ -55,6 +55,8 @@ double baseline; // baseline pressure
 
 double a,P = 0;
 
+int count = 0;
+
 void setup() {
   //DDRC &= ~(1<<3);
   //PORTC |= (1<<3);
@@ -89,6 +91,12 @@ void loop() {
 //  turn_on_lcd();
 //  delay(500);
 test_segment();
+count++;
+
+if (count>10)
+{
+  PORTC |= (1<<3);
+}
   
   char receiv = 0;
   if (Serial.available()>0)
