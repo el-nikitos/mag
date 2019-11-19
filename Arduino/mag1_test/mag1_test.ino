@@ -50,25 +50,40 @@
 #define init_lcd_F_output   DDRD |= (1<<6)
 #define init_lcd_G_output   DDRD |= (1<<5)
 
+#define init_button2  DDRC &=~ (1<<2)
+#define read_K2 PINC & (1<<2)
+
+byte  byte_seg_1 = 0, 
+      byte_seg_2 = 0, 
+      byte_seg_3 = 0, 
+      byte_seg_4 = 0;
+
 float batt_volt = 0;
 double baseline; // baseline pressure
 
-double a,P = 0;
+int counter = 0;
 
-int count = 0;
+int int_test = 2222;
+
+int int_button1 = 0;
+
 
 void setup() {
   //DDRC &= ~(1<<3);
   //PORTC |= (1<<3);
   DDRC |= (1<<3);
   PORTC |= (1<<3);
-  delay(5000);
+  delay(2000);
   PORTC &= ~(1<<3);
 
   lcd_init();
 //  turn_on_lcd();
 //  delay(2000);
 //  clear_lcd();
+//for (int i=0;i<=2;i++)
+//{
+  test_segment();
+//}
   
   Serial.begin(9600);
 
@@ -77,6 +92,7 @@ void setup() {
   ADCSRA = 0b11100111;  // ADC=on, multiple, prescal = 128
   // 0 -> ADEN, 1 -> ADSC, 2 -> ADFR, 3 -> ADIF, 4 -> ADIE, 5 -> ADPS2, 6 -> ADPS1, 7 -> ADPS0
 
+  init_button2;
 }
 
 void loop() {
@@ -90,14 +106,13 @@ void loop() {
 //  lcd_LB_off;
 //  turn_on_lcd();
 //  delay(500);
-test_segment();
-count++;
+  delay(1000);
 
-if (count>10)
-{
-  PORTC |= (1<<3);
-}
-  
+  displayed( int_test );
+  //int_test++;
+
+  //button2_test();
+  /*
   char receiv = 0;
   if (Serial.available()>0)
   {
@@ -120,6 +135,6 @@ if (count>10)
  if (receiv == '3')
   {
     Serial.print("Pressure: ");
-    Serial.println(P);
   }
+  */
 }
