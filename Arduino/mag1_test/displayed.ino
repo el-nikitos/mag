@@ -1,6 +1,8 @@
 void displayed(int int_numb)
 {
+  //lcd_EN_on;
   num_cut( int_numb );
+  //lcd_EN_off;
   
   seg1_write( byte_seg_1 );
   seg2_write( byte_seg_2 );

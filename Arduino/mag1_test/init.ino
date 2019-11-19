@@ -2,14 +2,14 @@
 void lcd_init()
 {
   init_lcd_LB_output;
-  lcd_LB_off;
+  lcd_LB_on;
   
 //  pinMode(PB5, OUTPUT);
 //  digitalWrite(PB5, LOW); //en
 
   init_lcd_EN_output;
   lcd_EN_off;
-  
+  //lcd_EN_on;
   
   //pinMode(PB7, OUTPUT);
   init_lcd_seg1_output;

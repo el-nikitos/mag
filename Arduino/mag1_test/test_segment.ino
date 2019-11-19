@@ -1,5 +1,7 @@
 void test_segment()
 {
+  //lcd_EN_off;
+  
   clear_lcd();
   lcd_LB_on;
   delay(500);
@@ -100,4 +102,6 @@ void test_segment()
   lcd_clk_3_off;
   lcd_clk_4_off;
   delay(500);
+
+  //lcd_EN_on;
 }
