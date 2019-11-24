@@ -1,3 +1,3 @@
 (sym_lib_table
-  (lib (name mag-rescue)(type Legacy)(uri ${KIPRJMOD}/mag-rescue.lib)(options "")(descr ""))
+  (lib (name mag-rescue)(type Legacy)(uri ${KIPRJMOD}/mag-rescue.lib)(options "")(descr "")(disabled))
 )

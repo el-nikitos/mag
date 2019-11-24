@@ -1,6 +1,3 @@
-//#include <SFE_BMP180.h>
-//#include <Wire.h>
-
 #define refernce_volt 2.93
 
 #define lcd_clk_1_on  PORTB |= (1<<7)
@@ -55,10 +52,6 @@
 #define read_K2 (1<<2)
 #define read_K1 (1<<1)
 
-byte  byte_seg_1 = 0, 
-      byte_seg_2 = 0, 
-      byte_seg_3 = 0, 
-      byte_seg_4 = 0;
 
 float batt_volt = 0;
 double baseline; // baseline pressure
