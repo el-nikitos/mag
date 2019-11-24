@@ -166,6 +166,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="init_bmp180.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="init_timer_counter.h">
       <SubType>compile</SubType>
     </Compile>

@@ -7,22 +7,38 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "D:\girkraken\AVR_Lib\UART_Serial_328.h"
-#include "D:\girkraken\AVR_Lib\TWI_wire.h"
+#include ".\UART_Serial_328.h"
+#include ".\TWI_wire.h"
 #include ".\lcd_init.h"
 #include ".\test_segment.h"
 #include ".\lcd_segments.h"
 #include ".\init_timer_counter.h"
+#include ".\init_bmp180.h"
 
-byte  byte_seg_1 = 0,
-	  byte_seg_2 = 0,
-	  byte_seg_3 = 0,
-	  byte_seg_4 = 0;
+#define button_const 2
+
+// bmp180 calibretion registers value
+int bmp180_AC1,
+	bmp180_AC2,
+	bmp180_AC3,
+	bmp180_B1,
+	bmp180_B2,
+	bmp180_MB,
+	bmp180_MC,
+	bmp180_MD;
+unsigned int	bmp_180_AC4,
+				bmp_180_AC5,
+				bmp_180_AC6;
+
+byte	byte_button_1 = 0,
+		byte_button_2 = 0,
+		byte_button_status = 0;
 	  
 unsigned int	counter_task_lcd_refresh = 0,
-				counter_task_button_hook = 0;
+				counter_task_button_hook = 0,
+				counter_task_i2c_pressure = 0;
 	  
-int int_test = 8888;
+int int_test = -9999;
 
 /*
 void delay_counters(unsigned long long_delay){
@@ -35,13 +51,48 @@ void delay_counters(unsigned long long_delay){
 
 void task_button_hook()
 {
+	if ( (PINC&read_K1) == 0)
+	{
+		byte_button_1++;
+	}
+	else
+	{
+		byte_button_1 = 0;
+	}
 	
+	if ( (PINC&read_K2) == 0)
+	{
+		byte_button_2++;
+	}
+	else
+	{
+		byte_button_2 = 0;
+	}
 	
+	if (byte_button_1 > button_const)
+	{
+		int_test++;
+		byte_button_1 = 0;
+	}
+	
+	if (byte_button_2 > button_const)
+	{
+		int_test--;
+		byte_button_2 = 0;
+	}
 }
 
 void task_lcd_refresh()
 {
 	displayed( int_test );
+	//int_test++;
+}
+
+void task_i2c_pressure()
+{
+	//int_test = TWI_read_byte(bmp180_add, bmp180_reg_id);
+	//int_test = TWI_read_byte(bmp180_add, 0xF4);
+	//int_test = ( TWI_read_byte(bmp180_add, 0xF6) )<<8 | TWI_read_byte(bmp180_add, 0xF7);
 }
 
 void setup()
@@ -56,6 +107,12 @@ void setup()
 	test_segment();
 	
 	UART_open(8000000, 9600);
+	
+	TWI_init_speed(18);
+	
+	bmp180_AC1 = ( TWI_read_byte(bmp180_add, bmp180_reg_AC1H) )<<8 | TWI_read_byte(bmp180_add, bmp180_reg_AC1L);
+	bmp180_AC2 = ( TWI_read_byte(bmp180_add, bmp180_reg_AC2H) )<<8 | TWI_read_byte(bmp180_add, bmp180_reg_AC2L);
+	bmp180_AC3 = ( TWI_read_byte(bmp180_add, bmp180_reg_AC3H) )<<8 | TWI_read_byte(bmp180_add, bmp180_reg_AC3L);
 	
 	init_timer_counter();
 	sei();
@@ -74,10 +131,18 @@ void loop()
 		task_lcd_refresh();
 	}
 	
-	if ( counter_task_button_hook >= 200 )
+	if ( counter_task_button_hook >= 50 )
 	{
+		counter_task_button_hook = 0;
 		task_button_hook();
 	}
+	
+	if ( counter_task_i2c_pressure >= 100 )
+	{
+		counter_task_i2c_pressure = 0;
+		task_i2c_pressure();
+	}
+	
 	//displayed( counter/10 );
 	//delay_counters(1000);
 }
@@ -95,6 +160,7 @@ ISR (TIMER1_COMPA_vect)
 {
 	counter_task_lcd_refresh++;
 	counter_task_button_hook++;
+	counter_task_i2c_pressure++;
 	TCNT1 = 0;
 }
 

@@ -105,25 +105,54 @@ void seg_write(byte number)
 
 void displayed(int int_numb)
 {
-	byte byte_seg = int_numb%10 ;
+	int int_abs_numb;
+	byte byte_seg;
+	
+	if ( int_numb>=0 )
+	{
+		int_abs_numb = int_numb;
+		
+		byte_seg = int_abs_numb%10 ;
+		seg_write( byte_seg );
+		lcd_clk_4_on;
+		delay_counters(1);
+		lcd_clk_4_off;
+	}
+	else
+	{
+		int_abs_numb = -int_numb;
+		
+		byte_seg = int_abs_numb%10 ;
+		seg_write( byte_seg );
+		
+		lcd_dot_on;
+		
+		lcd_clk_4_on;
+		delay_counters(1);
+		lcd_clk_4_off;
+	}
+	
+	/*
+	byte_seg = int_abs_numb%10 ;
 	seg_write( byte_seg );
 	lcd_clk_4_on;
 	delay_counters(1);
 	lcd_clk_4_off;
+	*/
 	
-	byte_seg = round( (int_numb%100)/10 ) ;
+	byte_seg = round( (int_abs_numb%100)/10 ) ;
 	seg_write( byte_seg );
 	lcd_clk_3_on;
 	delay_counters(1);
 	lcd_clk_3_off;
 	
-	byte_seg = round( (int_numb%1000)/100 ) ;
+	byte_seg = round( (int_abs_numb%1000)/100 ) ;
 	seg_write( byte_seg );
 	lcd_clk_2_on;
 	delay_counters(1);
 	lcd_clk_2_off;
 	
-	byte_seg = round( int_numb/1000 ) ;
+	byte_seg = round( int_abs_numb/1000 ) ;
 	seg_write( byte_seg );
 	lcd_clk_1_on;
 	delay_counters(1);
