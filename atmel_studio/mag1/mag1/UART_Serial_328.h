@@ -33,4 +33,36 @@ void UART_open(unsigned long Fcpu, unsigned long BaudRate)	{
 	 UDR0 = data;
  }
  
+ void UART_write_int(int data)	{
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 
+	 UDR0 = data & 0b0000000011111111;
+	 
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 
+	 UDR0 = (data>>8);
+ }
+ 
+ void UART_write_short(short data)	{
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 UDR0 = data & 0x00FF;
+	 
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 UDR0 = (data>>8);
+ }
+ 
+ void UART_write_long(long data)	{
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 UDR0 = data & 0x00FF;
+	 
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 UDR0 = (data>>8);
+	 
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 UDR0 = (data>>16);
+	 
+	 while ( !((UCSR0A)&(1<<UDRE0)) );
+	 UDR0 = (data>>24);
+ }
+ 
  

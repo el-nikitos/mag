@@ -15,20 +15,10 @@
 #include ".\init_timer_counter.h"
 #include ".\init_bmp180.h"
 
-#define button_const 2
+#define button_time_const 2
 
-// bmp180 calibretion registers value
-int bmp180_AC1,
-	bmp180_AC2,
-	bmp180_AC3,
-	bmp180_B1,
-	bmp180_B2,
-	bmp180_MB,
-	bmp180_MC,
-	bmp180_MD;
-unsigned int	bmp_180_AC4,
-				bmp_180_AC5,
-				bmp_180_AC6;
+// bmp180 calibration registers value
+
 
 byte	byte_button_1 = 0,
 		byte_button_2 = 0,
@@ -39,15 +29,6 @@ unsigned int	counter_task_lcd_refresh = 0,
 				counter_task_i2c_pressure = 0;
 	  
 int int_test = -9999;
-
-/*
-void delay_counters(unsigned long long_delay){
-	for(unsigned long i = 0;i<long_delay;i++)
-	{
-		asm volatile("nop");
-	}
-}
-*/
 
 void task_button_hook()
 {
@@ -69,13 +50,13 @@ void task_button_hook()
 		byte_button_2 = 0;
 	}
 	
-	if (byte_button_1 > button_const)
+	if (byte_button_1 > button_time_const)
 	{
 		int_test++;
 		byte_button_1 = 0;
 	}
 	
-	if (byte_button_2 > button_const)
+	if (byte_button_2 > button_time_const)
 	{
 		int_test--;
 		byte_button_2 = 0;
@@ -90,9 +71,32 @@ void task_lcd_refresh()
 
 void task_i2c_pressure()
 {
-	//int_test = TWI_read_byte(bmp180_add, bmp180_reg_id);
-	//int_test = TWI_read_byte(bmp180_add, 0xF4);
-	//int_test = ( TWI_read_byte(bmp180_add, 0xF6) )<<8 | TWI_read_byte(bmp180_add, 0xF7);
+	/*
+	UART_write_short( bmp180_AC1 );
+	UART_write_short( bmp180_AC2 );
+	UART_write_short( bmp180_AC3 );
+	UART_write_short( bmp180_B1 );
+	UART_write_short( bmp180_B2 );
+	UART_write_short( bmp180_MB );
+	UART_write_short( bmp180_MC );
+	UART_write_short( bmp180_MD );
+	
+	
+	UART_write_short( long_bmp180_AC4 );
+	UART_write_short( long_bmp180_AC5 );
+	UART_write_short( long_bmp180_AC6 );
+	*/
+	
+	bmp180_get_ut();
+	
+	bmp180_get_temperature();
+	
+	
+	//UART_write_short( bmp180_temp );
+	//UART_write_short( 999 );
+	
+	int_test = bmp180_temp;
+	//UART_write_byte( 77 );
 }
 
 void setup()
@@ -110,9 +114,7 @@ void setup()
 	
 	TWI_init_speed(18);
 	
-	bmp180_AC1 = ( TWI_read_byte(bmp180_add, bmp180_reg_AC1H) )<<8 | TWI_read_byte(bmp180_add, bmp180_reg_AC1L);
-	bmp180_AC2 = ( TWI_read_byte(bmp180_add, bmp180_reg_AC2H) )<<8 | TWI_read_byte(bmp180_add, bmp180_reg_AC2L);
-	bmp180_AC3 = ( TWI_read_byte(bmp180_add, bmp180_reg_AC3H) )<<8 | TWI_read_byte(bmp180_add, bmp180_reg_AC3L);
+	bmp180_get_cal_param();
 	
 	init_timer_counter();
 	sei();
@@ -137,7 +139,7 @@ void loop()
 		task_button_hook();
 	}
 	
-	if ( counter_task_i2c_pressure >= 100 )
+	if ( counter_task_i2c_pressure >= 1000 )
 	{
 		counter_task_i2c_pressure = 0;
 		task_i2c_pressure();
