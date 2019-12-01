@@ -178,6 +178,9 @@
     <Compile Include="lcd_segments.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="oled_init.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="test_segment.h">
       <SubType>compile</SubType>
     </Compile>

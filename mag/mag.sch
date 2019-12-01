@@ -311,8 +311,6 @@ Wire Wire Line
 	15000 4500 14700 4500
 Wire Wire Line
 	13800 4500 13500 4500
-Text Notes 11750 2000 0    50   ~ 0
-Display
 $Comp
 L mag-rescue:display_EDS803_EDS805-elements HL1
 U 1 1 5CEAE07F
@@ -1298,4 +1296,6 @@ Text Notes 5350 10300 0    50   ~ 0
 замена на 100 Ом
 Text Notes 1950 4450 0    50   ~ 0
 SDA и SCL подтянуть к 3В, а не батарее
+Text Notes 11600 2100 0    50   ~ 0
+Display\nadres: 0x3С (0011 110b)
 $EndSCHEMATC

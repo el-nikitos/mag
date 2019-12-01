@@ -15,7 +15,8 @@ main.d main.o: .././main.cpp \
  .././.\UART_Serial_328.h \
  d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  .././.\TWI_wire.h .././.\lcd_init.h .././.\test_segment.h \
- .././.\lcd_segments.h .././.\init_timer_counter.h .././.\init_bmp180.h
+ .././.\lcd_segments.h .././.\init_timer_counter.h .././.\init_bmp180.h \
+ .././.\oled_init.h
 
 d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -58,3 +59,5 @@ d:\atmel\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 .././.\init_timer_counter.h:
 
 .././.\init_bmp180.h:
+
+.././.\oled_init.h:

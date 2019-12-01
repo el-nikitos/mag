@@ -36,10 +36,6 @@ void setup()
   //PORTC |= (1<<3);
   DDRC |= (1<<3);
   PORTC |= (1<<3);
-
-  delay(5000);
-  
-  PORTC &= ~(1<<3);
   
   Wire.begin();
  
@@ -57,7 +53,7 @@ void loop()
   Serial.println("Scanning...");
  
   nDevices = 0;
-  for(address = 1; address < 127; address++ )
+  for(address = 0; address < 127; address++ )
   {
     // The i2c_scanner uses the return value of
     // the Write.endTransmisstion to see if

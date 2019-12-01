@@ -14,6 +14,7 @@
 #include ".\lcd_segments.h"
 #include ".\init_timer_counter.h"
 #include ".\init_bmp180.h"
+#include ".\oled_init.h"
 
 #define button_time_const 2
 
@@ -67,6 +68,8 @@ void task_lcd_refresh()
 {
 	displayed( int_test );
 	//int_test++;
+	
+	
 }
 
 void task_i2c_pressure()
@@ -109,7 +112,12 @@ void setup()
 	
 	lcd_init();
 	
+	init_oled();
+	
+	oled_print_logo();
+	
 	test_segment();
+	
 	
 	UART_open(8000000, 9600);
 	
