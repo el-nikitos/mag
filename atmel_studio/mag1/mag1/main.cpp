@@ -91,11 +91,12 @@ void task_i2c_pressure()
 	
 	bmp180_get_temperature();
 	
+	bmp180_get_up();
 	
-	//UART_write_short( bmp180_temp );
-	//UART_write_short( 999 );
+	bmp180_get_pressure();
 	
-	int_test = bmp180_temp;
+	//int_test = bmp180_temp;
+	int_test = bmp180_press;
 	//UART_write_byte( 77 );
 }
 

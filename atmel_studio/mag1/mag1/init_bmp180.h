@@ -53,9 +53,25 @@ unsigned short	bmp180_AC4,
 				
 long	long_bmp180_AC4,	
 		long_bmp180_AC5,
-		long_bmp180_AC6;
+		long_bmp180_AC6,
+		B5,
+		long_bmp180_B2,
+		long_bmp180_AC2,
+		long_bmp180_AC1,
+		long_bmp180_AC3,
+		long_bmp180_B1;
+		
+unsigned long ulong_bmp180_AC4;
 				
-long bmp180_UT, bmp180_temp;
+long	bmp180_UT, 
+		bmp180_temp,
+		bmp180_UP,
+		bmp180_press,
+		long_bmp180_press;
+		
+unsigned long	ulong_bmp180_press;
+		
+unsigned long ulong_bmp180_UP;
 
 void bmp180_get_cal_param()
 {
@@ -75,6 +91,14 @@ void bmp180_get_cal_param()
 	long_bmp180_AC4 = bmp180_AC4;
 	long_bmp180_AC5 = bmp180_AC5;
 	long_bmp180_AC6 = bmp180_AC6;
+	
+	long_bmp180_B2 = bmp180_B2;
+	long_bmp180_AC2 = bmp180_AC2;
+	long_bmp180_AC1 = bmp180_AC1;
+	long_bmp180_AC3 = bmp180_AC3;
+	long_bmp180_B1 = bmp180_B1;
+	
+	ulong_bmp180_AC4 = bmp180_AC4;
 	
 	if (bmp180_MC >= 0)
 	{
@@ -112,6 +136,20 @@ long long_div(long A, long B)
 	return result_div;
 }
 
+unsigned long ulong_div(unsigned long A, unsigned long B)
+{
+	unsigned long result_div = 0;
+	unsigned long dif = A;
+	
+	while (dif >= B)
+	{
+		result_div++;
+		dif = dif - B;
+	}
+	
+	return result_div;
+}
+
 void bmp180_get_temperature()
 {
 	long X1 = ( ( bmp180_UT - long_bmp180_AC6 ) * long_bmp180_AC5 ) >> 15;
@@ -120,12 +158,71 @@ void bmp180_get_temperature()
 	long X2_2 = X1 + bmp180_MD;
 	long X2 = long_div( X2_1, X2_2);
 	
-	long B5 = X1 - X2;
+	B5 = X1 - X2;
 	
 	bmp180_temp = (B5 + 8) >> 4;
-	
-	//UART_write_short( X1 );
-	//UART_write_short( X2 );
-	//UART_write_long( X2_1 );
 }
 
+void bmp180_get_up()
+{
+	//byte byte_oss = 0;
+	TWI_write_byte(bmp180_add, bmp180_reg_ctrl_meas, 0x34);
+	
+	for(unsigned long i = 0;i<45000;i++)
+	{
+		asm volatile("nop");
+	}
+	
+	long buffer_MSB = TWI_read_byte(bmp180_add, bmp180_reg_out_msb);
+	long buffer_LSB = TWI_read_byte(bmp180_add, bmp180_reg_out_lsb);
+	//long buffer_XLSB = TWI_read_byte(bmp180_add, bmp180_reg_out_xlsb);
+
+	bmp180_UP = (buffer_MSB << 8) + (buffer_LSB);// + (buffer_XLSB);
+	
+	ulong_bmp180_UP = bmp180_UP;
+	//UART_write_long( bmp180_UP );
+}
+
+void bmp180_get_pressure()
+{
+	long long_B6 = B5 - 4000;
+	
+	
+	long X1 = ( long_bmp180_B2 * ((long_B6 * long_B6) >> 12) ) >> 11;
+	long X2 = (long_bmp180_AC2 * long_B6) >> 11;// / 2^11;
+	long X3 = X1 + X2;
+	long B3 = ((long_bmp180_AC1<<2) + X3 + 2) >> 2;
+	
+	X1 = (long_bmp180_AC3*long_B6)>>13;
+	X2 = ( long_bmp180_B1 * ((long_B6 * long_B6) >> 12) ) >> 16;
+	X3 = ((X1 + X2) + 2) >>2 ;
+	
+	long X3_1 = X3 + 32768;
+	unsigned long ulong_X3_1 = X3_1;
+	unsigned long B4 = (ulong_bmp180_AC4 * ulong_X3_1) >> 15;
+	
+	unsigned long ulong_B3 = B3;
+	unsigned long B7 = (ulong_bmp180_UP - ulong_B3) * 50000;
+	
+	ulong_bmp180_press = ulong_div(B7, B4) << 1;
+	
+	unsigned long ulong_X1 = (ulong_bmp180_press >> 8) * (ulong_bmp180_press >> 8);
+	ulong_X1 = (ulong_X1*3038) >> 16;
+	
+	long_bmp180_press = ulong_bmp180_press;
+	X2 = (-7357 * long_bmp180_press) >> 16;
+	
+	long_bmp180_press = long_bmp180_press + ((X1 + X2 + 3791) >> 4);
+	
+	UART_write_short( bmp180_UT );
+	UART_write_long( ulong_bmp180_UP );
+	
+	UART_write_long( long_bmp180_press );
+	
+	bmp180_press = long_bmp180_press / 10;
+	
+	//UART_write_short( long_bmp180_B2 );
+	//UART_write_short( long_B6 );
+	//UART_write_short( X1 );
+	//UART_write_short( X3 );
+}
