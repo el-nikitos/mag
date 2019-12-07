@@ -20,6 +20,7 @@
 
 // bmp180 calibration registers value
 
+//byte oled_img[1024];
 
 byte	byte_button_1 = 0,
 		byte_button_2 = 0,
@@ -114,10 +115,11 @@ void setup()
 	
 	init_oled();
 	
-	oled_print_logo();
+	oled_print( logo_skyer );
 	
 	test_segment();
 	
+	oled_clear();
 	
 	UART_open(8000000, 9600);
 	
@@ -136,10 +138,15 @@ void loop()
 	
 	delay_counters(5000);
 	*/
+	
 	if ( counter_task_lcd_refresh >= 200 )
 	{
 		counter_task_lcd_refresh = 0;
 		task_lcd_refresh();
+		/*
+		oled_print( logo_el_nikitos );
+		oled_print( logo_skyer2 );
+		*/
 	}
 	
 	if ( counter_task_button_hook >= 50 )

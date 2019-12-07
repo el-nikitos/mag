@@ -43,6 +43,37 @@ void TWI_start_write_stop(uint8_t addres, uint8_t DATA)	{
 	TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
 }
 
+void TWI_start_wait(uint8_t addres)
+{
+	addres = addres&(0b01111111);
+	
+	TWCR = 0;
+	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+	      //запуск TWI / TWI мастер / TWI включен
+	while( !(TWCR & (1<<TWINT)) );
+	// проверка, что TWINT сброшен, т.е. операция выполнена
+	/*
+	тут должна быть проверка регистров статуса
+	*/
+	
+	TWDR = (addres<<1)|(0<<0);
+	TWCR = (1<<TWINT) | (1<<TWEN);
+		  //запуск TWI
+	while( !(TWCR & (1<<TWINT)) );
+}
+
+void TWI_write_byte_wait(uint8_t DATA)
+{
+	TWDR = DATA;
+	TWCR = (1<<TWINT) | (1<<TWEN);
+	while( !(TWCR & (1<<TWINT)) );
+}
+
+void TWI_wait_stop()
+{
+	TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
+}
+
 void TWI_write_byte(uint8_t addres, uint8_t REG, uint8_t SEND_BYTE)	{
 	addres = addres&(0b01111111);
 	

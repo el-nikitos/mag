@@ -181,6 +181,9 @@
     <Compile Include="oled_init.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="oled_logo.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="test_segment.h">
       <SubType>compile</SubType>
     </Compile>

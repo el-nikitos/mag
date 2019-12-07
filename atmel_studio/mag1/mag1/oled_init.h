@@ -5,6 +5,7 @@
  *  Author: Admin
  */ 
 
+#include ".\oled_logo.h"
 
 #define oled_add	0x3C
 
@@ -79,24 +80,8 @@ void init_oled()
 	///
 }
 
-void oled_print_logo()
+void oled_print(const byte img[])
 {
-
-
-	// We have to send the buffer as 16 bytes packets
-	// Our buffer is 1024 bytes long, 1024/16 = 64
-	// We have to send 64 packets
-	/*
-	for (uint8_t packet = 0; packet < 64; packet++) {
-		i2c.start();
-		i2c.write(0x40);
-		for (uint8_t packet_byte = 0; packet_byte < 16; ++packet_byte) {
-			i2c.write(buffer[packet*16+packet_byte]);
-		}
-		i2c.stop();
-	}
-	*/
-	
 	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);
 	TWI_write_byte(oled_add, 0x00, 0x00);
 	TWI_write_byte(oled_add, 0x00, 0x7F);
@@ -105,11 +90,75 @@ void oled_print_logo()
 	TWI_write_byte(oled_add, 0x00, 0x00);
 	TWI_write_byte(oled_add, 0x00, 0x07);
 	
-	TWI_write_byte(oled_add, 0x40, 0x55);
-	/*
-	for (uint8_t packet = 0; packet<64; packet++)
+	for (int i=0; i<32; i++)
 	{
+		TWI_start_wait(oled_add);
+		TWI_write_byte_wait(0x40);
 		
+		for (int j=0; j<32; j++)
+		{
+			TWI_write_byte_wait( img[i*32+j] );
+		}
+		
+		TWI_wait_stop();
 	}
-	*/
+}
+
+/*
+void oled_print_logo_skyer()
+{
+	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);
+	TWI_write_byte(oled_add, 0x00, 0x00);
+	TWI_write_byte(oled_add, 0x00, 0x7F);
+	
+	TWI_write_byte(oled_add, 0x00, SSD1306_PAGEADDR);
+	TWI_write_byte(oled_add, 0x00, 0x00);
+	TWI_write_byte(oled_add, 0x00, 0x07);
+	
+	TWI_start_wait(oled_add);
+	TWI_write_byte_wait(0x40);
+	for (int i=0; i<1024; i++)
+	{
+		TWI_write_byte_wait( logo_skyer[i] );
+	}
+	TWI_wait_stop();
+}
+*/
+/*
+void oled_print_logo_el_nikitos()
+{
+	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);
+	TWI_write_byte(oled_add, 0x00, 0x00);
+	TWI_write_byte(oled_add, 0x00, 0x7F);
+	
+	TWI_write_byte(oled_add, 0x00, SSD1306_PAGEADDR);
+	TWI_write_byte(oled_add, 0x00, 0x00);
+	TWI_write_byte(oled_add, 0x00, 0x07);
+	
+	TWI_start_wait(oled_add);
+	TWI_write_byte_wait(0x40);
+	for (int i=0; i<1024; i++)
+	{
+		TWI_write_byte_wait( logo_el_nikitos[i] );
+	}
+	TWI_wait_stop();
+}
+*/
+void oled_clear()
+{
+	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);
+	TWI_write_byte(oled_add, 0x00, 0x00);
+	TWI_write_byte(oled_add, 0x00, 0x7F);
+	
+	TWI_write_byte(oled_add, 0x00, SSD1306_PAGEADDR);
+	TWI_write_byte(oled_add, 0x00, 0x00);
+	TWI_write_byte(oled_add, 0x00, 0x07);
+	
+	TWI_start_wait(oled_add);
+	TWI_write_byte_wait(0x40);
+	for (int i=0; i<1024; i++)
+	{
+		TWI_write_byte_wait(0x00);
+	}
+	TWI_wait_stop();
 }
