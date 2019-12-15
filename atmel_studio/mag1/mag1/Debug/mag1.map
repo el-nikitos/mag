@@ -60,14 +60,29 @@ Discarded input sections
                 0x00000000        0x8 main.o
  .text._Z19TWI_start_read_stoph
                 0x00000000       0x46 main.o
+ .text._Z19TWI_start_read_waith
+                0x00000000       0x2c main.o
+ .text._Z18TWI_read_byte_waitv
+                0x00000000       0x10 main.o
  .text._Z11turn_on_lcdv
                 0x00000000       0x22 main.o
  .text._Z8long_divll
                 0x00000000       0x4a main.o
  .text._Z9ulong_divmm
                 0x00000000       0x4a main.o
+ .text._Z21i2c_eeprom_write_pagehPh
+                0x00000000       0x40 main.o
+ .text._Z26i2c_eeprom_test_write_pageh
+                0x00000000       0x2e main.o
+ .text._Z20i2c_eeprom_read_pagehPh
+                0x00000000       0x46 main.o
+ .text._Z20i2c_eeprom_read_bytehh
+                0x00000000       0x12 main.o
  .bss.byte_button_status
                 0x00000000        0x1 main.o
+ .bss.oled_img  0x00000000      0x400 main.o
+ .data.logo_el_nikitos
+                0x00000000      0x400 main.o
  .text          0x00000000        0x0 d:/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
  .data          0x00000000        0x0 d:/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
  .bss           0x00000000        0x0 d:/atmel/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
@@ -860,42 +875,42 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x148
+.debug_aranges  0x00000000      0x178
  *(.debug_aranges)
  .debug_aranges
-                0x00000000      0x148 main.o
+                0x00000000      0x178 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x25e5
+.debug_info     0x00000000     0x20d3
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/atmel/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328/avr5/crtatmega328.o
- .debug_info    0x000005f4     0x1ff1 main.o
+ .debug_info    0x000005f4     0x1adf main.o
 
-.debug_abbrev   0x00000000      0x8bb
+.debug_abbrev   0x00000000      0x8ac
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 D:/atmel/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328/avr5/crtatmega328.o
- .debug_abbrev  0x000005a2      0x319 main.o
+ .debug_abbrev  0x000005a2      0x30a main.o
 
-.debug_line     0x00000000     0x10be
+.debug_line     0x00000000     0x123d
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 D:/atmel/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328/avr5/crtatmega328.o
- .debug_line    0x00000133      0xf8b main.o
+ .debug_line    0x00000133     0x110a main.o
 
-.debug_frame    0x00000000      0x3ac
+.debug_frame    0x00000000      0x43c
  *(.debug_frame)
- .debug_frame   0x00000000      0x3ac main.o
+ .debug_frame   0x00000000      0x43c main.o
 
-.debug_str      0x00000000      0xa61
+.debug_str      0x00000000      0xba8
  *(.debug_str)
  .debug_str     0x00000000      0x208 D:/atmel/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328/avr5/crtatmega328.o
- .debug_str     0x00000208      0x859 main.o
-                                0x96d (size before relaxing)
+ .debug_str     0x00000208      0x9a0 main.o
+                                0xab4 (size before relaxing)
 
-.debug_loc      0x00000000     0x1286
+.debug_loc      0x00000000     0x1580
  *(.debug_loc)
- .debug_loc     0x00000000     0x1286 main.o
+ .debug_loc     0x00000000     0x1580 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -915,9 +930,9 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x150
+.debug_ranges   0x00000000      0x180
  *(.debug_ranges)
- .debug_ranges  0x00000000      0x150 main.o
+ .debug_ranges  0x00000000      0x180 main.o
 
 .debug_macro
  *(.debug_macro)

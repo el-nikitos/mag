@@ -144,6 +144,7 @@ void oled_print_logo_el_nikitos()
 	TWI_wait_stop();
 }
 */
+
 void oled_clear()
 {
 	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);

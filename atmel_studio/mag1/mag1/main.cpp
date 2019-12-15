@@ -15,12 +15,13 @@
 #include ".\init_timer_counter.h"
 #include ".\init_bmp180.h"
 #include ".\oled_init.h"
+#include ".\i2c_eeprom.h"
 
 #define button_time_const 2
 
 // bmp180 calibration registers value
 
-//byte oled_img[1024];
+byte oled_img[1024];
 
 byte	byte_button_1 = 0,
 		byte_button_2 = 0,
@@ -69,28 +70,19 @@ void task_lcd_refresh()
 {
 	displayed( int_test );
 	//int_test++;
+	//i2c_eeprom_read_page(0, oled_img);
+	//oled_print( oled_img );
+	//oled_print( logo_el_nikitos );
 	
-	
+	//UART_write_byte( i2c_eeprom_read_byte(0, 0) );
+	//UART_write_byte( oled_img[1] );
+	//UART_write_byte( oled_img[2] );
+	//UART_write_byte( oled_img[3] );
 }
 
 void task_i2c_pressure()
 {
-	/*
-	UART_write_short( bmp180_AC1 );
-	UART_write_short( bmp180_AC2 );
-	UART_write_short( bmp180_AC3 );
-	UART_write_short( bmp180_B1 );
-	UART_write_short( bmp180_B2 );
-	UART_write_short( bmp180_MB );
-	UART_write_short( bmp180_MC );
-	UART_write_short( bmp180_MD );
-	
-	
-	UART_write_short( long_bmp180_AC4 );
-	UART_write_short( long_bmp180_AC5 );
-	UART_write_short( long_bmp180_AC6 );
-	*/
-	
+
 	bmp180_get_ut();
 	
 	bmp180_get_temperature();
@@ -116,6 +108,8 @@ void setup()
 	init_oled();
 	
 	oled_print( logo_skyer );
+	//i2c_eeprom_write_page(0, logo_el_nikitos);
+	//i2c_eeprom_test_write_page(0);
 	
 	test_segment();
 	
@@ -143,10 +137,6 @@ void loop()
 	{
 		counter_task_lcd_refresh = 0;
 		task_lcd_refresh();
-		/*
-		oled_print( logo_el_nikitos );
-		oled_print( logo_skyer2 );
-		*/
 	}
 	
 	if ( counter_task_button_hook >= 50 )

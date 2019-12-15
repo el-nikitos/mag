@@ -13,21 +13,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001960  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000148  00000000  00000000  0000199c  2**0
+  5 .debug_aranges 00000178  00000000  00000000  0000199c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   000025e5  00000000  00000000  00001ae4  2**0
+  6 .debug_info   000020d3  00000000  00000000  00001b14  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000008bb  00000000  00000000  000040c9  2**0
+  7 .debug_abbrev 000008ac  00000000  00000000  00003be7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000010be  00000000  00000000  00004984  2**0
+  8 .debug_line   0000123d  00000000  00000000  00004493  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000003ac  00000000  00000000  00005a44  2**2
+  9 .debug_frame  0000043c  00000000  00000000  000056d0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000a61  00000000  00000000  00005df0  2**0
+ 10 .debug_str    00000ba8  00000000  00000000  00005b0c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001286  00000000  00000000  00006851  2**0
+ 11 .debug_loc    00001580  00000000  00000000  000066b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000150  00000000  00000000  00007ad7  2**0
+ 12 .debug_ranges 00000180  00000000  00000000  00007c34  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -112,12 +112,11 @@ Disassembly of section .text:
       b8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000bc <_Z9UART_openmm>:
-		result_div++;
-		dif = dif - B;
-	}
+	TWI_write_byte(eeprom_add, 0, 0);
 	
-	return result_div;
-}
+	byte receiv_byte = TWI_start_read_stop( eeprom_add );
+	
+	return receiv_byte;
       bc:	0f 93       	push	r16
       be:	1f 93       	push	r17
       c0:	68 94       	set
@@ -1062,16 +1061,12 @@ Disassembly of section .text:
      958:	08 95       	ret
 
 0000095a <_Z22bmp180_get_temperaturev>:
-
-void bmp180_get_temperature()
-{
      95a:	cf 92       	push	r12
      95c:	df 92       	push	r13
      95e:	ef 92       	push	r14
      960:	ff 92       	push	r15
      962:	0f 93       	push	r16
      964:	1f 93       	push	r17
-	long X1 = ( ( bmp180_UT - long_bmp180_AC6 ) * long_bmp180_AC5 ) >> 15;
      966:	40 91 22 05 	lds	r20, 0x0522	; 0x800522 <bmp180_UT>
      96a:	50 91 23 05 	lds	r21, 0x0523	; 0x800523 <bmp180_UT+0x1>
      96e:	60 91 24 05 	lds	r22, 0x0524	; 0x800524 <bmp180_UT+0x2>
@@ -1102,8 +1097,6 @@ void bmp180_get_temperature()
      9b6:	ba 95       	dec	r27
      9b8:	d1 f7       	brne	.-12     	; 0x9ae <_Z22bmp180_get_temperaturev+0x54>
      9ba:	b0 2d       	mov	r27, r0
-	
-	long X2_1 = abs_bmp180_MC << 11;
      9bc:	80 91 54 05 	lds	r24, 0x0554	; 0x800554 <abs_bmp180_MC>
      9c0:	90 91 55 05 	lds	r25, 0x0555	; 0x800555 <abs_bmp180_MC+0x1>
      9c4:	a0 91 56 05 	lds	r26, 0x0556	; 0x800556 <abs_bmp180_MC+0x2>
@@ -1117,7 +1110,6 @@ void bmp180_get_temperature()
      9d8:	7a 95       	dec	r23
      9da:	d1 f7       	brne	.-12     	; 0x9d0 <_Z22bmp180_get_temperaturev+0x76>
      9dc:	70 2d       	mov	r23, r0
-	long X2_2 = X1 + bmp180_MD;
      9de:	40 91 58 05 	lds	r20, 0x0558	; 0x800558 <bmp180_MD>
      9e2:	50 91 59 05 	lds	r21, 0x0559	; 0x800559 <bmp180_MD+0x1>
      9e6:	05 2e       	mov	r0, r21
@@ -1128,12 +1120,6 @@ void bmp180_get_temperature()
      9f0:	5d 1d       	adc	r21, r13
      9f2:	6e 1d       	adc	r22, r14
      9f4:	7f 1d       	adc	r23, r15
-long long_div(long A, long B)
-{
-	long result_div = 0;
-	long dif = A;
-	
-	while (dif >= B)
      9f6:	84 17       	cp	r24, r20
      9f8:	95 07       	cpc	r25, r21
      9fa:	a6 07       	cpc	r26, r22
@@ -1142,44 +1128,23 @@ long long_div(long A, long B)
      a00:	00 e0       	ldi	r16, 0x00	; 0
      a02:	10 e0       	ldi	r17, 0x00	; 0
      a04:	98 01       	movw	r18, r16
-	{
-		result_div++;
      a06:	0f 5f       	subi	r16, 0xFF	; 255
      a08:	1f 4f       	sbci	r17, 0xFF	; 255
      a0a:	2f 4f       	sbci	r18, 0xFF	; 255
      a0c:	3f 4f       	sbci	r19, 0xFF	; 255
-		dif = dif - B;
      a0e:	84 1b       	sub	r24, r20
      a10:	95 0b       	sbc	r25, r21
      a12:	a6 0b       	sbc	r26, r22
      a14:	b7 0b       	sbc	r27, r23
-long long_div(long A, long B)
-{
-	long result_div = 0;
-	long dif = A;
-	
-	while (dif >= B)
      a16:	84 17       	cp	r24, r20
      a18:	95 07       	cpc	r25, r21
      a1a:	a6 07       	cpc	r26, r22
      a1c:	b7 07       	cpc	r27, r23
      a1e:	9c f7       	brge	.-26     	; 0xa06 <_Z22bmp180_get_temperaturev+0xac>
      a20:	03 c0       	rjmp	.+6      	; 0xa28 <_Z22bmp180_get_temperaturev+0xce>
-	bmp180_UT = ( TWI_read_byte(bmp180_add, bmp180_reg_out_msb) )<<8 | (TWI_read_byte(bmp180_add, bmp180_reg_out_lsb));
-}
-
-long long_div(long A, long B)
-{
-	long result_div = 0;
      a22:	00 e0       	ldi	r16, 0x00	; 0
      a24:	10 e0       	ldi	r17, 0x00	; 0
      a26:	98 01       	movw	r18, r16
-	
-	long X2_1 = abs_bmp180_MC << 11;
-	long X2_2 = X1 + bmp180_MD;
-	long X2 = long_div( X2_1, X2_2);
-	
-	B5 = X1 - X2;
      a28:	d7 01       	movw	r26, r14
      a2a:	c6 01       	movw	r24, r12
      a2c:	80 1b       	sub	r24, r16
@@ -1190,8 +1155,6 @@ long long_div(long A, long B)
      a38:	90 93 3f 05 	sts	0x053F, r25	; 0x80053f <B5+0x1>
      a3c:	a0 93 40 05 	sts	0x0540, r26	; 0x800540 <B5+0x2>
      a40:	b0 93 41 05 	sts	0x0541, r27	; 0x800541 <B5+0x3>
-	
-	bmp180_temp = (B5 + 8) >> 4;
      a44:	08 96       	adiw	r24, 0x08	; 8
      a46:	a1 1d       	adc	r26, r1
      a48:	b1 1d       	adc	r27, r1
@@ -1207,7 +1170,6 @@ long long_div(long A, long B)
      a5e:	90 93 1f 05 	sts	0x051F, r25	; 0x80051f <bmp180_temp+0x1>
      a62:	a0 93 20 05 	sts	0x0520, r26	; 0x800520 <bmp180_temp+0x2>
      a66:	b0 93 21 05 	sts	0x0521, r27	; 0x800521 <bmp180_temp+0x3>
-}
      a6a:	1f 91       	pop	r17
      a6c:	0f 91       	pop	r16
      a6e:	ff 90       	pop	r15
@@ -1217,52 +1179,28 @@ long long_div(long A, long B)
      a76:	08 95       	ret
 
 00000a78 <_Z13bmp180_get_upv>:
-
-void bmp180_get_up()
-{
      a78:	0f 93       	push	r16
      a7a:	1f 93       	push	r17
      a7c:	cf 93       	push	r28
-	//byte byte_oss = 0;
-	TWI_write_byte(bmp180_add, bmp180_reg_ctrl_meas, 0x34);
      a7e:	44 e3       	ldi	r20, 0x34	; 52
      a80:	64 ef       	ldi	r22, 0xF4	; 244
      a82:	87 e7       	ldi	r24, 0x77	; 119
      a84:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
      a88:	80 e0       	ldi	r24, 0x00	; 0
      a8a:	90 e0       	ldi	r25, 0x00	; 0
-	
-	for(unsigned long i = 0;i<45000;i++)
-	{
-		asm volatile("nop");
      a8c:	00 00       	nop
      a8e:	01 96       	adiw	r24, 0x01	; 1
-void bmp180_get_up()
-{
-	//byte byte_oss = 0;
-	TWI_write_byte(bmp180_add, bmp180_reg_ctrl_meas, 0x34);
-	
-	for(unsigned long i = 0;i<45000;i++)
      a90:	88 3c       	cpi	r24, 0xC8	; 200
      a92:	0f ea       	ldi	r16, 0xAF	; 175
      a94:	90 07       	cpc	r25, r16
      a96:	d1 f7       	brne	.-12     	; 0xa8c <_Z13bmp180_get_upv+0x14>
-	{
-		asm volatile("nop");
-	}
-	
-	long buffer_MSB = TWI_read_byte(bmp180_add, bmp180_reg_out_msb);
      a98:	66 ef       	ldi	r22, 0xF6	; 246
      a9a:	87 e7       	ldi	r24, 0x77	; 119
      a9c:	0e 94 12 01 	call	0x224	; 0x224 <_Z13TWI_read_bytehh>
      aa0:	c8 2f       	mov	r28, r24
-	long buffer_LSB = TWI_read_byte(bmp180_add, bmp180_reg_out_lsb);
      aa2:	67 ef       	ldi	r22, 0xF7	; 247
      aa4:	87 e7       	ldi	r24, 0x77	; 119
      aa6:	0e 94 12 01 	call	0x224	; 0x224 <_Z13TWI_read_bytehh>
-	//long buffer_XLSB = TWI_read_byte(bmp180_add, bmp180_reg_out_xlsb);
-
-	bmp180_UP = (buffer_MSB << 8) + (buffer_LSB);// + (buffer_XLSB);
      aaa:	4c 2f       	mov	r20, r28
      aac:	50 e0       	ldi	r21, 0x00	; 0
      aae:	60 e0       	ldi	r22, 0x00	; 0
@@ -1281,23 +1219,16 @@ void bmp180_get_up()
      aca:	10 93 1b 05 	sts	0x051B, r17	; 0x80051b <bmp180_UP+0x1>
      ace:	20 93 1c 05 	sts	0x051C, r18	; 0x80051c <bmp180_UP+0x2>
      ad2:	30 93 1d 05 	sts	0x051D, r19	; 0x80051d <bmp180_UP+0x3>
-	
-	ulong_bmp180_UP = bmp180_UP;
      ad6:	00 93 0a 05 	sts	0x050A, r16	; 0x80050a <ulong_bmp180_UP>
      ada:	10 93 0b 05 	sts	0x050B, r17	; 0x80050b <ulong_bmp180_UP+0x1>
      ade:	20 93 0c 05 	sts	0x050C, r18	; 0x80050c <ulong_bmp180_UP+0x2>
      ae2:	30 93 0d 05 	sts	0x050D, r19	; 0x80050d <ulong_bmp180_UP+0x3>
-	//UART_write_long( bmp180_UP );
-}
      ae6:	cf 91       	pop	r28
      ae8:	1f 91       	pop	r17
      aea:	0f 91       	pop	r16
      aec:	08 95       	ret
 
 00000aee <_Z19bmp180_get_pressurev>:
-
-void bmp180_get_pressure()
-{
      aee:	4f 92       	push	r4
      af0:	5f 92       	push	r5
      af2:	6f 92       	push	r6
@@ -1318,7 +1249,6 @@ void bmp180_get_pressure()
      b10:	00 d0       	rcall	.+0      	; 0xb12 <_Z19bmp180_get_pressurev+0x24>
      b12:	cd b7       	in	r28, 0x3d	; 61
      b14:	de b7       	in	r29, 0x3e	; 62
-	long long_B6 = B5 - 4000;
      b16:	40 90 3e 05 	lds	r4, 0x053E	; 0x80053e <B5>
      b1a:	50 90 3f 05 	lds	r5, 0x053F	; 0x80053f <B5+0x1>
      b1e:	60 90 40 05 	lds	r6, 0x0540	; 0x800540 <B5+0x2>
@@ -1333,9 +1263,6 @@ void bmp180_get_pressure()
      b34:	9a 83       	std	Y+2, r25	; 0x02
      b36:	ab 83       	std	Y+3, r26	; 0x03
      b38:	bc 83       	std	Y+4, r27	; 0x04
-	
-	
-	long X1 = ( long_bmp180_B2 * ((long_B6 * long_B6) >> 12) ) >> 11;
      b3a:	9c 01       	movw	r18, r24
      b3c:	ad 01       	movw	r20, r26
      b3e:	bc 01       	movw	r22, r24
@@ -1352,11 +1279,6 @@ void bmp180_get_pressure()
      b56:	3a 95       	dec	r19
      b58:	d1 f7       	brne	.-12     	; 0xb4e <_Z19bmp180_get_pressurev+0x60>
      b5a:	30 2d       	mov	r19, r0
-	long X2 = (long_bmp180_AC2 * long_B6) >> 11;// / 2^11;
-	long X3 = X1 + X2;
-	long B3 = ((long_bmp180_AC1<<2) + X3 + 2) >> 2;
-	
-	X1 = (long_bmp180_AC3*long_B6)>>13;
      b5c:	60 91 2e 05 	lds	r22, 0x052E	; 0x80052e <long_bmp180_AC3>
      b60:	70 91 2f 05 	lds	r23, 0x052F	; 0x80052f <long_bmp180_AC3+0x1>
      b64:	80 91 30 05 	lds	r24, 0x0530	; 0x800530 <long_bmp180_AC3+0x2>
@@ -1373,12 +1295,6 @@ void bmp180_get_pressure()
      b80:	7a 95       	dec	r23
      b82:	d1 f7       	brne	.-12     	; 0xb78 <_Z19bmp180_get_pressurev+0x8a>
      b84:	70 2d       	mov	r23, r0
-	X2 = ( long_bmp180_B1 * ((long_B6 * long_B6) >> 12) ) >> 16;
-	X3 = ((X1 + X2) + 2) >>2 ;
-	
-	long X3_1 = X3 + 32768;
-	unsigned long ulong_X3_1 = X3_1;
-	unsigned long B4 = (ulong_bmp180_AC4 * ulong_X3_1) >> 15;
      b86:	60 91 2a 05 	lds	r22, 0x052A	; 0x80052a <long_bmp180_B1>
      b8a:	70 91 2b 05 	lds	r23, 0x052B	; 0x80052b <long_bmp180_B1+0x1>
      b8e:	80 91 2c 05 	lds	r24, 0x052C	; 0x80052c <long_bmp180_B1+0x2>
@@ -1426,9 +1342,6 @@ void bmp180_get_pressure()
      bf2:	ba 95       	dec	r27
      bf4:	d1 f7       	brne	.-12     	; 0xbea <_Z19bmp180_get_pressurev+0xfc>
      bf6:	b0 2d       	mov	r27, r0
-	
-	unsigned long ulong_B3 = B3;
-	unsigned long B7 = (ulong_bmp180_UP - ulong_B3) * 50000;
      bf8:	60 91 3a 05 	lds	r22, 0x053A	; 0x80053a <long_bmp180_B2>
      bfc:	70 91 3b 05 	lds	r23, 0x053B	; 0x80053b <long_bmp180_B2+0x1>
      c00:	80 91 3c 05 	lds	r24, 0x053C	; 0x80053c <long_bmp180_B2+0x2>
@@ -1511,12 +1424,6 @@ void bmp180_get_pressure()
      cba:	a0 e5       	ldi	r26, 0x50	; 80
      cbc:	b3 ec       	ldi	r27, 0xC3	; 195
      cbe:	0e 94 15 0a 	call	0x142a	; 0x142a <__muluhisi3>
-unsigned long ulong_div(unsigned long A, unsigned long B)
-{
-	unsigned long result_div = 0;
-	unsigned long dif = A;
-	
-	while (dif >= B)
      cc2:	6c 15       	cp	r22, r12
      cc4:	7d 05       	cpc	r23, r13
      cc6:	8e 05       	cpc	r24, r14
@@ -1525,44 +1432,23 @@ unsigned long ulong_div(unsigned long A, unsigned long B)
      ccc:	00 e0       	ldi	r16, 0x00	; 0
      cce:	10 e0       	ldi	r17, 0x00	; 0
      cd0:	98 01       	movw	r18, r16
-	{
-		result_div++;
      cd2:	0f 5f       	subi	r16, 0xFF	; 255
      cd4:	1f 4f       	sbci	r17, 0xFF	; 255
      cd6:	2f 4f       	sbci	r18, 0xFF	; 255
      cd8:	3f 4f       	sbci	r19, 0xFF	; 255
-		dif = dif - B;
      cda:	6c 19       	sub	r22, r12
      cdc:	7d 09       	sbc	r23, r13
      cde:	8e 09       	sbc	r24, r14
      ce0:	9f 09       	sbc	r25, r15
-unsigned long ulong_div(unsigned long A, unsigned long B)
-{
-	unsigned long result_div = 0;
-	unsigned long dif = A;
-	
-	while (dif >= B)
      ce2:	6c 15       	cp	r22, r12
      ce4:	7d 05       	cpc	r23, r13
      ce6:	8e 05       	cpc	r24, r14
      ce8:	9f 05       	cpc	r25, r15
      cea:	98 f7       	brcc	.-26     	; 0xcd2 <_Z19bmp180_get_pressurev+0x1e4>
      cec:	03 c0       	rjmp	.+6      	; 0xcf4 <_Z19bmp180_get_pressurev+0x206>
-	return result_div;
-}
-
-unsigned long ulong_div(unsigned long A, unsigned long B)
-{
-	unsigned long result_div = 0;
      cee:	00 e0       	ldi	r16, 0x00	; 0
      cf0:	10 e0       	ldi	r17, 0x00	; 0
      cf2:	98 01       	movw	r18, r16
-	unsigned long B4 = (ulong_bmp180_AC4 * ulong_X3_1) >> 15;
-	
-	unsigned long ulong_B3 = B3;
-	unsigned long B7 = (ulong_bmp180_UP - ulong_B3) * 50000;
-	
-	ulong_bmp180_press = ulong_div(B7, B4) << 1;
      cf4:	68 01       	movw	r12, r16
      cf6:	79 01       	movw	r14, r18
      cf8:	cc 0c       	add	r12, r12
@@ -1573,12 +1459,6 @@ unsigned long ulong_div(unsigned long A, unsigned long B)
      d04:	d0 92 0f 05 	sts	0x050F, r13	; 0x80050f <ulong_bmp180_press+0x1>
      d08:	e0 92 10 05 	sts	0x0510, r14	; 0x800510 <ulong_bmp180_press+0x2>
      d0c:	f0 92 11 05 	sts	0x0511, r15	; 0x800511 <ulong_bmp180_press+0x3>
-	ulong_X1 = (ulong_X1*3038) >> 16;
-	
-	long_bmp180_press = ulong_bmp180_press;
-	X2 = (-7357 * long_bmp180_press) >> 16;
-	
-	long_bmp180_press = long_bmp180_press + ((X1 + X2 + 3791) >> 4);
      d10:	a3 e4       	ldi	r26, 0x43	; 67
      d12:	b3 ee       	ldi	r27, 0xE3	; 227
      d14:	a7 01       	movw	r20, r14
@@ -1613,26 +1493,19 @@ unsigned long ulong_div(unsigned long A, unsigned long B)
      d52:	10 93 13 05 	sts	0x0513, r17	; 0x800513 <long_bmp180_press+0x1>
      d56:	20 93 14 05 	sts	0x0514, r18	; 0x800514 <long_bmp180_press+0x2>
      d5a:	30 93 15 05 	sts	0x0515, r19	; 0x800515 <long_bmp180_press+0x3>
-	
-	UART_write_short( bmp180_UT );
      d5e:	80 91 22 05 	lds	r24, 0x0522	; 0x800522 <bmp180_UT>
      d62:	90 91 23 05 	lds	r25, 0x0523	; 0x800523 <bmp180_UT+0x1>
      d66:	0e 94 87 00 	call	0x10e	; 0x10e <_Z16UART_write_shorts>
-	UART_write_long( ulong_bmp180_UP );
      d6a:	60 91 0a 05 	lds	r22, 0x050A	; 0x80050a <ulong_bmp180_UP>
      d6e:	70 91 0b 05 	lds	r23, 0x050B	; 0x80050b <ulong_bmp180_UP+0x1>
      d72:	80 91 0c 05 	lds	r24, 0x050C	; 0x80050c <ulong_bmp180_UP+0x2>
      d76:	90 91 0d 05 	lds	r25, 0x050D	; 0x80050d <ulong_bmp180_UP+0x3>
      d7a:	0e 94 96 00 	call	0x12c	; 0x12c <_Z15UART_write_longl>
-	
-	UART_write_long( long_bmp180_press );
      d7e:	60 91 12 05 	lds	r22, 0x0512	; 0x800512 <long_bmp180_press>
      d82:	70 91 13 05 	lds	r23, 0x0513	; 0x800513 <long_bmp180_press+0x1>
      d86:	80 91 14 05 	lds	r24, 0x0514	; 0x800514 <long_bmp180_press+0x2>
      d8a:	90 91 15 05 	lds	r25, 0x0515	; 0x800515 <long_bmp180_press+0x3>
      d8e:	0e 94 96 00 	call	0x12c	; 0x12c <_Z15UART_write_longl>
-	
-	bmp180_press = long_bmp180_press / 10;
      d92:	60 91 12 05 	lds	r22, 0x0512	; 0x800512 <long_bmp180_press>
      d96:	70 91 13 05 	lds	r23, 0x0513	; 0x800513 <long_bmp180_press+0x1>
      d9a:	80 91 14 05 	lds	r24, 0x0514	; 0x800514 <long_bmp180_press+0x2>
@@ -1646,11 +1519,6 @@ unsigned long ulong_div(unsigned long A, unsigned long B)
      db2:	30 93 17 05 	sts	0x0517, r19	; 0x800517 <bmp180_press+0x1>
      db6:	40 93 18 05 	sts	0x0518, r20	; 0x800518 <bmp180_press+0x2>
      dba:	50 93 19 05 	sts	0x0519, r21	; 0x800519 <bmp180_press+0x3>
-	
-	//UART_write_short( long_bmp180_B2 );
-	//UART_write_short( long_B6 );
-	//UART_write_short( X1 );
-	//UART_write_short( X3 );
      dbe:	0f 90       	pop	r0
      dc0:	0f 90       	pop	r0
      dc2:	0f 90       	pop	r0
@@ -1674,147 +1542,102 @@ unsigned long ulong_div(unsigned long A, unsigned long B)
      de6:	08 95       	ret
 
 00000de8 <_Z9init_oledv>:
-#define SSD1306_SWITCHCAPVCC 0x2
-#define SSD1306_NOP 0xE3
-
-void init_oled()
-{
-		TWI_write_byte(oled_add, 0x00, SSD1306_DISPLAYOFF);	
      de8:	4e ea       	ldi	r20, 0xAE	; 174
      dea:	60 e0       	ldi	r22, 0x00	; 0
      dec:	8c e3       	ldi	r24, 0x3C	; 60
      dee:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETDISPLAYCLOCKDIV);
      df2:	45 ed       	ldi	r20, 0xD5	; 213
      df4:	60 e0       	ldi	r22, 0x00	; 0
      df6:	8c e3       	ldi	r24, 0x3C	; 60
      df8:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x80);
      dfc:	40 e8       	ldi	r20, 0x80	; 128
      dfe:	60 e0       	ldi	r22, 0x00	; 0
      e00:	8c e3       	ldi	r24, 0x3C	; 60
      e02:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETMULTIPLEX);
      e06:	48 ea       	ldi	r20, 0xA8	; 168
      e08:	60 e0       	ldi	r22, 0x00	; 0
      e0a:	8c e3       	ldi	r24, 0x3C	; 60
      e0c:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x3F);
      e10:	4f e3       	ldi	r20, 0x3F	; 63
      e12:	60 e0       	ldi	r22, 0x00	; 0
      e14:	8c e3       	ldi	r24, 0x3C	; 60
      e16:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETDISPLAYOFFSET);
      e1a:	43 ed       	ldi	r20, 0xD3	; 211
      e1c:	60 e0       	ldi	r22, 0x00	; 0
      e1e:	8c e3       	ldi	r24, 0x3C	; 60
      e20:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x00);
      e24:	40 e0       	ldi	r20, 0x00	; 0
      e26:	60 e0       	ldi	r22, 0x00	; 0
      e28:	8c e3       	ldi	r24, 0x3C	; 60
      e2a:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETSTARTLINE | 0x00);
      e2e:	40 e4       	ldi	r20, 0x40	; 64
      e30:	60 e0       	ldi	r22, 0x00	; 0
      e32:	8c e3       	ldi	r24, 0x3C	; 60
      e34:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_CHARGEPUMP);
      e38:	4d e8       	ldi	r20, 0x8D	; 141
      e3a:	60 e0       	ldi	r22, 0x00	; 0
      e3c:	8c e3       	ldi	r24, 0x3C	; 60
      e3e:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x14);
      e42:	44 e1       	ldi	r20, 0x14	; 20
      e44:	60 e0       	ldi	r22, 0x00	; 0
      e46:	8c e3       	ldi	r24, 0x3C	; 60
      e48:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_MEMORYMODE);
      e4c:	40 e2       	ldi	r20, 0x20	; 32
      e4e:	60 e0       	ldi	r22, 0x00	; 0
      e50:	8c e3       	ldi	r24, 0x3C	; 60
      e52:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x00);
      e56:	40 e0       	ldi	r20, 0x00	; 0
      e58:	60 e0       	ldi	r22, 0x00	; 0
      e5a:	8c e3       	ldi	r24, 0x3C	; 60
      e5c:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SEGREMAP | 0x1);
      e60:	41 ea       	ldi	r20, 0xA1	; 161
      e62:	60 e0       	ldi	r22, 0x00	; 0
      e64:	8c e3       	ldi	r24, 0x3C	; 60
      e66:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_COMSCANDEC);
      e6a:	48 ec       	ldi	r20, 0xC8	; 200
      e6c:	60 e0       	ldi	r22, 0x00	; 0
      e6e:	8c e3       	ldi	r24, 0x3C	; 60
      e70:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETCOMPINS);
      e74:	4a ed       	ldi	r20, 0xDA	; 218
      e76:	60 e0       	ldi	r22, 0x00	; 0
      e78:	8c e3       	ldi	r24, 0x3C	; 60
      e7a:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x12);
      e7e:	42 e1       	ldi	r20, 0x12	; 18
      e80:	60 e0       	ldi	r22, 0x00	; 0
      e82:	8c e3       	ldi	r24, 0x3C	; 60
      e84:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETCONTRAST);
      e88:	41 e8       	ldi	r20, 0x81	; 129
      e8a:	60 e0       	ldi	r22, 0x00	; 0
      e8c:	8c e3       	ldi	r24, 0x3C	; 60
      e8e:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0xCF); // contrast
      e92:	4f ec       	ldi	r20, 0xCF	; 207
      e94:	60 e0       	ldi	r22, 0x00	; 0
      e96:	8c e3       	ldi	r24, 0x3C	; 60
      e98:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETPRECHARGE);
      e9c:	49 ed       	ldi	r20, 0xD9	; 217
      e9e:	60 e0       	ldi	r22, 0x00	; 0
      ea0:	8c e3       	ldi	r24, 0x3C	; 60
      ea2:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0xF1);
      ea6:	41 ef       	ldi	r20, 0xF1	; 241
      ea8:	60 e0       	ldi	r22, 0x00	; 0
      eaa:	8c e3       	ldi	r24, 0x3C	; 60
      eac:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_SETVCOMDETECT);
      eb0:	4b ed       	ldi	r20, 0xDB	; 219
      eb2:	60 e0       	ldi	r22, 0x00	; 0
      eb4:	8c e3       	ldi	r24, 0x3C	; 60
      eb6:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		TWI_write_byte(oled_add, 0x00, 0x40);
      eba:	40 e4       	ldi	r20, 0x40	; 64
      ebc:	60 e0       	ldi	r22, 0x00	; 0
      ebe:	8c e3       	ldi	r24, 0x3C	; 60
      ec0:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_DISPLAYALLON_RESUME);
      ec4:	44 ea       	ldi	r20, 0xA4	; 164
      ec6:	60 e0       	ldi	r22, 0x00	; 0
      ec8:	8c e3       	ldi	r24, 0x3C	; 60
      eca:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_NORMALDISPLAY);
      ece:	46 ea       	ldi	r20, 0xA6	; 166
      ed0:	60 e0       	ldi	r22, 0x00	; 0
      ed2:	8c e3       	ldi	r24, 0x3C	; 60
      ed4:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-		
-		TWI_write_byte(oled_add, 0x00, SSD1306_DISPLAYON);
      ed8:	4f ea       	ldi	r20, 0xAF	; 175
      eda:	60 e0       	ldi	r22, 0x00	; 0
      edc:	8c e3       	ldi	r24, 0x3C	; 60
@@ -1822,11 +1645,6 @@ void init_oled()
      ee2:	08 95       	ret
 
 00000ee4 <_Z10oled_printPKh>:
-	///
-}
-
-void oled_print(const byte img[])
-{
      ee4:	af 92       	push	r10
      ee6:	bf 92       	push	r11
      ee8:	df 92       	push	r13
@@ -1837,33 +1655,26 @@ void oled_print(const byte img[])
      ef2:	cf 93       	push	r28
      ef4:	df 93       	push	r29
      ef6:	7c 01       	movw	r14, r24
-	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);
      ef8:	41 e2       	ldi	r20, 0x21	; 33
      efa:	60 e0       	ldi	r22, 0x00	; 0
      efc:	8c e3       	ldi	r24, 0x3C	; 60
      efe:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x00);
      f02:	40 e0       	ldi	r20, 0x00	; 0
      f04:	60 e0       	ldi	r22, 0x00	; 0
      f06:	8c e3       	ldi	r24, 0x3C	; 60
      f08:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x7F);
      f0c:	4f e7       	ldi	r20, 0x7F	; 127
      f0e:	60 e0       	ldi	r22, 0x00	; 0
      f10:	8c e3       	ldi	r24, 0x3C	; 60
      f12:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	
-	TWI_write_byte(oled_add, 0x00, SSD1306_PAGEADDR);
      f16:	42 e2       	ldi	r20, 0x22	; 34
      f18:	60 e0       	ldi	r22, 0x00	; 0
      f1a:	8c e3       	ldi	r24, 0x3C	; 60
      f1c:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x00);
      f20:	40 e0       	ldi	r20, 0x00	; 0
      f22:	60 e0       	ldi	r22, 0x00	; 0
      f24:	8c e3       	ldi	r24, 0x3C	; 60
      f26:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x07);
      f2a:	47 e0       	ldi	r20, 0x07	; 7
      f2c:	60 e0       	ldi	r22, 0x00	; 0
      f2e:	8c e3       	ldi	r24, 0x3C	; 60
@@ -1871,12 +1682,6 @@ void oled_print(const byte img[])
      f34:	e7 01       	movw	r28, r14
      f36:	8c ef       	ldi	r24, 0xFC	; 252
      f38:	f8 1a       	sub	r15, r24
-	while( !(TWCR & (1<<TWINT)) );
-}
-
-void TWI_wait_stop()
-{
-	TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
      f3a:	0f 2e       	mov	r0, r31
      f3c:	fc eb       	ldi	r31, 0xBC	; 188
      f3e:	af 2e       	mov	r10, r31
@@ -1886,51 +1691,24 @@ void TWI_wait_stop()
      f46:	f4 e9       	ldi	r31, 0x94	; 148
      f48:	df 2e       	mov	r13, r31
      f4a:	f0 2d       	mov	r31, r0
-	
-	for (int i=0; i<32; i++)
-	{
-		TWI_start_wait(oled_add);
      f4c:	8c e3       	ldi	r24, 0x3C	; 60
      f4e:	0e 94 c6 00 	call	0x18c	; 0x18c <_Z14TWI_start_waith>
-		TWI_write_byte_wait(0x40);
      f52:	80 e4       	ldi	r24, 0x40	; 64
      f54:	0e 94 db 00 	call	0x1b6	; 0x1b6 <_Z19TWI_write_byte_waith>
      f58:	8e 01       	movw	r16, r28
      f5a:	00 5e       	subi	r16, 0xE0	; 224
      f5c:	1f 4f       	sbci	r17, 0xFF	; 255
-		
-		for (int j=0; j<32; j++)
-		{
-			TWI_write_byte_wait( img[i*32+j] );
      f5e:	89 91       	ld	r24, Y+
      f60:	0e 94 db 00 	call	0x1b6	; 0x1b6 <_Z19TWI_write_byte_waith>
-	for (int i=0; i<32; i++)
-	{
-		TWI_start_wait(oled_add);
-		TWI_write_byte_wait(0x40);
-		
-		for (int j=0; j<32; j++)
      f64:	c0 17       	cp	r28, r16
      f66:	d1 07       	cpc	r29, r17
      f68:	d1 f7       	brne	.-12     	; 0xf5e <_Z10oled_printPKh+0x7a>
      f6a:	f5 01       	movw	r30, r10
      f6c:	d0 82       	st	Z, r13
      f6e:	e8 01       	movw	r28, r16
-	
-	TWI_write_byte(oled_add, 0x00, SSD1306_PAGEADDR);
-	TWI_write_byte(oled_add, 0x00, 0x00);
-	TWI_write_byte(oled_add, 0x00, 0x07);
-	
-	for (int i=0; i<32; i++)
      f70:	0e 15       	cp	r16, r14
      f72:	1f 05       	cpc	r17, r15
      f74:	59 f7       	brne	.-42     	; 0xf4c <_Z10oled_printPKh+0x68>
-			TWI_write_byte_wait( img[i*32+j] );
-		}
-		
-		TWI_wait_stop();
-	}
-}
      f76:	df 91       	pop	r29
      f78:	cf 91       	pop	r28
      f7a:	1f 91       	pop	r17
@@ -1943,73 +1721,44 @@ void TWI_wait_stop()
      f88:	08 95       	ret
 
 00000f8a <_Z10oled_clearv>:
-	}
-	TWI_wait_stop();
-}
-*/
-void oled_clear()
-{
      f8a:	cf 93       	push	r28
      f8c:	df 93       	push	r29
-	TWI_write_byte(oled_add, 0x00, SSD1306_COLUMNADDR);
      f8e:	41 e2       	ldi	r20, 0x21	; 33
      f90:	60 e0       	ldi	r22, 0x00	; 0
      f92:	8c e3       	ldi	r24, 0x3C	; 60
      f94:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x00);
      f98:	40 e0       	ldi	r20, 0x00	; 0
      f9a:	60 e0       	ldi	r22, 0x00	; 0
      f9c:	8c e3       	ldi	r24, 0x3C	; 60
      f9e:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x7F);
      fa2:	4f e7       	ldi	r20, 0x7F	; 127
      fa4:	60 e0       	ldi	r22, 0x00	; 0
      fa6:	8c e3       	ldi	r24, 0x3C	; 60
      fa8:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	
-	TWI_write_byte(oled_add, 0x00, SSD1306_PAGEADDR);
      fac:	42 e2       	ldi	r20, 0x22	; 34
      fae:	60 e0       	ldi	r22, 0x00	; 0
      fb0:	8c e3       	ldi	r24, 0x3C	; 60
      fb2:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x00);
      fb6:	40 e0       	ldi	r20, 0x00	; 0
      fb8:	60 e0       	ldi	r22, 0x00	; 0
      fba:	8c e3       	ldi	r24, 0x3C	; 60
      fbc:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	TWI_write_byte(oled_add, 0x00, 0x07);
      fc0:	47 e0       	ldi	r20, 0x07	; 7
      fc2:	60 e0       	ldi	r22, 0x00	; 0
      fc4:	8c e3       	ldi	r24, 0x3C	; 60
      fc6:	0e 94 e6 00 	call	0x1cc	; 0x1cc <_Z14TWI_write_bytehhh>
-	
-	TWI_start_wait(oled_add);
      fca:	8c e3       	ldi	r24, 0x3C	; 60
      fcc:	0e 94 c6 00 	call	0x18c	; 0x18c <_Z14TWI_start_waith>
-	TWI_write_byte_wait(0x40);
      fd0:	80 e4       	ldi	r24, 0x40	; 64
      fd2:	0e 94 db 00 	call	0x1b6	; 0x1b6 <_Z19TWI_write_byte_waith>
      fd6:	c0 e0       	ldi	r28, 0x00	; 0
      fd8:	d4 e0       	ldi	r29, 0x04	; 4
-	for (int i=0; i<1024; i++)
-	{
-		TWI_write_byte_wait(0x00);
      fda:	80 e0       	ldi	r24, 0x00	; 0
      fdc:	0e 94 db 00 	call	0x1b6	; 0x1b6 <_Z19TWI_write_byte_waith>
      fe0:	21 97       	sbiw	r28, 0x01	; 1
-	TWI_write_byte(oled_add, 0x00, 0x00);
-	TWI_write_byte(oled_add, 0x00, 0x07);
-	
-	TWI_start_wait(oled_add);
-	TWI_write_byte_wait(0x40);
-	for (int i=0; i<1024; i++)
      fe2:	d9 f7       	brne	.-10     	; 0xfda <_Z10oled_clearv+0x50>
      fe4:	84 e9       	ldi	r24, 0x94	; 148
      fe6:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__DATA_REGION_ORIGIN__+0x5c>
-	{
-		TWI_write_byte_wait(0x00);
-	}
-	TWI_wait_stop();
      fea:	df 91       	pop	r29
      fec:	cf 91       	pop	r28
      fee:	08 95       	ret
@@ -2106,11 +1855,11 @@ void task_lcd_refresh()
     106a:	08 95       	ret
 
 0000106c <_Z17task_i2c_pressurev>:
-	UART_write_short( long_bmp180_AC4 );
-	UART_write_short( long_bmp180_AC5 );
-	UART_write_short( long_bmp180_AC6 );
-	*/
-	
+}
+
+void task_i2c_pressure()
+{
+
 	bmp180_get_ut();
     106c:	0e 94 81 04 	call	0x902	; 0x902 <_Z13bmp180_get_utv>
 	
@@ -2160,6 +1909,8 @@ void setup()
     10a8:	82 e0       	ldi	r24, 0x02	; 2
     10aa:	91 e0       	ldi	r25, 0x01	; 1
     10ac:	0e 94 72 07 	call	0xee4	; 0xee4 <_Z10oled_printPKh>
+	//i2c_eeprom_write_page(0, logo_el_nikitos);
+	//i2c_eeprom_test_write_page(0);
 	
 	test_segment();
     10b0:	0e 94 8e 01 	call	0x31c	; 0x31c <_Z12test_segmentv>
@@ -2215,9 +1966,6 @@ void TWI_init_speed(uint8_t prescal)	{
     10f0:	10 92 06 05 	sts	0x0506, r1	; 0x800506 <counter_task_lcd_refresh>
 		task_lcd_refresh();
     10f4:	0e 94 2f 08 	call	0x105e	; 0x105e <_Z16task_lcd_refreshv>
-		oled_print( logo_el_nikitos );
-		oled_print( logo_skyer2 );
-		*/
 	}
 	
 	if ( counter_task_button_hook >= 50 )
