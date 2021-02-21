@@ -180,3 +180,29 @@ uint8_t TWI_read_byte(uint8_t addres, uint8_t REG)	{
 	
 	return READ_BYTE;
 }
+
+void TWI_start_read_wait(uint8_t addres)	
+{
+	addres = addres&(0b01111111);
+	
+	TWCR = 0;
+	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+			//запуск TWI / TWI мастер / TWI включен
+	while( !(TWCR & (1<<TWINT)) );
+	
+	// старт при чтении
+	TWDR = (addres<<1)|(1<<0);
+	TWCR = (1<<TWINT) | (1<<TWEN);
+	while( !(TWCR & (1<<TWINT)) );
+	// проверка, что TWINT выставлен, т.е. операция выполнена
+}
+
+uint8_t TWI_read_byte_wait()	
+{
+	uint8_t READ_BYTE = 0;
+	
+	while( !(TWCR & (1<<TWINT)) );
+	READ_BYTE = TWDR;
+	
+	return READ_BYTE;
+}
