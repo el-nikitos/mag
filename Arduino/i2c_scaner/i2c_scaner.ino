@@ -28,18 +28,50 @@
 //
  
 #include <Wire.h>
- 
+
+#define RS_EN_OUTPUT  DDRB |= (1<<1)
+#define RS_EN_RX      PORTB &= ~(1<<1)
+#define RS_EN_TX      PORTB |= (1<<1)
+
+#define LED_OUTPUT    DDRB |= (1<<0)
+#define LED_OFF       PORTB &= ~(1<<0)
+#define LED_ON        PORTB |= (1<<0)
+
+#define ACCEL_1_SLA_OUTPUT  DDRD |= (1<<7)
+#define ACCEL_1_SLA_1       PORTD |= (1<<7)
+#define ACCEL_1_SLA_0       PORTD &= ~(1<<7)
+
+#define ACCEL_2_SLA_OUTPUT  DDRB |= (1<<2)
+#define ACCEL_2_SLA_1       PORTB |= (1<<2)
+#define ACCEL_2_SLA_0       PORTB &= ~(1<<2)
+
+#define ACCEL_VCC_OUTPUT    DDRC |= (1<<0)
+#define ACCEL_VCC_ON        PORTC |= (1<<0)
+#define ACCEL_VCC_OFF       PORTC &= ~(1<<0) 
  
 void setup()
 {
-  //DDRC &= ~(1<<3);
-  //PORTC |= (1<<3);
-  DDRC |= (1<<3);
-  PORTC |= (1<<3);
+  //  DDRC &= ~(1<<3);
+  //  PORTC |= (1<<3);
+  //  DDRC |= (1<<3);
+  //  PORTC |= (1<<3);
+
+  ACCEL_VCC_OUTPUT;
+  ACCEL_1_SLA_OUTPUT;
+  ACCEL_2_SLA_OUTPUT;
+  RS_EN_OUTPUT;
+
+  ACCEL_VCC_ON;
+  RS_EN_TX;
+
+  LED_OUTPUT;
+  LED_ON;
+  delay(1000);
+  LED_OFF;
   
   Wire.begin();
  
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);             // Leonardo: wait for serial monitor
   Serial.println("\nI2C Scanner");
 }
@@ -84,5 +116,5 @@ void loop()
   else
     Serial.println("done\n");
  
-  delay(1000);           // wait 5 seconds for next scan
+  delay(1000);           // wait 1 seconds for next scan
 }
