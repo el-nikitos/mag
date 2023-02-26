@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:mag-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -167,6 +166,4 @@ NoConn ~ 6300 3100
 NoConn ~ 6300 3250
 NoConn ~ 6300 3400
 NoConn ~ 6300 2650
-Text Notes 7000 5050 0    50   ~ 0
-убрать переходки из-под микросхемы (кроме земли)
 $EndSCHEMATC

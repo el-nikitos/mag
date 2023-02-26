@@ -1,0 +1,799 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue
+#
+DEF AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue G 0 40 Y Y 1 F N
+F0 "G" 225 175 50 H V C CNN
+F1 "AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue" 325 -300 50 H V C CNN
+F2 "N_G:AC-DC_IRM-20-12" -50 0 50 H I C CNN
+F3 "" -50 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/irm-15-5" 350 -400 50 H I C CNN "LINK"
+F5 "220В/5В" 350 -200 50 H V C CNN "INFO"
+DRAW
+S 0 50 700 -250 0 1 0 f
+X +V +V 750 0 50 L 50 50 1 1 I
+X -V -V 750 -100 50 L 50 50 1 1 I
+X L L -50 0 50 R 50 50 1 1 I
+X N N -50 -200 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue-UAK_2-rescue
+#
+DEF AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue-UAK_2-rescue G 0 40 Y Y 1 F N
+F0 "G" 225 175 50 H V C CNN
+F1 "AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue-UAK_2-rescue" 325 -300 50 H V C CNN
+F2 "N_G:AC-DC_IRM-20-12" -50 0 50 H I C CNN
+F3 "" -50 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/irm-15-5" 350 -400 50 H I C CNN "LINK"
+F5 "220В/5В" 350 -200 50 H V C CNN "INFO"
+DRAW
+S 0 50 700 -250 0 1 0 f
+X +V +V 750 0 50 L 50 50 1 1 I
+X -V -V 750 -100 50 L 50 50 1 1 I
+X L L -50 0 50 R 50 50 1 1 I
+X N N -50 -200 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue
+#
+DEF Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue XP 0 40 Y Y 1 F N
+F0 "XP" 100 50 50 H V C CNN
+F1 "Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue" 150 -550 50 H V C CNN
+F2 "MOTOR_X:Вилка_СНП389-4ВП32-1-1" 125 -625 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "РЮМК.430420.033 ТУ" 0 -700 39 H V C CNN
+DRAW
+S 0 0 300 -500 1 1 0 N
+S 0 0 300 -500 1 1 0 N
+P 2 1 1 0 100 -150 125 -125 N
+P 2 1 1 0 100 -150 125 -125 N
+P 2 1 1 0 125 -125 125 -200 N
+P 2 1 1 0 125 -125 125 -200 N
+P 2 1 1 0 150 -150 125 -125 N
+P 2 1 1 0 150 -150 125 -125 N
+X 1 1 500 -100 200 L 50 50 1 1 I
+X 1 1 500 -100 200 L 50 50 1 1 I
+X 2 2 500 -200 200 L 50 50 1 1 I
+X 2 2 500 -200 200 L 50 50 1 1 I
+X 3 3 500 -300 200 L 50 50 1 1 I
+X 3 3 500 -300 200 L 50 50 1 1 I
+X 4 4 500 -400 200 L 50 50 1 1 I
+X 4 4 500 -400 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue XP 0 40 Y Y 1 F N
+F0 "XP" 100 50 50 H V C CNN
+F1 "Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 150 -550 50 H V C CNN
+F2 "MOTOR_X:Вилка_СНП389-4ВП32-1-1" 125 -625 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "РЮМК.430420.033 ТУ" 0 -700 39 H V C CNN
+DRAW
+S 0 0 300 -500 1 1 0 N
+S 0 0 300 -500 1 1 0 N
+P 2 1 1 0 100 -150 125 -125 N
+P 2 1 1 0 100 -150 125 -125 N
+P 2 1 1 0 125 -125 125 -200 N
+P 2 1 1 0 125 -125 125 -200 N
+P 2 1 1 0 150 -150 125 -125 N
+P 2 1 1 0 150 -150 125 -125 N
+X 1 1 500 -100 200 L 50 50 1 1 I
+X 1 1 500 -100 200 L 50 50 1 1 I
+X 2 2 500 -200 200 L 50 50 1 1 I
+X 2 2 500 -200 200 L 50 50 1 1 I
+X 3 3 500 -300 200 L 50 50 1 1 I
+X 3 3 500 -300 200 L 50 50 1 1 I
+X 4 4 500 -400 200 L 50 50 1 1 I
+X 4 4 500 -400 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue
+#
+DEF Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue XFU 0 40 Y Y 1 F N
+F0 "XFU" 0 125 50 H V C CNN
+F1 "Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue" 100 -250 50 H I C CNN
+F2 "N_X:Держатель_5х20" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/kls5-266-fh-100" 150 -325 50 H I C CNN "LINK"
+DRAW
+S 100 100 150 -100 0 1 0 N
+P 2 0 1 0 150 -100 200 -100 N
+P 2 0 1 0 150 100 200 100 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue-UAK_2-rescue
+#
+DEF Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue-UAK_2-rescue XFU 0 40 Y Y 1 F N
+F0 "XFU" 0 125 50 H V C CNN
+F1 "Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue-UAK_2-rescue" 100 -250 50 H I C CNN
+F2 "N_X:Держатель_5х20" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/kls5-266-fh-100" 150 -325 50 H I C CNN "LINK"
+DRAW
+S 100 100 150 -100 0 1 0 N
+P 2 0 1 0 150 -100 200 -100 N
+P 2 0 1 0 150 100 200 100 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Диод_шоттки_SK16-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Диод_шоттки_SK16-elements_2020-UAK_0-rescue-UAK_1-rescue VD 0 40 Y Y 1 F N
+F0 "VD" 175 125 50 H V C CNN
+F1 "Диод_шоттки_SK16-elements_2020-UAK_0-rescue-UAK_1-rescue" 175 -125 50 H V C CNN
+F2 "N_VD_HL:Диод_SMB" 175 -225 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+F4 "1А, 60В" 175 -450 50 H I C CNN "INFO"
+F5 "https://www.chipdip.ru/product/sk16-diotec" 175 -325 50 H I C CNN "LINK"
+DRAW
+P 2 0 1 0 50 0 200 0 N
+P 2 0 1 0 175 -50 150 -50 N
+P 2 0 1 0 175 50 175 -50 N
+P 2 0 1 0 175 50 200 50 N
+P 2 0 1 0 200 0 250 0 N
+P 4 0 1 0 125 50 125 -50 175 0 125 50 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 2 300 0 50 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Диод_шоттки_SK16-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Диод_шоттки_SK16-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue VD 0 40 Y Y 1 F N
+F0 "VD" 175 125 50 H V C CNN
+F1 "Диод_шоттки_SK16-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 175 -125 50 H V C CNN
+F2 "N_VD_HL:Диод_SMB" 175 -225 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+F4 "1А, 60В" 175 -450 50 H I C CNN "INFO"
+F5 "https://www.chipdip.ru/product/sk16-diotec" 175 -325 50 H I C CNN "LINK"
+DRAW
+P 2 0 1 0 50 0 200 0 N
+P 2 0 1 0 175 -50 150 -50 N
+P 2 0 1 0 175 50 175 -50 N
+P 2 0 1 0 175 50 200 50 N
+P 2 0 1 0 200 0 250 0 N
+P 4 0 1 0 125 50 125 -50 175 0 125 50 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 2 300 0 50 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue L 0 40 Y Y 1 F N
+F0 "L" 125 125 50 H V C CNN
+F1 "Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue" 100 -400 50 H V C CNN
+F2 "N_RLC:Дроссель_B82731" 90 -190 50 V I C CNN
+F3 "" 90 -190 50 V I C CNN
+DRAW
+A 80 -190 32 716 -716 0 1 0 N 90 -160 90 -220
+A 80 -130 32 716 -716 0 1 0 N 90 -100 90 -160
+A 80 -70 32 716 -716 0 1 0 N 90 -40 90 -100
+A 180 -190 32 -1084 1084 0 1 0 N 170 -220 170 -160
+A 180 -130 32 -1084 1084 0 1 0 N 170 -160 170 -100
+A 180 -70 32 -1084 1084 0 1 0 N 170 -100 170 -40
+P 2 0 1 0 130 -40 130 -220 N
+P 2 0 1 0 172 -220 172 -250 N
+P 3 0 1 0 90 -220 90 -250 50 -250 N
+P 3 0 1 0 90 -40 90 0 50 0 N
+P 3 0 1 0 170 -40 170 0 185 0 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 3 250 0 75 L 50 50 1 1 I
+X ~ 4 250 -250 75 L 50 50 1 1 I
+X ~ 6 0 -250 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue L 0 40 Y Y 1 F N
+F0 "L" 125 125 50 H V C CNN
+F1 "Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 100 -400 50 H V C CNN
+F2 "N_RLC:Дроссель_B82731" 90 -190 50 V I C CNN
+F3 "" 90 -190 50 V I C CNN
+DRAW
+A 80 -190 32 716 -716 0 1 0 N 90 -160 90 -220
+A 80 -130 32 716 -716 0 1 0 N 90 -100 90 -160
+A 80 -70 32 716 -716 0 1 0 N 90 -40 90 -100
+A 180 -190 32 -1084 1084 0 1 0 N 170 -220 170 -160
+A 180 -130 32 -1084 1084 0 1 0 N 170 -160 170 -100
+A 180 -70 32 -1084 1084 0 1 0 N 170 -100 170 -40
+P 2 0 1 0 130 -40 130 -220 N
+P 2 0 1 0 172 -220 172 -250 N
+P 3 0 1 0 90 -220 90 -250 50 -250 N
+P 3 0 1 0 90 -40 90 0 50 0 N
+P 3 0 1 0 170 -40 170 0 185 0 N
+X ~ 1 0 0 50 R 50 50 1 1 I
+X ~ 3 250 0 75 L 50 50 1 1 I
+X ~ 4 250 -250 75 L 50 50 1 1 I
+X ~ 6 0 -250 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue HL 0 40 Y Y 1 F N
+F0 "HL" 1150 150 50 H V C CNN
+F1 "Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue" 625 -2075 50 H I C CNN
+F2 "N_VD_HL:ЖК_MT-16S2H" 0 225 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+T 0 950 -700 50 0 0 0 "10 кОм" Normal 0 C C
+T 0 1150 -950 50 0 0 0 GND Normal 0 C C
+T 0 950 -100 50 0 0 0 MT-16S2H Normal 0 C C
+T 0 750 -950 50 0 0 0 Uo Normal 0 C C
+T 0 950 -300 50 0 0 0 ЖК-индикатор Normal 0 C C
+T 0 950 -550 50 0 0 0 контрастностью: Normal 0 C C
+T 0 950 -475 50 0 0 0 Управление Normal 0 C C
+S 100 100 600 -1600 0 0 0 f
+S 600 100 1300 -1600 0 0 0 f
+S 650 50 1250 -250 0 0 0 N
+S 900 -750 1000 -800 0 0 0 N
+P 2 0 0 0 750 -775 750 -900 N
+P 2 0 0 0 750 -775 900 -775 N
+P 2 0 0 0 950 -850 1150 -850 N
+P 2 0 0 0 950 -800 925 -825 N
+P 2 0 0 0 950 -800 950 -850 N
+P 2 0 0 0 950 -800 975 -825 N
+P 2 0 0 0 1000 -775 1150 -775 N
+P 2 0 0 0 1150 -775 1150 -900 N
+P 2 0 0 0 1250 -375 650 -375 N
+X GND 1 0 0 100 R 50 50 1 1 I
+X DB3 10 0 -900 100 R 50 50 1 1 I
+X DB4 11 0 -1000 100 R 50 50 1 1 I
+X DB5 12 0 -1100 100 R 50 50 1 1 I
+X DB6 13 0 -1200 100 R 50 50 1 1 I
+X DB7 14 0 -1300 100 R 50 50 1 1 I
+X LED+ 15 0 -1400 100 R 50 50 1 1 I
+X LED- 16 0 -1500 100 R 50 50 1 1 I
+X Ucc 2 0 -100 100 R 50 50 1 1 I
+X Uo(ЖК) 3 0 -200 100 R 50 50 1 1 I
+X A0 4 0 -300 100 R 50 50 1 1 I
+X R/W 5 0 -400 100 R 50 50 1 1 I
+X E 6 0 -500 100 R 50 50 1 1 I
+X DB0 7 0 -600 100 R 50 50 1 1 I
+X DB1 8 0 -700 100 R 50 50 1 1 I
+X DB2 9 0 -800 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue HL 0 40 Y Y 1 F N
+F0 "HL" 1150 150 50 H V C CNN
+F1 "Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 625 -2075 50 H I C CNN
+F2 "N_VD_HL:ЖК_MT-16S2H" 0 225 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+T 0 950 -700 50 0 0 0 "10 кОм" Normal 0 C C
+T 0 1150 -950 50 0 0 0 GND Normal 0 C C
+T 0 950 -100 50 0 0 0 MT-16S2H Normal 0 C C
+T 0 750 -950 50 0 0 0 Uo Normal 0 C C
+T 0 950 -300 50 0 0 0 ЖК-индикатор Normal 0 C C
+T 0 950 -550 50 0 0 0 контрастностью: Normal 0 C C
+T 0 950 -475 50 0 0 0 Управление Normal 0 C C
+S 100 100 600 -1600 0 0 0 f
+S 600 100 1300 -1600 0 0 0 f
+S 650 50 1250 -250 0 0 0 N
+S 900 -750 1000 -800 0 0 0 N
+P 2 0 0 0 750 -775 750 -900 N
+P 2 0 0 0 750 -775 900 -775 N
+P 2 0 0 0 950 -850 1150 -850 N
+P 2 0 0 0 950 -800 925 -825 N
+P 2 0 0 0 950 -800 950 -850 N
+P 2 0 0 0 950 -800 975 -825 N
+P 2 0 0 0 1000 -775 1150 -775 N
+P 2 0 0 0 1150 -775 1150 -900 N
+P 2 0 0 0 1250 -375 650 -375 N
+X GND 1 0 0 100 R 50 50 1 1 I
+X DB3 10 0 -900 100 R 50 50 1 1 I
+X DB4 11 0 -1000 100 R 50 50 1 1 I
+X DB5 12 0 -1100 100 R 50 50 1 1 I
+X DB6 13 0 -1200 100 R 50 50 1 1 I
+X DB7 14 0 -1300 100 R 50 50 1 1 I
+X LED+ 15 0 -1400 100 R 50 50 1 1 I
+X LED- 16 0 -1500 100 R 50 50 1 1 I
+X Ucc 2 0 -100 100 R 50 50 1 1 I
+X Uo(ЖК) 3 0 -200 100 R 50 50 1 1 I
+X A0 4 0 -300 100 R 50 50 1 1 I
+X R/W 5 0 -400 100 R 50 50 1 1 I
+X E 6 0 -500 100 R 50 50 1 1 I
+X DB0 7 0 -600 100 R 50 50 1 1 I
+X DB1 8 0 -700 100 R 50 50 1 1 I
+X DB2 9 0 -800 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue HA 0 40 Y Y 1 F N
+F0 "HA" 50 175 50 H V C CNN
+F1 "Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue" 0 -250 50 H V C CNN
+F2 "N_VD_HL:Зуммер_HPA17F" 0 -400 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/hpa17f" -75 -325 50 H I C CNN "LINK"
+DRAW
+S 0 50 100 -150 0 1 0 N
+P 4 0 1 0 100 50 150 100 150 -200 100 -150 N
+X 1 1 -100 0 100 R 50 50 1 1 I
+X 2 2 -100 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue HA 0 40 Y Y 1 F N
+F0 "HA" 50 175 50 H V C CNN
+F1 "Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 0 -250 50 H V C CNN
+F2 "N_VD_HL:Зуммер_HPA17F" 0 -400 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/hpa17f" -75 -325 50 H I C CNN "LINK"
+DRAW
+S 0 50 100 -150 0 1 0 N
+P 4 0 1 0 100 50 150 100 150 -200 100 -150 N
+X 1 1 -100 0 100 R 50 50 1 1 I
+X 2 2 -100 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020-UAK_0-rescue-UAK_1-rescue XТ 0 40 Y Y 1 F N
+F0 "XТ" -300 350 60 H V C CNN
+F1 "Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020-UAK_0-rescue-UAK_1-rescue" -310 -260 60 H I C CNN
+F2 "N_X:Клеммник_х2_шаг5" -575 275 60 H I C CNN
+F3 "" -575 275 60 H I C CNN
+DRAW
+C -500 250 25 0 0 0 N
+C 0 -150 10 0 0 0 N
+C 0 0 10 0 0 0 N
+T 0 -500 50 50 0 0 0 1 Normal 0 C C
+T 0 -500 -100 50 0 0 0 2 Normal 0 C C
+T 0 -500 175 50 0 0 0 Конт. Normal 0 C C
+T 0 -200 200 50 0 0 0 Цепь Normal 0 C C
+S -600 100 -400 300 0 0 0 N
+S -400 300 0 100 0 0 0 N
+S -400 -200 -600 -50 0 1 0 N
+S -400 -50 -600 100 0 1 0 N
+P 2 0 0 0 -525 250 -550 250 N
+P 2 0 0 0 -475 250 -450 250 N
+P 2 0 0 0 -400 -200 0 -200 N
+P 2 0 0 0 -400 -50 0 -50 N
+P 2 0 0 0 0 -160 0 -200 N
+P 2 0 0 0 0 -140 0 -50 N
+P 2 0 0 0 0 -50 0 -10 N
+P 2 0 0 0 0 10 0 100 N
+X ~ 1 0 0 0 L 50 50 1 1 B N
+X ~ 2 0 -150 0 L 50 50 1 1 B N
+ENDDRAW
+ENDDEF
+#
+# Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue XТ 0 40 Y Y 1 F N
+F0 "XТ" -300 350 60 H V C CNN
+F1 "Клеммник_х2_KLS2-300-5.00-02P-2S-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" -310 -260 60 H I C CNN
+F2 "N_X:Клеммник_х2_шаг5" -575 275 60 H I C CNN
+F3 "" -575 275 60 H I C CNN
+DRAW
+C -500 250 25 0 0 0 N
+C 0 -150 10 0 0 0 N
+C 0 0 10 0 0 0 N
+T 0 -500 50 50 0 0 0 1 Normal 0 C C
+T 0 -500 -100 50 0 0 0 2 Normal 0 C C
+T 0 -500 175 50 0 0 0 Конт. Normal 0 C C
+T 0 -200 200 50 0 0 0 Цепь Normal 0 C C
+S -600 100 -400 300 0 0 0 N
+S -400 300 0 100 0 0 0 N
+S -400 -200 -600 -50 0 1 0 N
+S -400 -50 -600 100 0 1 0 N
+P 2 0 0 0 -525 250 -550 250 N
+P 2 0 0 0 -475 250 -450 250 N
+P 2 0 0 0 -400 -200 0 -200 N
+P 2 0 0 0 -400 -50 0 -50 N
+P 2 0 0 0 0 -160 0 -200 N
+P 2 0 0 0 0 -140 0 -50 N
+P 2 0 0 0 0 -50 0 -10 N
+P 2 0 0 0 0 10 0 100 N
+X ~ 1 0 0 0 L 50 50 1 1 B N
+X ~ 2 0 -150 0 L 50 50 1 1 B N
+ENDDRAW
+ENDDEF
+#
+# Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue
+#
+DEF Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue" -50 -250 60 H I C CNN
+F2 "MOTOR_RLC:Конденсатор_тантал_SMD_m7343" -100 -150 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "m7343" 400 100 50 H I C CNN "Типоразмер"
+F5 "22 мкФ" 400 200 50 H I C CNN "Номинал"
+F6 "С226" 50 -100 50 H V C CNN "Обозначение УГО"
+DRAW
+P 2 0 1 0 -100 75 -50 75 N
+P 2 0 1 0 -75 50 -75 100 N
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue C 0 40 Y Y 1 F N
+F0 "C" 0 150 60 H V C CNN
+F1 "Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" -50 -250 60 H I C CNN
+F2 "MOTOR_RLC:Конденсатор_тантал_SMD_m7343" -100 -150 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "m7343" 400 100 50 H I C CNN "Типоразмер"
+F5 "22 мкФ" 400 200 50 H I C CNN "Номинал"
+F6 "С226" 50 -100 50 H V C CNN "Обозначение УГО"
+DRAW
+P 2 0 1 0 -100 75 -50 75 N
+P 2 0 1 0 -75 50 -75 100 N
+P 2 0 1 0 0 50 0 -50 N
+P 2 0 1 0 50 50 50 -50 N
+X ~ 1 -50 0 50 R 50 50 1 1 I
+X ~ 2 100 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue
+#
+DEF Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue X 0 40 Y Y 1 F N
+F0 "X" -75 125 50 H I C CNN
+F1 "Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue" -25 -125 50 H I C CNN
+F2 "MOTOR_ICO:Крепежное_Отверстие_под_М3" -75 225 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "PCB_element" 0 -200 50 H I C CNN "INFO"
+DRAW
+C 0 0 50 0 1 0 N
+T 0 100 -75 50 0 0 0 М3 Normal 0 C C
+P 2 0 1 0 0 0 -100 0 N
+P 2 0 1 0 0 100 0 -100 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue X 0 40 Y Y 1 F N
+F0 "X" -75 125 50 H I C CNN
+F1 "Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" -25 -125 50 H I C CNN
+F2 "MOTOR_ICO:Крепежное_Отверстие_под_М3" -75 225 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "PCB_element" 0 -200 50 H I C CNN "INFO"
+DRAW
+C 0 0 50 0 1 0 N
+T 0 100 -75 50 0 0 0 М3 Normal 0 C C
+P 2 0 1 0 0 0 -100 0 N
+P 2 0 1 0 0 100 0 -100 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue DA 0 40 Y Y 1 F N
+F0 "DA" 75 325 50 H V C CNN
+F1 "МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue" -100 250 50 H I C CNN
+F2 "N_DD:DIP6" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "КР293КП1Б/АОУ163А" 275 -425 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product/kr293kp1b" 250 200 50 H I C CNN "LINK"
+DRAW
+S 0 50 500 -350 0 1 0 f
+P 2 0 1 0 50 -50 150 -50 N
+P 2 0 1 0 200 -125 175 -125 N
+P 2 0 1 0 200 -75 175 -75 N
+P 2 0 1 0 350 -250 450 -250 N
+P 2 0 1 0 350 -50 450 -50 N
+P 3 0 1 0 175 -100 200 -125 200 -100 N
+P 3 0 1 0 175 -50 200 -75 200 -50 N
+P 3 0 1 0 300 -250 300 -300 400 -300 N
+P 3 0 1 0 300 -150 300 -175 275 -250 N
+P 3 0 1 0 300 -100 300 -150 400 -150 N
+P 3 0 1 0 400 -150 400 -300 500 -300 N
+P 4 0 1 0 0 -150 100 -150 100 0 0 0 N
+P 4 0 1 0 100 -50 50 -100 150 -100 100 -50 N
+P 4 0 1 0 350 -200 450 -200 400 -250 350 -200 N
+P 4 0 1 0 350 -100 450 -100 400 -50 350 -100 N
+P 4 0 1 0 400 0 300 0 300 -25 275 -100 N
+P 4 0 1 0 500 -150 400 -150 400 0 500 0 N
+X ~ 1 -100 0 100 R 50 50 1 1 I
+X ~ 2 -100 -150 100 R 50 50 1 1 I
+X ~ 3 -100 -300 100 R 50 50 1 1 I
+X ~ 4 600 -300 100 L 50 50 1 1 I
+X ~ 5 600 -150 100 L 50 50 1 1 I
+X ~ 6 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue DA 0 40 Y Y 1 F N
+F0 "DA" 75 325 50 H V C CNN
+F1 "МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" -100 250 50 H I C CNN
+F2 "N_DD:DIP6" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "КР293КП1Б/АОУ163А" 275 -425 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product/kr293kp1b" 250 200 50 H I C CNN "LINK"
+DRAW
+S 0 50 500 -350 0 1 0 f
+P 2 0 1 0 50 -50 150 -50 N
+P 2 0 1 0 200 -125 175 -125 N
+P 2 0 1 0 200 -75 175 -75 N
+P 2 0 1 0 350 -250 450 -250 N
+P 2 0 1 0 350 -50 450 -50 N
+P 3 0 1 0 175 -100 200 -125 200 -100 N
+P 3 0 1 0 175 -50 200 -75 200 -50 N
+P 3 0 1 0 300 -250 300 -300 400 -300 N
+P 3 0 1 0 300 -150 300 -175 275 -250 N
+P 3 0 1 0 300 -100 300 -150 400 -150 N
+P 3 0 1 0 400 -150 400 -300 500 -300 N
+P 4 0 1 0 0 -150 100 -150 100 0 0 0 N
+P 4 0 1 0 100 -50 50 -100 150 -100 100 -50 N
+P 4 0 1 0 350 -200 450 -200 400 -250 350 -200 N
+P 4 0 1 0 350 -100 450 -100 400 -50 350 -100 N
+P 4 0 1 0 400 0 300 0 300 -25 275 -100 N
+P 4 0 1 0 500 -150 400 -150 400 0 500 0 N
+X ~ 1 -100 0 100 R 50 50 1 1 I
+X ~ 2 -100 -150 100 R 50 50 1 1 I
+X ~ 3 -100 -300 100 R 50 50 1 1 I
+X ~ 4 600 -300 100 L 50 50 1 1 I
+X ~ 5 600 -150 100 L 50 50 1 1 I
+X ~ 6 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue
+#
+DEF Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue VD 0 40 Y Y 1 F N
+F0 "VD" 250 150 50 H V C CNN
+F1 "Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue" 275 -425 50 H I C CNN
+F2 "MOTOR_VD_VT_HL:Корпус_КТ-46" 250 250 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+F4 "аА0.339.471ТУ" 200 -350 50 H I C CNN "TY"
+DRAW
+S 100 100 350 -300 0 0 0 f
+P 2 0 0 0 225 -150 225 -250 N
+P 2 0 0 0 225 50 225 -50 N
+P 2 0 0 0 300 -100 350 -100 N
+P 4 0 0 0 100 0 300 0 300 -200 100 -200 N
+P 4 0 1 0 175 -150 175 -250 225 -200 175 -150 N
+P 4 0 1 0 175 50 175 -50 225 0 175 50 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+X ~ 2 0 -200 100 R 50 50 1 1 I
+X ~ 3 450 -100 100 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue VD 0 40 Y Y 1 F N
+F0 "VD" 250 150 50 H V C CNN
+F1 "Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 275 -425 50 H I C CNN
+F2 "MOTOR_VD_VT_HL:Корпус_КТ-46" 250 250 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+F4 "аА0.339.471ТУ" 200 -350 50 H I C CNN "TY"
+DRAW
+S 100 100 350 -300 0 0 0 f
+P 2 0 0 0 225 -150 225 -250 N
+P 2 0 0 0 225 50 225 -50 N
+P 2 0 0 0 300 -100 350 -100 N
+P 4 0 0 0 100 0 300 0 300 -200 100 -200 N
+P 4 0 1 0 175 -150 175 -250 225 -200 175 -150 N
+P 4 0 1 0 175 50 175 -50 225 0 175 50 N
+X ~ 1 0 0 100 R 50 50 1 1 I
+X ~ 2 0 -200 100 R 50 50 1 1 I
+X ~ 3 450 -100 100 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue DD 0 40 Y Y 1 F N
+F0 "DD" 375 150 50 H V C CNN
+F1 "Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue" 250 -350 50 H V C CNN
+F2 "N_DD:SC-70-5" 25 -550 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/mc74vhc1gt125dt1g" 25 -450 50 H I C CNN "LINK"
+DRAW
+S 0 100 500 -300 0 1 0 f
+X ~OE 1 -100 0 100 R 50 50 1 1 I
+X IN 2 -100 -100 100 R 50 50 1 1 I
+X GND 3 -100 -200 100 R 50 50 1 1 I
+X OUT 4 600 -200 100 L 50 50 1 1 I
+X VCC 5 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue DD 0 40 Y Y 1 F N
+F0 "DD" 375 150 50 H V C CNN
+F1 "Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 250 -350 50 H V C CNN
+F2 "N_DD:SC-70-5" 25 -550 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "https://www.chipdip.ru/product/mc74vhc1gt125dt1g" 25 -450 50 H I C CNN "LINK"
+DRAW
+S 0 100 500 -300 0 1 0 f
+X ~OE 1 -100 0 100 R 50 50 1 1 I
+X IN 2 -100 -100 100 R 50 50 1 1 I
+X GND 3 -100 -200 100 R 50 50 1 1 I
+X OUT 4 600 -200 100 L 50 50 1 1 I
+X VCC 5 600 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue RP 0 40 Y Y 1 F N
+F0 "RP" 200 -450 39 H V C CNN
+F1 "Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue" 600 -900 39 H I C CNN
+F2 "MOTOR_IMPORT_OTK:резистор_подстроечный_PVZ3A334" 550 -1000 39 H I C CNN
+F3 "" 0 0 39 H I C CNN
+F4 "https://www.chipdip.ru/product/3303x-3-103" 0 0 50 H I C CNN "LINK"
+F5 "10 кОм" 0 0 50 H I C CNN "INFO"
+DRAW
+T 0 350 -600 50 0 0 0 "10 кОм" Normal 0 C C
+T 0 350 -750 50 0 0 0 PVZ3A103 Normal 0 C C
+S 150 -525 550 -675 0 0 0 N
+P 2 0 0 0 350 -475 350 -525 N
+P 3 0 0 0 325 -475 350 -525 375 -475 N
+P 3 0 0 0 350 -475 350 -400 550 -400 N
+X ~ 1 50 -600 100 R 50 50 1 1 I
+X ~ 2 650 -400 100 L 50 50 1 1 I
+X ~ 3 650 -600 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue RP 0 40 Y Y 1 F N
+F0 "RP" 200 -450 39 H V C CNN
+F1 "Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 600 -900 39 H I C CNN
+F2 "MOTOR_IMPORT_OTK:резистор_подстроечный_PVZ3A334" 550 -1000 39 H I C CNN
+F3 "" 0 0 39 H I C CNN
+F4 "https://www.chipdip.ru/product/3303x-3-103" 0 0 50 H I C CNN "LINK"
+F5 "10 кОм" 0 0 50 H I C CNN "INFO"
+DRAW
+T 0 350 -600 50 0 0 0 "10 кОм" Normal 0 C C
+T 0 350 -750 50 0 0 0 PVZ3A103 Normal 0 C C
+S 150 -525 550 -675 0 0 0 N
+P 2 0 0 0 350 -475 350 -525 N
+P 3 0 0 0 325 -475 350 -525 375 -475 N
+P 3 0 0 0 350 -475 350 -400 550 -400 N
+X ~ 1 50 -600 100 R 50 50 1 1 I
+X ~ 2 650 -400 100 L 50 50 1 1 I
+X ~ 3 650 -600 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue VT 0 40 Y Y 1 F N
+F0 "VT" 125 500 60 H V C CNN
+F1 "Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue" 100 -200 60 H V C CNN
+F2 "MOTOR_VD_VT_HL:Корпус_КТ-46" 75 675 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "https://www.terraelectronica.ru/product/660681" 25 850 50 H I C CNN "LINK"
+F5 "n-канальный полевой" 50 1025 50 H I C CNN "INFO"
+DRAW
+C 150 150 270 0 1 0 N
+P 2 0 1 0 0 0 -50 0 N
+P 2 0 1 0 0 300 0 0 N
+P 2 0 1 0 100 -50 100 50 N
+P 2 0 1 0 100 100 100 200 N
+P 2 0 1 0 100 150 150 125 N
+P 2 0 1 0 100 150 150 175 N
+P 2 0 1 0 100 150 350 150 N
+P 2 0 1 0 100 250 100 350 N
+P 2 0 1 0 350 0 100 0 N
+P 2 0 1 0 350 150 350 0 N
+P 2 0 1 0 350 300 100 300 N
+P 2 0 1 0 450 150 550 150 N
+P 2 0 1 0 500 0 500 300 N
+P 4 0 1 0 450 100 500 150 550 100 450 100 N
+X ~ 1 -250 0 200 R 50 50 1 1 I
+X ~ 2 550 0 200 L 50 50 1 1 I
+X ~ 3 550 300 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue VT 0 40 Y Y 1 F N
+F0 "VT" 125 500 60 H V C CNN
+F1 "Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" 100 -200 60 H V C CNN
+F2 "MOTOR_VD_VT_HL:Корпус_КТ-46" 75 675 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "https://www.terraelectronica.ru/product/660681" 25 850 50 H I C CNN "LINK"
+F5 "n-канальный полевой" 50 1025 50 H I C CNN "INFO"
+DRAW
+C 150 150 270 0 1 0 N
+P 2 0 1 0 0 0 -50 0 N
+P 2 0 1 0 0 300 0 0 N
+P 2 0 1 0 100 -50 100 50 N
+P 2 0 1 0 100 100 100 200 N
+P 2 0 1 0 100 150 150 125 N
+P 2 0 1 0 100 150 150 175 N
+P 2 0 1 0 100 150 350 150 N
+P 2 0 1 0 100 250 100 350 N
+P 2 0 1 0 350 0 100 0 N
+P 2 0 1 0 350 150 350 0 N
+P 2 0 1 0 350 300 100 300 N
+P 2 0 1 0 450 150 550 150 N
+P 2 0 1 0 500 0 500 300 N
+P 4 0 1 0 450 100 500 150 550 100 450 100 N
+X ~ 1 -250 0 200 R 50 50 1 1 I
+X ~ 2 550 0 200 L 50 50 1 1 I
+X ~ 3 550 300 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Чип-индуктивность_10мкГн_1.8А_20проц.-elements_2020-UAK_0-rescue-UAK_1-rescue
+#
+DEF Чип-индуктивность_10мкГн_1.8А_20проц.-elements_2020-UAK_0-rescue-UAK_1-rescue L 0 40 Y Y 1 F N
+F0 "L" -200 150 60 H V C CNN
+F1 "Чип-индуктивность_10мкГн_1.8А_20проц.-elements_2020-UAK_0-rescue-UAK_1-rescue" -75 -300 60 H I C CNN
+F2 "N_RLC:Чип-индуктивность_SMD_SCD0503T" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "10мкГн/1,8А" -200 -75 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product0/9000523874" -150 -175 50 H I C CNN "LINK"
+DRAW
+A -350 0 50 1 1799 0 1 0 N -300 0 -400 0
+A -250 0 50 1 1799 0 1 0 N -200 0 -300 0
+A -150 0 50 1 1799 0 1 0 N -100 0 -200 0
+A -50 0 50 1 1799 0 1 0 N 0 0 -100 0
+X ~ 1 -450 0 50 R 50 50 1 1 I
+X ~ 2 50 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Чип-индуктивность_10мкГн_1.8А_20проц.-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+#
+DEF Чип-индуктивность_10мкГн_1.8А_20проц.-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue L 0 40 Y Y 1 F N
+F0 "L" -200 150 60 H V C CNN
+F1 "Чип-индуктивность_10мкГн_1.8А_20проц.-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue" -75 -300 60 H I C CNN
+F2 "N_RLC:Чип-индуктивность_SMD_SCD0503T" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "10мкГн/1,8А" -200 -75 50 H V C CNN "INFO"
+F5 "https://www.chipdip.ru/product0/9000523874" -150 -175 50 H I C CNN "LINK"
+DRAW
+A -350 0 50 1 1799 0 1 0 N -300 0 -400 0
+A -250 0 50 1 1799 0 1 0 N -200 0 -300 0
+A -150 0 50 1 1799 0 1 0 N -100 0 -200 0
+A -50 0 50 1 1799 0 1 0 N 0 0 -100 0
+X ~ 1 -450 0 50 R 50 50 1 1 I
+X ~ 2 50 0 50 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# стабилизатор_нерегулируемый_LM1117S33-elements
+#
+DEF стабилизатор_нерегулируемый_LM1117S33-elements G 0 40 Y Y 1 F N
+F0 "G" 600 150 50 H V C CNN
+F1 "стабилизатор_нерегулируемый_LM1117S33-elements" 1000 -350 50 H V C CNN
+F2 "N_VD_HL:Транзистор_NPN_SOT223" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S 700 -250 0 100 0 1 0 f
+X GND 1 350 -300 50 U 50 50 1 1 P
+X 3В3 2 750 0 50 L 50 50 1 1 O
+X 4...15_В 3 -50 0 50 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

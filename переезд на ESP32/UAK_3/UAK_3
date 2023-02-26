@@ -1,0 +1,75 @@
+Source,/Users/Toxa/UAK/UAK_3/UAK_3.sch
+Kicad Rev,Eeschema (5.1.2-1)-1
+Generated Date,суббота, 08 мая 2021 г., 20:34:48
+
+Title,UAK.2B.MN
+Company,Not Set
+Revision,Not Set
+Date Issue,Not Set
+
+Reference,Value,LCSC,LINK,Для заказа,INFO,TY,Поле4,Номинал,УГО,Library,Library Ref
+A1,модуль_esp32_wrover_OR_wroom32_SMD,C701341,https://lcsc.com/product-detail/WIFI-Modules_Espressif-Systems-ESP32-WROOM-32E-4MB_C701341.html/?href=jlc-SMT,ESP32-WROOM-32 [4MB],,,,,,modules,модуль_esp32_wrover_OR_wroom32_SMD
+K1,Кнопка_FSMSM,-,https://www.terraelectronica.ru/product/1087727,Кнопка FSMSM,,,,,,elements,кнопка
+R18,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R21,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R24,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R25,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+K2,Кнопка_FSMSM,-,https://www.terraelectronica.ru/product/1087727,Кнопка FSMSM,,,,,,elements,кнопка
+VD2,Набор_диодов_BAR43CFILM,C14308,https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_ON-Semiconductor-BAT54CLT1G_C14308.html/?href=jlc-SMT,Набор диодов BAR43CFILM,,аА0.339.471ТУ,,,,UAK_3-rescue,Набор_диодов_2Д803АС9-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+XP1,Вилка_WF-4R,-,https://www.chipdip.ru/product/wf-4r,Вилка угловая WF-4R,,,РЮМК.430420.033 ТУ,,,UAK_3-rescue,Вилка_СНП389-4ВП32-1-1-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+C4,Конденсатор_керамический,C14663,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB104_C14663.html/?href=jlc-SMT,Конденсатор 0603 100 нФ 50В 5%,0,1мкФ/50В,,,,,elements,Конденсатор_керамический
+C3,Конденсатор_керамический,C14663,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB104_C14663.html/?href=jlc-SMT,Конденсатор 0603 100 нФ 50В 5%,0,1мкФ/50В,,,,,elements,Конденсатор_керамический
+R19,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R22,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+C5,Конденсатор_керамический,C14663,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB104_C14663.html/?href=jlc-SMT,Конденсатор 0603 100 нФ 50В 5%,0,1мкФ/50В,,,,,elements,Конденсатор_керамический
+VT3,Транзистор_полевой_N-канальный_IRLML6344TR,C693370,https://lcsc.com/product-detail/MOSFET_VBsemi-Elec-IRLML6344TR_C693370.html/?href=jlc-SMT,Транзистор N-канал IRLML6344TRPBF,IRLML6344TR,,,,,UAK_3-rescue,Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+R12,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R15,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+VD1,Диод_шоттки_SK16,C35501,https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_MDD-Microdiode-Electronics-SS24B_C35501.html/?href=jlc-SMT,Диод шоттки SK16 (1А 60В),1А, 60В,,,,,elements_2020,Диод_шоттки_SK16
+X6,Крепежное_отверстие_М3,-,-,-,PCB_element,,,,,UAK_3-rescue,Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+X5,Крепежное_отверстие_М3,-,-,-,PCB_element,,,,,UAK_3-rescue,Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+X4,Крепежное_отверстие_М3,-,-,-,PCB_element,,,,,UAK_3-rescue,Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+X3,Крепежное_отверстие_М3,-,-,-,PCB_element,,,,,UAK_3-rescue,Крепежное_отверстие_М3-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+RP1,Резистор_подстроечный_PVA3A103,C36376,https://lcsc.com/product-detail/Variable-Resistors_BOURNS-3314J-1-103E_C36376.html/?href=jlc-SMT,Резистор подстроечный 10 кОм,10 кОм,,,,,UAK_3-rescue,Резистор_подстроечный_PVA3A103-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+R14,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R11,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+VT2,Транзистор_полевой_N-канальный_IRLML6344TR,C693370,https://lcsc.com/product-detail/MOSFET_VBsemi-Elec-IRLML6344TR_C693370.html/?href=jlc-SMT,Транзистор N-канал IRLML6344TRPBF,IRLML6344TR,,,,,UAK_3-rescue,Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+HA1,Излучатель_HPA17F,-,https://www.chipdip.ru/product/hpa17f,Зуммер HPA17F,,,,,,UAK_3-rescue,Излучатель_HPA17F-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+R16,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R13,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+VT4,Транзистор_полевой_N-канальный_IRLML6344TR,C693370,https://lcsc.com/product-detail/MOSFET_VBsemi-Elec-IRLML6344TR_C693370.html/?href=jlc-SMT,Транзистор N-канал IRLML6344TRPBF,IRLML6344TR,,,,,UAK_3-rescue,Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+HL2,Жидкокристалический_индикатор_MT-16S2H-2KLW,-,-,-,,,,,,UAK_3-rescue,Жидкокристалический_индикатор_MT-16S2H-2KLW-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+R20,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R23,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+C6,Конденсатор_керамический,C14663,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB104_C14663.html/?href=jlc-SMT,Конденсатор 0603 100 нФ 50В 5%,0,1мкФ/50В,,,,,elements,Конденсатор_керамический
+DD1,Повторитель_M74VHC1GT125,C457671 ,https://lcsc.com/product-detail/Logic-Buffers-Drivers-Receivers-Transceivers_ON-Semiconductor-M74VHC1GT125DT1G_C457671.html/?href=jlc-SMT,Повторитель M74VHC1GT125DT1G,,,,,,UAK_3-rescue,Повторитель_M74VHC1GT125-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+C1,Конденсатор_керамический,C14663,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_YAGEO-CC0603KRX7R9BB104_C14663.html/?href=jlc-SMT,Конденсатор 0603 100 нФ 50В 5%,0,1мкФ/50В,,,,,elements,Конденсатор_керамический
+C2,Конденсатор_К53-56А-32В-22_мкФ+-10проц.,C313070 ,https://lcsc.com/product-detail/Tantalum-Capacitors_AVX-TPSD107K010R0050_C313070.html/?href=jlc-SMT,Конденсатор D 100 мкФ 10В 20%,100мкФ/10В,,,,,UAK_3-rescue,Конденсатор_К53-56А-32В-22_мкФ+-10проц.-MOTOR_2020_components-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+DA1,МОП-реле_КР293КП1Б,-,https://www.chipdip.ru/product/kr293kp1b,МОП-реле КР293КП1Б,КР293КП1Б/АОУ163А,,,,,UAK_3-rescue,МОП-реле_КР293КП1Б-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+R3,Резистор_0,065Вт,C336847,https://lcsc.com/product-detail/Others_PANASONIC-ERJ3RBD1500V_C336847.html,Резистор 0603 150 Ом 5%,150 Ом,,,,,elements,Резистор_0,065Вт
+R2,Резистор_0,065Вт,C510290,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_ROHM-Semicon-SFR03EZPF1002_C510290.html,Резистор 0603 10 кОм 5%,10 кОм,,,,,elements,Резистор_0,065Вт
+R1,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+VT1,Транзистор_полевой_N-канальный_IRLML6344TR,C693370,https://lcsc.com/product-detail/MOSFET_VBsemi-Elec-IRLML6344TR_C693370.html/?href=jlc-SMT,Транзистор N-канал IRLML6344TRPBF,IRLML6344TR,,,,,UAK_3-rescue,Транзистор_полевой_N-канальный_IRLML6344TR-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+R17,Резистор_0,25Вт,C830401,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_KOA-Speer-Elec-RK73H2BTTD1001D_C830401.html,Резистор 1206 4,7 кОм 5%,1 кОм,,,,,elements,Резистор_0,25Вт
+D2,LOGO,-,-,-,PCB_element,,,,,elements,LOGO
+XFU1,Держатель_предохранителя_KLS5-266,-,https://www.chipdip.ru/product/kls5-266-fh-100,Держатель KLS5-266,,,,,,UAK_3-rescue,Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue-UAK_2-rescue
+XFU2,Держатель_предохранителя_KLS5-266,-,https://www.chipdip.ru/product/kls5-266-fh-100,Держатель KLS5-266,,,,,,UAK_3-rescue,Держатель_предохранителя_KLS5-266-elements_2020-UAK_1-rescue-UAK_2-rescue
+D1,LOGO,-,-,-,PCB_element,,,,,elements,LOGO
+HL1,TFT-дисплей_ST7735_ILI9341,-,,,,,,,,elements_2020,TFT-дисплей_ST7735_ILI9341
+R4,Резистор_0,5Вт,C406994,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-201007J0131T4E_C406994.html,,130 Ом,,,130 Ом,R101,elements,Резистор_0,5Вт
+R9,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R10,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R8,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R7,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R6,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+R5,Резистор_0,065Вт,C101310,https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_240R-241-5_C101310.html,Резистор 0603 240 Ом 5%,240 Ом,,,,,elements,Резистор_0,065Вт
+X2,Клеммник_х10,-,,,,,,,,elements,Клеммник_х10
+X1,Клеммник_х4,-,,,,,,,,elements,Клеммник_х4
+C7,Конденсатор_керамический,C304015 ,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-1210B223K102CT_C304015.html/?href=jlc-SMT,Конденсатор 1210 0,022 мкФ 630В 10%,0,022мкФ/630В,,,,,elements,Конденсатор_керамический
+C10,Конденсатор_керамический,C19702 ,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A106KP8NNNC_C19702.html/?href=jlc-SMT,Конденсатор 0603 10 мкФ 25В 20%,10мкФ/10В,,,,,elements,Конденсатор_керамический
+L1,Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В,-,https://www.chipdip.ru/product/b82731-t2132-a20,Дроссель B82731-T2132-A20,2x6,8мГн/1,3А,,,,,UAK_3-rescue,Дроссель_B82731-T2132-A20_2х6.8мГн_1.3А_250В-elements_2020-UAK_0-rescue-UAK_1-rescue-UAK_2-rescue
+C11,Конденсатор_керамический,C19702 ,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A106KP8NNNC_C19702.html/?href=jlc-SMT,Конденсатор 0603 10 мкФ 25В 20%,10мкФ/10В,,,,,elements,Конденсатор_керамический
+G2,стабилизатор_нерегулируемый_LM1117GS-3.3,C173386 ,https://lcsc.com/product-detail/Dropout-Regulators-LDO_Shenzhen-Fuman-Elec-SC1117-3-3V_C173386.html/?href=jlc-SMT,LDO LM1117GS-3.3,,,,,,elements,стабилизатор_нерегулируемый_LM1117S33
+C8,Конденсатор_керамический,C19702 ,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A106KP8NNNC_C19702.html/?href=jlc-SMT,Конденсатор 0603 10 мкФ 25В 20%,10мкФ/10В,,,,,elements,Конденсатор_керамический
+C9,Конденсатор_керамический,C19702 ,https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A106KP8NNNC_C19702.html/?href=jlc-SMT,Конденсатор 0603 10 мкФ 25В 20%,10мкФ/10В,,,,,elements,Конденсатор_керамический
+G1,AC-DC-преобразователь_IRM-15-5,-,https://www.chipdip.ru/product/irm-15-5,AC-DC IRM-15-5,220В/5В,,,,,UAK_3-rescue,AC-DC-преобразователь_IRM-15-5-elements_2020-UAK_1-rescue-UAK_2-rescue
