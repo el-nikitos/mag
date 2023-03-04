@@ -3493,12 +3493,12 @@ Text Notes -11500 10000 0    138  ~ 0
 $Comp
 L eo-engine:#метка-3V3 #3V1
 U 1 1 644DD9E6
-P 16150 3300
-F 0 "#3V1" H 16150 3250 50  0001 C CNN
-F 1 "#метка-3V3" H 16100 3150 50  0001 C CNN
-F 2 "" H 16150 3300 50  0001 C CNN
-F 3 "" H 16150 3300 50  0001 C CNN
-	1    16150 3300
+P 21000 1750
+F 0 "#3V1" H 21000 1700 50  0001 C CNN
+F 1 "#метка-3V3" H 20950 1600 50  0001 C CNN
+F 2 "" H 21000 1750 50  0001 C CNN
+F 3 "" H 21000 1750 50  0001 C CNN
+	1    21000 1750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3919,16 +3919,14 @@ GND-IN
 $Comp
 L eo-engine:#метка-GND #GND2
 U 1 1 650E835F
-P 15250 2500
-F 0 "#GND2" H 15250 2550 50  0001 C CNN
-F 1 "#метка-GND" H 15300 2650 50  0001 C CNN
-F 2 "" H 15250 2500 50  0001 C CNN
-F 3 "" H 15250 2500 50  0001 C CNN
-	1    15250 2500
+P 16500 2500
+F 0 "#GND2" H 16500 2550 50  0001 C CNN
+F 1 "#метка-GND" H 16550 2650 50  0001 C CNN
+F 2 "" H 16500 2500 50  0001 C CNN
+F 3 "" H 16500 2500 50  0001 C CNN
+	1    16500 2500
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	15000 2500 15250 2500
 Wire Wire Line
 	13250 6000 15500 6000
 $Comp
@@ -3990,15 +3988,15 @@ $EndComp
 $Comp
 L eo-engine:Конденсатор*10мкФ*16В*0805 C12
 U 1 1 652ACB3B
-P 8000 -750
-F 0 "C12" H 8184 -866 138 0000 L CNN
-F 1 "Конденсатор*10мкФ*16В*0805" H 7850 -500 50  0001 C CNN
-F 2 "N_RLC:Конденсатор_SMD_IEC_0805" H 7950 -600 50  0001 C CNN
-F 3 "" H 8000 -750 50  0001 C CNN
-F 4 "10мкФ 16В" H 8184 -1089 138 0000 L CNN "INFO"
-F 5 "https://www.terraelectronica.ru/product/863492" H 7950 -600 50  0001 C CNN "LINK"
-F 6 "0,86" H 8000 -750 50  0001 C CNN "COST"
-	1    8000 -750
+P 16500 1850
+F 0 "C12" H 16684 1734 138 0000 L CNN
+F 1 "Конденсатор*10мкФ*16В*0805" H 16350 2100 50  0001 C CNN
+F 2 "N_RLC:Конденсатор_SMD_IEC_0805" H 16450 2000 50  0001 C CNN
+F 3 "" H 16500 1850 50  0001 C CNN
+F 4 "10мкФ 16В" H 16684 1511 138 0000 L CNN "INFO"
+F 5 "https://www.terraelectronica.ru/product/863492" H 16450 2000 50  0001 C CNN "LINK"
+F 6 "0,86" H 16500 1850 50  0001 C CNN "COST"
+	1    16500 1850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -4115,7 +4113,77 @@ Wire Wire Line
 	13250 3750 13250 3550
 Wire Wire Line
 	13250 1750 15000 1750
+Connection ~ 13250 1750
+$Comp
+L eo-engine:Микросхема*LDO*IN8V*OUT3V3*1,2A*SOT-223 G2
+U 1 1 6421A54A
+P 18500 1750
+F 0 "G2" H 19500 2100 138 0000 C CNN
+F 1 "Микросхема*LDO*IN8V*OUT3V3*1,2A*SOT-223" H 19100 700 50  0001 C CNN
+F 2 "N_VD_HL:Транзистор_NPN_SOT223_pnp" H 18500 1950 50  0001 C CNN
+F 3 "https://static.chipdip.ru/lib/529/DOC010529765.pdf" H 18500 1950 50  0001 C CNN
+F 4 "https://www.chipdip.ru/product/ldl1117s33r-stm" H 18500 1750 50  0001 C CNN "LINK"
+F 5 "LDO 3V3" H 19500 1100 138 0000 C CNN "INFO"
+	1    18500 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	20500 1750 21000 1750
+Wire Wire Line
+	20500 2050 21000 2050
+Wire Wire Line
+	21000 2050 21000 1750
+Connection ~ 21000 1750
+$Comp
+L eo-engine:Конденсатор*10мкФ*16В*0805 C14
+U 1 1 642AEDB7
+P 21000 2250
+F 0 "C14" H 21184 2134 138 0000 L CNN
+F 1 "Конденсатор*10мкФ*16В*0805" H 20850 2500 50  0001 C CNN
+F 2 "N_RLC:Конденсатор_SMD_IEC_0805" H 20950 2400 50  0001 C CNN
+F 3 "" H 21000 2250 50  0001 C CNN
+F 4 "10мкФ 16В" H 21184 1911 138 0000 L CNN "INFO"
+F 5 "https://www.terraelectronica.ru/product/863492" H 20950 2400 50  0001 C CNN "LINK"
+F 6 "0,86" H 21000 2250 50  0001 C CNN "COST"
+	1    21000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16000 1750 16500 1750
+Wire Wire Line
+	16500 2500 16500 2350
+Connection ~ 16500 2500
+Wire Wire Line
+	16500 1850 16500 1750
+Connection ~ 16500 1750
+Wire Wire Line
+	16500 1750 18500 1750
+Wire Wire Line
+	16500 2500 18250 2500
+Wire Wire Line
+	18250 2500 18250 2050
+Wire Wire Line
+	18250 2050 18500 2050
+$Comp
+L eo-engine:#метка-GND #GND3
+U 1 1 6435EB5B
+P 21000 3000
+F 0 "#GND3" H 21000 3050 50  0001 C CNN
+F 1 "#метка-GND" H 21050 3150 50  0001 C CNN
+F 2 "" H 21000 3000 50  0001 C CNN
+F 3 "" H 21000 3000 50  0001 C CNN
+	1    21000 3000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	21000 2050 21000 2250
+Connection ~ 21000 2050
+Wire Wire Line
+	21000 2750 21000 3000
+Text Notes 15500 4000 0    138  ~ 0
+совместить линейный стабилизатор и включение по кнопке
+Wire Wire Line
+	15000 2500 16500 2500
 Wire Bus Line
 	3000 2850 3000 6400
-Connection ~ 13250 1750
 $EndSCHEMATC
