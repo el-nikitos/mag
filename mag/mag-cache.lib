@@ -191,23 +191,6 @@ X ~ 4 150 0 50 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# elements_2020_Микросхема_заряда_MCP73831T-2ACI_OT
-#
-DEF elements_2020_Микросхема_заряда_MCP73831T-2ACI_OT DD 0 40 Y Y 1 F N
-F0 "DD" 600 150 50 H V C CNN
-F1 "elements_2020_Микросхема_заряда_MCP73831T-2ACI_OT" 450 -550 50 H V C CNN
-F2 "N_G:SOT-23-5_pnp" 400 -750 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S 0 100 750 -500 0 1 0 f
-X STAT 1 -200 0 200 R 50 50 1 1 I
-X VSS/GND 2 -200 -200 200 R 50 50 1 1 I
-X VBAT 3 -200 -400 200 R 50 50 1 1 I
-X VDD 4 950 -400 200 L 50 50 1 1 I
-X PROG 5 950 0 200 L 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # elements_2020_ОУ_LMV321ILT
 #
 DEF elements_2020_ОУ_LMV321ILT DA 0 40 Y Y 1 F N
@@ -299,6 +282,37 @@ X ~ 2 300 0 50 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
+# elements_2020_Транзистор_полевой_N-канальный_КП526А9
+#
+DEF elements_2020_Транзистор_полевой_N-канальный_КП526А9 VT 0 40 Y Y 1 F N
+F0 "VT" 125 500 60 H V C CNN
+F1 "elements_2020_Транзистор_полевой_N-канальный_КП526А9" 100 -200 60 H V C CNN
+F2 "MOTOR_VD_VT_HL:Корпус_КТ-46" 75 675 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+F4 "https://www.chipdip.ru/product/kp526a9" 25 850 50 H I C CNN "LINK"
+F5 "n-канальный полевой" 50 1025 50 H I C CNN "INFO"
+DRAW
+C 150 150 270 0 1 0 N
+P 2 0 1 0 0 0 -50 0 N
+P 2 0 1 0 0 300 0 0 N
+P 2 0 1 0 100 -50 100 50 N
+P 2 0 1 0 100 100 100 200 N
+P 2 0 1 0 100 150 150 125 N
+P 2 0 1 0 100 150 150 175 N
+P 2 0 1 0 100 150 350 150 N
+P 2 0 1 0 100 250 100 350 N
+P 2 0 1 0 350 0 100 0 N
+P 2 0 1 0 350 150 350 0 N
+P 2 0 1 0 350 300 100 300 N
+P 2 0 1 0 450 150 550 150 N
+P 2 0 1 0 500 0 500 300 N
+P 4 0 1 0 450 100 500 150 550 100 450 100 N
+X ~ 1 -250 0 200 R 50 50 1 1 I
+X ~ 2 550 0 200 L 50 50 1 1 I
+X ~ 3 550 300 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
 # elements_LOGO
 #
 DEF elements_LOGO D 0 40 Y Y 1 F N
@@ -325,21 +339,6 @@ P 2 0 1 0 0 50 0 -50 N
 P 2 0 1 0 50 50 50 -50 N
 X ~ 1 -50 0 50 R 50 50 1 1 I
 X ~ 2 100 0 50 L 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# elements_Предохранитель
-#
-DEF elements_Предохранитель FU 0 40 Y Y 1 F N
-F0 "FU" -25 150 60 H V C CNN
-F1 "elements_Предохранитель" 0 -150 60 H V C CNN
-F2 "" 0 0 60 H I C CNN
-F3 "" 0 0 60 H I C CNN
-DRAW
-S -200 75 200 -75 0 1 0 N
-P 2 0 1 0 -200 0 200 0 N
-X ~ 1 -400 0 200 R 50 50 1 1 I
-X ~ 2 400 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
@@ -522,24 +521,6 @@ P 2 0 1 18 0 -275 0 -500 N
 P 2 0 1 18 0 -225 0 0 N
 X ~ 1 0 0 100 R 50 50 1 1 I N
 X ~ 2 0 -500 100 R 50 50 1 1 I N
-ENDDRAW
-ENDDEF
-#
-# eo-engine_Микросхема*LDO*IN8V*OUT3V3*1,2A*SOT-223
-#
-DEF eo-engine_Микросхема*LDO*IN8V*OUT3V3*1,2A*SOT-223 G 0 40 Y Y 1 F N
-F0 "G" 1600 300 138 H V C CNN
-F1 "eo-engine_Микросхема*LDO*IN8V*OUT3V3*1,2A*SOT-223" 600 -1050 50 H I C CNN
-F2 "N_VD_HL:Транзистор_NPN_SOT223_pnp" 0 200 50 H I C CNN
-F3 "" 0 200 50 H I C CNN
-F4 "https://www.chipdip.ru/product/ldl1117s33r-stm" 0 0 50 H I C CNN "LINK"
-F5 "LDO 3V3" 950 -650 138 H V C CNN "INFO"
-DRAW
-S 200 200 1800 -500 0 1 0 N
-X GND 1 0 -300 200 R 138 138 1 1 I
-X OUT(2V5) 2 2000 0 200 L 138 138 1 1 I
-X IN 3 0 0 200 R 138 138 1 1 I
-X OUT(2V5) 4 2000 -300 200 L 138 138 1 1 I
 ENDDRAW
 ENDDEF
 #
